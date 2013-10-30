@@ -30,15 +30,17 @@ ini_set('session.cookie_domain', $cookiedomain[0]);
 ini_set('session.save_handler', $config['cookie']['save_handler']);
 ini_set('session.save_path', $config['cookie']['cookiepath']);
 
-if (strpos($cookie['cookie']['save_handler']) == 'memcache')
+if ($config['cookie']['save_handler'] == 'memcache')
 {
+	require PLUGINS_ROOT.'/cookie/session.class.php';
+	$session = new session();
 	session_set_save_handler(
-								array('cookie','sess_open'),
-								array('cookie','sess_close'),
-								array('cookie','sess_get'),
-								array('cookie','sess_set'),
-								array('cookie','sess_destroy'),
-								array('cookie','sess_gc')
+								array($session,'sess_open'),
+								array($session,'sess_close'),
+								array($session,'sess_get'),
+								array($session,'sess_set'),
+								array($session,'sess_destroy'),
+								array($session,'sess_gc')
 							);
 }
 

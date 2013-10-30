@@ -5,37 +5,36 @@ $argv = $_SERVER['argv'];
 /* 判断是否有 -C 参数*/
 foreach ($argv as $key=>$val)
 {
-	if ($val == '-c')
+	if (substr($val,0,1) == '-')
 	{
-		$config_file = $argv[$key+1];
-		break;
+		$argv_array[$val] = $argv[$key+1];
 	}
 }
 
 /* 如果是文件夹 */
-if (!empty($config_file))
+if (!empty($argv_array['-c']))
 {
-	if (is_dir($config_file))
+	if (is_dir($argv_array['-c']))
 	{
-		if (substr($config_file,-1,1) != '/')
+		if (substr($argv_array['-c'],-1,1) != '/')
 		{
-			$config_file .= "/";
+			$argv_array['-c'] .= "/";
 		}
 		$files = array();
-		$handle = opendir($config_file); 
+		$handle = opendir($argv_array['-c']); 
 		while (false != ($file = readdir($handle)))
 		{
 			if ($file != "." && $file != ".." && $file != ".DS_Store" && strpos($file,'.config') !== false)
 			{
-				get_srv_config($config_file.$file);
+				get_srv_config($argv_array['-c'].$file);
 			}
 		}
 		closedir($handle);
 	}
 
-	else if (is_file($config_file))
+	else if (is_file($argv_array['-c']))
 	{
-		get_srv_config($config_file);
+		get_srv_config($argv_array['-c']);
 	}
 	else
 	{
@@ -44,27 +43,27 @@ if (!empty($config_file))
 
 }
 
-if (in_array('--help',$argv) || in_array('-h',$argv) || in_array('-?',$argv) || in_array('-help',$argv))
+if (isset($argv_array['-help']) || isset($argv_array['-h']) || isset($argv_array['-?']) || isset($argv_array['-help']))
 {
 	$cron_help = "________________________________________________________________________________________\n";
 	$cron_help .= "|                                                                                      |\n";
 	$cron_help .= '| -c <path>|<file>        SetEnv Directory example: ***/basic.baidu.com.conf/*.conf    |'."\n";
-	$cron_help .= "| --help                  this help                                                    |\n";
+	$cron_help .= "| -help                  this help                                                    |\n";
 	$cron_help .= "| -recache                delete cache                                                 |\n";
-	$cron_help .= "| --debug                 Show \$_SERVER list                                           |\n";
+	$cron_help .= "| -debug                 Show \$_SERVER list                                           |\n";
 	$cron_help .= "_______________________________________________________________________________________\n";
 
 	echo $cron_help;
 	exit;
 }
 
-if (in_array('--debug',$argv))
+if (isset($argv_array['-debug']))
 {
 	print_r($_SERVER);
 	exit;
 }
 
-if (in_array('-recache',$argv))
+if (isset($argv_array['-recache']))
 {
 	$_GET['recache'] = 1;
 }

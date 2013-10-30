@@ -46,7 +46,7 @@ catch (Exception $e)
  * --------------------------------
  */
 
-$file = new file($config['file']);
+#$file = new file();
 
 
 /* 加载输入类 */

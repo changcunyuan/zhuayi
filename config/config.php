@@ -21,8 +21,8 @@ $config['web']['error_url'] = 'http://'.$_SERVER['HTTP_HOST'].'/zpadmin';
  * --------------------------------
  */
 $config['cookie']['cookiedomain'] = $_SERVER['HTTP_HOST'];
-$config['cookie']['save_handler'] = 'memcache'; //files oe memcache
-$config['cookie']['outtime'] = 86400; //过期时间
+$config['cookie']['save_handler'] = $_SERVER['COOKIE_HANDLER']; //files oe memcache
+$config['cookie']['outtime'] = $_SERVER['BAIDU_MEMCACHED_OUTTIME']; //过期时间
 $config['cookie']['cookiepath'] = $_SERVER['COOKIE_PATH']; ///tmp or tcp://127.0.0.1 多台服务器共享使用多个 memcached server 时用逗号","隔开
 
 /**

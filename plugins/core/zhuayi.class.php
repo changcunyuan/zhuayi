@@ -28,6 +28,9 @@ class zhuayi
 	static $admin = false;
 	static $perf_include_count = array();
 
+	/* smarty 注册函数 */
+	static $smarty_registerPlugin = array();
+
 	/**
 	 * 构造函数
 	 */
@@ -84,7 +87,7 @@ class zhuayi
 			$url->url_domain = $config['url_domain'];
 
 			$controller = $url->url($config['url_config']);
-			$this->cache->select_connection()->set($controller_key,$controller,SAE_MEMCACHED_OUTTIME);
+			$this->cache->select_connection()->set($controller_key,$controller,$_SERVER['BAIDU_MEMCACHED_OUTTIME']);
 		}
 
 		if (isset($_GET['url_debug']))
@@ -490,6 +493,14 @@ class zhuayi
 			$smarty->assign('ZHUAYI_ROOT',ZHUAYI_ROOT);
 			$smarty->assign('show',$this->variable['show']);
 
+			if (!empty(self::$smarty_registerPlugin))
+			{
+				foreach (self::$smarty_registerPlugin as $val)
+				{
+					$smarty->registerPlugin($val[0],$val[1],$val[2]);
+				}
+			}
+			
 			$smarty->display($filename);
 		}
 		else
