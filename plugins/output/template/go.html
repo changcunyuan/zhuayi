@@ -1,0 +1,33 @@
+<style type="text/css">
+body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3"}
+.qz_msgbox_layer,
+.qz_msgbox_layer .gtl_ico_succ,
+.qz_msgbox_layer .gtl_ico_fail,
+.qz_msgbox_layer .gtl_ico_hits,
+.qz_msgbox_layer .gtl_ico_clear,
+.qz_msgbox_layer .gtl_end{display:inline-block;height:54px;line-height:54px;font-weight:bold;font-size:14px;color:#606060;background-image:url("http://qzonestyle.gtimg.cn/qzonestyle/qzone_client_v5/img/gb_tip_layer.png");_background-image:url("http://qzonestyle.gtimg.cn/qzonestyle/qzone_client_v5/img/gb_tip_layer_ie6.png");background-repeat:no-repeat;}
+.qz_msgbox_layer_wrap{width:100%;position:fixed;_position:absolute;top:50%;left:0;text-align:center;z-index:65533;margin-top:-54px;}
+.qz_msgbox_layer{background-position:0 -161px;background-repeat:repeat-x;padding:0 18px 0 9px;margin:0 auto;position:relative;}
+.qz_msgbox_layer .gtl_ico_succ{background-position:-6px 0;left:-45px;top:0;width:45px;position:absolute;}
+.qz_msgbox_layer .gtl_end{background-position:0 0;position:absolute;right:-6px;top:0;width:6px;}
+.qz_msgbox_layer .gtl_ico_fail{background-position:-6px -108px;position:absolute;left:-45px;top:0;width:45px;}
+.qz_msgbox_layer .gtl_ico_hits{background-position:-6px -54px;position:absolute;left:-45px;top:0;width:45px;}
+.qz_msgbox_layer .gtl_ico_clear{background-position:-6px 0;left:-5px;width:5px;position:absolute;top:0;}
+.qz_msgbox_layer img{float:left;margin:19px 10px 0 5px ;}
+</style>
+<body style="height:700px;">
+<div class="qz_msgbox_layer_wrap" id="q_Msgbox">
+	<span class="qz_msgbox_layer" style="z-index: 10000; " id="mode_tips_v2">
+		<span class="gtl_ico_clear"></span>
+		<img src="http://cnc.qzonestyle.gtimg.cn/qzonestyle/qzone_client_v5/img/loading.gif" alt=""><?php echo $show['title'];?>
+		<span class="gtl_end"></span>
+	</span>
+</div>
+<script type="text/javascript">
+var url = "<?php echo $show['url'];?>";
+setTimeout(function(){
+	location.replace(url);
+},1000)
+</script>
+</body>
+</html>

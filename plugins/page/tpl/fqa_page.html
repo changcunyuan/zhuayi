@@ -1,0 +1,15 @@
+<div id="page">
+	<?php foreach ($this->page as $key=>$val){?>
+	<?php if ($val){?>
+	<a href="<?php echo $val;?>"><?php echo $key;?></a>
+	<?php }else{?>
+	<span><?php echo $key;?></span>
+	<?php }?>
+	<?php }?>
+</div>
+<script type="text/javascript">
+$(function(){
+	var page_width = $("#page").width()
+	$("#page").css('float','none').width(page_width);
+})
+</script>
