@@ -1,15 +1,6 @@
 <?php
 error_reporting(E_ALL^E_NOTICE^E_WARNING);
-$argv = $_SERVER['argv'];
-
-/* 判断是否有 -C 参数*/
-foreach ($argv as $key=>$val)
-{
-	if (substr($val,0,1) == '-')
-	{
-		$argv_array[$val] = $argv[$key+1];
-	}
-}
+$argv_array = arg_parser();
 
 /* 如果是文件夹 */
 if (!empty($argv_array['-c']))
@@ -96,5 +87,44 @@ function get_srv_config($file)
 		}
 		
 	}
+}
+
+function cmd_stdin()
+{
+	$fp = fopen("/dev/stdin", "r");
+	$input = fgets($fp, 255);
+	fclose($fp);
+	return $input;
+}
+
+/* 格式化 arg */
+function arg_parser()
+{
+	$argv = $_SERVER['argv'];
+	$argc = $_SERVER['argc'];
+	$argv_array = array();
+	if ( $argc > 1 )
+	{
+		for( $i = 1 ; $i < $argc ; $i++)
+		{
+			if ( substr($argv[$i],0,1) == "-" )
+			{
+				if ( $argc > ($i+1) )
+				{
+					if ( substr($argv[$i+1],0,1) != "-" )
+					{
+						$argv_array[$argv[$i]] = $argv[$i+1];
+						$i++;
+						continue;
+					}
+					else
+					{
+						$argv_array[$argv[$i]] = '';
+					}
+				}
+			}
+		} 
+	}
+	return $argv_array;
 }
 ?>
