@@ -113,7 +113,11 @@ class z_url
 			else
 			{
 				$controller['modle'] = $url[1];
-				$controller['action'] = $url[2];
+				if (isset($url[2]))
+				{
+					$controller['action'] = $url[2];
+				}
+				
 			}
 			
 			if (empty($controller['modle']))

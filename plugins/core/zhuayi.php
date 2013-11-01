@@ -10,7 +10,7 @@ require PLUGINS_ROOT.'/core/zhuayi.class.php';
 require_once PLUGINS_ROOT.'/core/cache.class.php';
 
 // 加载文件操作类
-require_once PLUGINS_ROOT.'/core/file.class.php';
+// require_once PLUGINS_ROOT.'/core/file.class.php';
 
 // 加载应用公共静态方法
 require_once ZHUAYI_ROOT.'/zhuayi/mod_app.php';

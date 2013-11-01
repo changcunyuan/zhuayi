@@ -13,7 +13,7 @@ $config['web']['appname'] = 'zhuayi';
  * --------------------------------
  */
 $config['web']['weburl'] = 'http://'.$_SERVER['HTTP_HOST'];
-$config['web']['error_url'] = 'http://'.$_SERVER['HTTP_HOST'].'/zpadmin';
+$config['web']['error_url'] = 'http://'.$_SERVER['HTTP_HOST'];
 
 /**
  * --------------------------------

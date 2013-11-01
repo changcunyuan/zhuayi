@@ -150,7 +150,7 @@ class zhuayi
 		{
 			$app->modle = $controller['modle'];
 			$app->action = $controller['action'];
-			$app->finder = $controller['finder'];
+			#$app->finder = $controller['finder'];
 			$app->fileds = $controller['fileds'];
 			try
 			{
@@ -391,7 +391,7 @@ class zhuayi
 	 * @return void
 	 * @author 
 	 **/
-	function load_tpl($filename,$finder)
+	function load_tpl($filename)
 	{
 
 		$arrfile = explode('_',$filename);
@@ -480,13 +480,13 @@ class zhuayi
 			$filename = $this->modle.'_'.$this->action;
 		}
 
-		$filename = self::load_tpl($filename,$this->finder);
+		$filename = self::load_tpl($filename);
 		
 		if ($is_filename == 'smarty')
 		{
 			global $config;
 			$smarty = new Smarty;
-			$smarty->setCompileDir(SINASRV_CACHE_DIR);
+			$smarty->setCompileDir($_SERVER['ZHUAYI_CACHE_DIR']);
 			$smarty->left_delimiter = '{%';
 			$smarty->right_delimiter = '%}';
 			$smarty->assign('config',$config);

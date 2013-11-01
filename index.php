@@ -8,10 +8,10 @@
 * @author       zhuayi
 * @QQ			2179942
 */
-// xhprof_lib在下载的包里存在这个目录,记得将目录包含到运行的php代码中
-// include_once "/Users/zhuayi/site/xhprof/xhprof_lib/utils/xhprof_lib.php";  
-// include_once "/Users/zhuayi/site/xhprof/xhprof_lib/utils/xhprof_runs.php";  
-// xhprof_enable(XHPROF_FLAGS_MEMORY);
+//xhprof_lib在下载的包里存在这个目录,记得将目录包含到运行的php代码中
+// include_once "/data/www/xhprof/xhprof_lib/utils/xhprof_lib.php";  
+// include_once "/data/www/xhprof/xhprof_lib/utils/xhprof_runs.php";  
+//xhprof_enable(XHPROF_FLAGS_MEMORY);
 try
 {
 	/* error debug */
