@@ -106,30 +106,20 @@ function cmd_stdin()
 function arg_parser()
 {
 	$argv = $_SERVER['argv'];
-	$argc = $_SERVER['argc'];
-	$argv_array = array();
-	if ( $argc > 1 )
+	unset($argv[0]);
+
+	for ($i = 1; $i < $_SERVER['argc']; $i++)
 	{
-		for( $i = 1 ; $i < $argc ; $i++)
+		if (substr($argv[$i],0,1) == '-' && isset($argv[$i+1]) && substr($argv[$i+1],0,1) != '-' )
 		{
-			if ( substr($argv[$i],0,1) == "-" )
-			{
-				if ( $argc > ($i+1) )
-				{
-					if ( substr($argv[$i+1],0,1) != "-" )
-					{
-						$argv_array[$argv[$i]] = $argv[$i+1];
-						$i++;
-						continue;
-					}
-					else
-					{
-						$argv_array[$argv[$i]] = '';
-					}
-				}
-			}
-		} 
+			$_ARG[$argv[$i]] = $argv[$i+1];
+			continue;
+		}
+		if (substr($argv[$i],0,1) == '-' )
+		{
+			$_ARG[$argv[$i]] = 'true';
+		}
 	}
-	return $argv_array;
+	return $_ARG;
 }
 ?>

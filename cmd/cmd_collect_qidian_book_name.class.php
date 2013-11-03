@@ -41,8 +41,7 @@ class cmd extends zhuayi
 	function run()
 	{
 		global $argv_array;
-		
-		/* 采集小说ID */
+				/* 采集小说ID */
 		$page = (empty($argv_array['-page'])?1:$argv_array['-page'])+self::$nowindex;
 		self::$qidian_category_url = str_replace("#page#",$page,self::$qidian_category_url);
 
