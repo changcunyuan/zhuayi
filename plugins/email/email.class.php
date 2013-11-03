@@ -26,7 +26,7 @@
  * -------------------------------------------------
  */
 
-include_once dirname(__FILE__).'/phpmailer.class.php';
+include dirname(__FILE__).'/phpmailer.class.php';
 
 class email extends phpmailer
 {

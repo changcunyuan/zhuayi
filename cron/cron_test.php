@@ -11,7 +11,7 @@
  * @QQ			 2179942
  * php cron_test.php -c /data/vhosts/baidu_soft.conf -soft_id  ~/Downloads/soft_id  -out ~/Downloads/hao123.xml
  */
-include_once dirname(__FILE__)."/cron.inc.php";
+include dirname(__FILE__)."/cron.inc.php";
 class cron_test extends zhuayi
 {
 

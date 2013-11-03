@@ -370,6 +370,7 @@ class http
 
 		//$this->results = end($results);
 		$this->results_tmp = array();
+		$headers = array();
 		foreach ($results as $val)
 		{
 			if (strpos('^'.$val,'HTTP/1.1') > 0)

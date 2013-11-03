@@ -22,16 +22,21 @@ define('APP_ROOT', ZHUAYI_ROOT.'/zhuayi/');
 
 define('PLUGINS_ROOT', ZHUAYI_ROOT.'/plugins/');
 
+if (!isset($_SERVER['HTTP_HOST']))
+{
+	$_SERVER['HTTP_HOST'] = ZHUAYI_ROOT;
+}
+
 require ZHUAYI_ROOT.'/config/config.php';
 
 /* 设置cookie 域 */
 $cookiedomain = explode(':',$config['cookie']['cookiedomain']);
 ini_set('session.cookie_domain', $cookiedomain[0]);
-ini_set('session.save_handler', $config['cookie']['save_handler']);
-ini_set('session.save_path', $config['cookie']['cookiepath']);
-
-if ($config['cookie']['save_handler'] == 'memcache')
+if ($config['cookie']['save_handler'] == 'memcached')
 {
+	ini_set('session.save_handler', $config['cookie']['save_handler']);
+	ini_set('session.save_path', $config['cookie']['cookiepath']);
+
 	require PLUGINS_ROOT.'/cookie/session.class.php';
 	$session = new session();
 	session_set_save_handler(
@@ -45,12 +50,6 @@ if ($config['cookie']['save_handler'] == 'memcache')
 }
 
 session_start();
-
-
-if (!isset($_SERVER['HTTP_HOST']))
-{
-	$_SERVER['HTTP_HOST'] = ZHUAYI_ROOT;
-}
 
 require ZHUAYI_ROOT.'/plugins/core/zhuayi.php';
 

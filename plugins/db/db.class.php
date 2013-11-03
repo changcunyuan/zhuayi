@@ -86,9 +86,6 @@ class db
 	public $objects = array();
 
 
-	/* 是否记录操作日志 */
-	public $insert_log = true;
-
 	/**
 	 * 构造函数
 	 * @param find $fields 数据库配置文件 
@@ -226,8 +223,6 @@ class db
 		$query = $this->_query($sql,0);
 		if ($query)
 		{
-			self::insert_log('delete',$before_content,'','',$log_where);
-
 			return true;
 		}
 		else
@@ -260,10 +255,6 @@ class db
 		if ($query)
 		{
 			$insert_id = $this->insert_id();
-			if ($log === true)
-			{
-				self::insert_log('insert','',$fields,$insert_id);
-			}
 			return $insert_id;
 		}
 		else
@@ -295,10 +286,6 @@ class db
 		$query = $this->_query($sql,0);
 		if ($query)
 		{
-			if ($log === true)
-			{
-				self::insert_log('replace into','',$fields,$insert_id);
-			}
 			return true;
 		}
 		else
@@ -383,11 +370,6 @@ class db
 		$query = $this->_query($sql,0);
 		if ($query)
 		{
-			if ($log === true)
-			{
-				self::insert_log('update',$before_content,$log_fields,$insert_id,$log_where);
-			}
-			
 			return true;
 		}
 		else
@@ -470,34 +452,34 @@ class db
 			case 'select':
 				if (!is_array($table))
 				{
-					$reset['sql'] = " select {$factor} from `".T."{$table}`" ;
+					$reset['sql'] = " select {$factor} from `{$table}`" ;
 					$reset['table'] = trim($table) ;
 				}
 				else
 				{
 					$table  = array_values($table);
-					$reset['sql'] = " select {$table[1]} from `".T."{$table[0]}`";
+					$reset['sql'] = " select {$table[1]} from `{$table[0]}`";
 					$reset['table'] = trim($table[0]);
 				}
 				break;
 			case 'count':
-				$reset['sql'] = " select count(*) as count from `".T."{$table}`";	
+				$reset['sql'] = " select count(*) as count from `{$table}`";	
 				$reset['table'] = trim($table) ;
 				break;
 			case 'update':
-				$reset['sql'] = " update `".T."{$table}` set ";
+				$reset['sql'] = " update `{$table}` set ";
 				$reset['table'] = trim($table) ;
 				break;
 			case 'insert':
-				$reset['sql'] = " insert into `".T."{$table}` ";
+				$reset['sql'] = " insert into `{$table}` ";
 				$reset['table'] = trim($table) ;
 				break;
 			case 'replace_into':
-				$reset['sql'] = " replace into `".T."{$table}` ";
+				$reset['sql'] = " replace into `{$table}` ";
 				$reset['table'] = trim($table) ;
 				break;
 			case 'delete':
-				$reset['sql'] = " delete from `".T."{$table}` ";
+				$reset['sql'] = " delete from `{$table}` ";
 				$reset['table'] = trim($table) ;
 				break;
 			default:
@@ -728,7 +710,7 @@ class db
 		{
 			$this->tablename = $table;
 			/* 如果存在 admin_%Y-m-d% 数据,则进行分表操作 */
-			if (strpos(T.$table,'%') !== false)
+			if (strpos($table,'%') !== false)
 			{
 				if (isset(self::$sub_table_list[$table]))
 				{
@@ -770,7 +752,7 @@ class db
 		
 		if ($reset === false)
 		{
-			$query = $this->_query(" show fields from `".T."{$table}`",1);
+			$query = $this->_query(" show fields from `{$table}`",1);
 
 			$fields = $this->_fetch_array($query);
 
@@ -855,7 +837,7 @@ class db
 		// exit;
 
 		// var_dump($this->objects);
-		$object = $this->objects[$this->laset_db_name];
+		$object = isset($this->objects[$this->laset_db_name])?$this->objects[$this->laset_db_name]:array();
 
 		if (!isset($object) || !isset($this->objects[$this->laset_db_name][$slave_name]))
 		{
@@ -930,8 +912,11 @@ class db
 			}
 		}
 		
-		$db_ex_end_time = sprintf("%0.3f",zhuayi::getmicrotime()-$db_exe_start_time);
-		$this->perf_add_count($slave,$sql,$db_ex_end_time,$this->laset_db_name);
+		if (isset($_GET['db_debug']))
+		{
+			$db_ex_end_time = sprintf("%0.3f",zhuayi::getmicrotime()-$db_exe_start_time);
+			$this->perf_add_count($slave,$sql,$db_ex_end_time,$this->laset_db_name);
+		}
 
 		return $sth;
 
@@ -968,8 +953,6 @@ class db
 		{
 			$this->$key = $val;
 		}
-		/* 定义表前缀 */
-		define('T', $this->db_config[$db_config_key]['mysql_pre']);
 		return $this;
 
 	}
@@ -1034,53 +1017,5 @@ class db
 			echo "</table><br>&nbsp;<br><br/>";
 			
 		}
-	}
-
-####################################################################################
-// 写入日志
-	function insert_log($act_type='',$before_content='',$last_content='',$rongyu_key='',$where='')
-	{
-		if ($this->insert_log === false)
-		{
-			return true;
-		}
-		$insert = array();
-		$insert['type'] = 'mysql';
-		$insert['server_ip'] = $this->mysql_host_s;
-		$insert['database'] = $this->mysql_db;
-		$insert['tablename'] = $this->tablename;
-
-		foreach ($before_content as $key=>$val)
-		{
-			$before_content[$key] = mysql_escape_string($val);
-		}
-		foreach ($last_content as $key=>$val)
-		{
-			$last_content[$key] = mysql_escape_string($val);
-		}
-		if (is_array($before_content))
-		{
-			$before_content = serialize($before_content);
-		}
-
-		if (is_array($last_content))
-		{
-			$last_content = serialize($last_content);
-		}
-
-		$admin = cookie::ret_cookie('admin_user');
-
-		$insert['act_type'] = $act_type;
-		$insert['before_content'] = $before_content;
-
-		$insert['last_content'] = $last_content;
-		$insert['rongyu_key'] = $rongyu_key;
-		$insert['where'] = mysql_escape_string(print_r($where,true));
-		$insert['create_username'] = $admin['username'];
-		$insert['create_userid'] = $admin['id'];
-		$insert['create_time'] = date("Y-m-d H:i:s");
-		$insert['create_ip'] = ip::get_ip(true);
-
-		return self::select_db('default')->insert('admin_log_new',$insert,false);
 	}
 }

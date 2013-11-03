@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_ALL^E_NOTICE^E_WARNING);
+error_reporting(E_ALL^E_DEPRECATED);
 $argv_array = arg_parser();
 
 /* 如果是文件夹 */
@@ -59,7 +59,7 @@ if (isset($argv_array['-recache']))
 	$_GET['recache'] = 1;
 }
 
-include_once dirname(__FILE__)."/../config/config.inc.php";
+include dirname(__FILE__)."/../config/config.inc.php";
 function echo_strings($strings)
 {
 	echo " ";
@@ -80,8 +80,13 @@ function get_srv_config($file)
 	foreach ($array_config as $val)
 	{
 		$val = trim($val);
-		if (strpos($val,'#') === false && !empty($val) && substr($val,0,1) == 'S')
+		if (strpos($val,'#') === false && !empty($val) && (substr($val,0,3) == 'Set' || substr($val,0,13) == 'fastcgi_param'))
 		{
+			/* 兼容nginx 去掉最后一个; */
+			if (substr($val,0,13) == 'fastcgi_param')
+			{
+				$val = substr($val, 0,(strlen($val)-1));
+			}
 			$val = explode(' ', $val);
 			$_SERVER[$val[1]] = trim($val[2]);
 		}
