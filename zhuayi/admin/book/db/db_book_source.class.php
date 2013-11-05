@@ -62,5 +62,19 @@ class db_book_source extends zhuayi
 		return self::$_instance->db->select_db(self::$db_name_conf)->update(self::$table_name,$update_array,"id = {$id}");
 
 	}
+
+
+	static function get_book_source_by_book_id($book_id)
+	{
+		$book_id = intval($book_id);
+		if (empty($book_id))
+		{
+			throw new Exception("参数错误!", -1);
+		}
+
+		$where = array();
+		$where['book_id'] = $book_id;
+		return self::$_instance->db->select_db(self::$db_name_conf)->fetch(self::$table_name,$where);
+	}
 }
 ?>

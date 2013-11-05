@@ -29,13 +29,19 @@ if (!isset($_SERVER['HTTP_HOST']))
 
 require ZHUAYI_ROOT.'/config/config.php';
 
+/**
+ * --------------------------------
+ * Zhuayi cookie
+ * --------------------------------
+ */
+//COOKIE_PATH is tmp or tcp://127.0.0.1 多台服务器共享使用多个 memcached server 时用逗号","隔开
 /* 设置cookie 域 */
-$cookiedomain = explode(':',$config['cookie']['cookiedomain']);
+$cookiedomain = explode(':',$_SERVER['HTTP_HOST']);
 ini_set('session.cookie_domain', $cookiedomain[0]);
-if ($config['cookie']['save_handler'] == 'memcached')
+if (isset($_SERVER['COOKIE_HANDLER']) && $_SERVER['COOKIE_HANDLER'] == 'memcache')
 {
-	ini_set('session.save_handler', $config['cookie']['save_handler']);
-	ini_set('session.save_path', $config['cookie']['cookiepath']);
+	ini_set('session.save_handler', $_SERVER['COOKIE_HANDLER']);
+	ini_set('session.save_path', $_SERVER['COOKIE_PATH']);
 
 	require PLUGINS_ROOT.'/cookie/session.class.php';
 	$session = new session();

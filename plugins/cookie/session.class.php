@@ -44,7 +44,7 @@ class session
     static function sess_get($sess_id)
     {
     	global $config;
-    	self::_get_mc($config['cookie']['cookiepath']);
+    	self::_get_mc($_SERVER['COOKIE_PATH']);
         self::unserializesession(self::$_mc_instance->get($sess_id));
         return true;
     }
@@ -52,7 +52,7 @@ class session
     static function sess_set($sid, $data)
     {
     	global $config;
-    	self::_get_mc($config['cookie']['cookiepath']);
+    	self::_get_mc($_SERVER['COOKIE_PATH']);
         self::$_mc_instance->set($sid,$data,MEMCACHE_COMPRESSED,$_SERVER['COOKIE_TIMEOUT']); 
         return true;
     }

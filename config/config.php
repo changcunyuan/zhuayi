@@ -17,16 +17,6 @@ $config['web']['error_url'] = 'http://'.$_SERVER['HTTP_HOST'];
 
 /**
  * --------------------------------
- * Zhuayi cookie
- * --------------------------------
- */
-$config['cookie']['cookiedomain'] = $_SERVER['HTTP_HOST'];
-$config['cookie']['save_handler'] = $_SERVER['COOKIE_HANDLER']; //files oe memcache
-$config['cookie']['outtime'] = $_SERVER['BAIDU_MEMCACHED_OUTTIME']; //过期时间
-$config['cookie']['cookiepath'] = $_SERVER['COOKIE_PATH']; ///tmp or tcp://127.0.0.1 多台服务器共享使用多个 memcached server 时用逗号","隔开
-
-/**
- * --------------------------------
  * Zhuayi CDN地址 
  * --------------------------------
  */
@@ -46,7 +36,7 @@ $config['debug'] = $_SERVER['DEBUG'];
  * Zhuayi URL路由 默认控制器
  * --------------------------------
  */
-$config['url_config']['default'] = 'index';
+$config['url_config']['default'] = 'book';
 
 /**
  * --------------------------------
@@ -55,11 +45,14 @@ $config['url_config']['default'] = 'index';
  */
 
 /* 是否开启二级域名支持 */
-$config['url_domain'] = true;
+$config['url_domain'] = false;
 
 /* 后台rewrite规则 */
 $config['url_config']['routing']['^\/admin(.*)'] = '/error/$1';
 $config['url_config']['routing']['^\/zpadmin(.*)'] = '/admin$1';
+
+
+$config['url_config']['routing']['^\/intro\/(.*?)\/([0-9]+)'] = '/book/intro/$1/$2/';
 
 
 ?>

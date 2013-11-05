@@ -12,6 +12,8 @@
 // include_once "/data/www/xhprof/xhprof_lib/utils/xhprof_lib.php";  
 // include_once "/data/www/xhprof/xhprof_lib/utils/xhprof_runs.php";  
 //xhprof_enable(XHPROF_FLAGS_MEMORY);
+ini_set( "display_errors",true);
+error_reporting(E_ALL);
 try
 {
 	/* error debug */

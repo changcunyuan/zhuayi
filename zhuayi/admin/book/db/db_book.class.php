@@ -41,7 +41,7 @@ class db_book extends zhuayi
 		$insert_array['update_status'] = $update_status;
 		$insert_array['wordcount'] = $wordcount;
 		$insert_array['litpic'] = $litpic;
-		$insert_array['update_time'] = $update_time;
+		// $insert_array['update_time'] = $update_time;
 		return self::$_instance->db->select_db(self::$db_name_conf)->insert(self::$table_name,$insert_array);
 	}
 
@@ -60,6 +60,34 @@ class db_book extends zhuayi
 		$where['book_name'] = $book_name;
 		$where['author_id'] = $author_id;
 		return self::$_instance->db->select_db(self::$db_name_conf)->fetch(self::$table_name,$where);
+	}
+
+	static function update_book_info_update_status_by_id($last_chapter,$update_status,$update_time,$wordcount,$book_id)
+	{
+		$update_status = intval($update_status);
+		$last_chapter = mysql_escape_string($last_chapter);
+		$update_time = mysql_escape_string($update_time);
+		$book_id = intval($book_id);
+
+		if (empty($book_id))
+		{
+			throw new Exception("参数错误!", -1);
+		}
+
+		$update = array();
+		$update['last_chapter'] = $last_chapter;
+		$update['update_status'] = $update_status;
+		$update['update_time'] = $update_time;
+		$update['wordcount'] = $wordcount;
+		return self::$_instance->db->select_db(self::$db_name_conf)->update(self::$table_name,$update," id = {$book_id}");
+	}
+
+	static function get_book_info_by_update_status($update_status,$limit)
+	{
+		$update_status = intval($update_status);
+		$where = array();
+		$where['update_status'] = $update_status;
+		return self::$_instance->db->select_db(self::$db_name_conf)->fetch_row(self::$table_name,$where,'',$limit);
 	}
 }
 ?>

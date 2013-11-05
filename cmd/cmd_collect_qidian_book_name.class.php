@@ -41,15 +41,16 @@ class cmd extends zhuayi
 	function run()
 	{
 		global $argv_array;
-				/* 采集小说ID */
+		
+		/* 采集小说ID */
 		$page = (empty($argv_array['-page'])?1:$argv_array['-page'])+self::$nowindex;
-		self::$qidian_category_url = str_replace("#page#",$page,self::$qidian_category_url);
+		$qidian_category_url = str_replace("#page#",$page,self::$qidian_category_url);
 
 		/* 开始采集 */
-		$this->http->get(self::$qidian_category_url);
+		$this->http->get($qidian_category_url);
 
 		echo "=================================================================================\n";
-		echo "www.qidian.com 第{$page}页 ".self::$qidian_category_url."\n";
+		echo "www.qidian.com 第{$page}页 ".$qidian_category_url."\n";
 		echo "_________________________________________________________________________________\n";
 	
 		//$strings = file_get_contents('/Users/zhuayi/1.html');
