@@ -11,8 +11,20 @@
 class mod_book extends zhuayi
 {
 	
-	static $book_intro_url = "/intro/#book_name#/#book_id#";
+	static $book_intro_url = "/detail/#book_name#/#book_id#";
 
 	
+	static function replace_description($params)
+	{
+		extract($params, EXTR_OVERWRITE);
+		$description = str_replace("&nbsp;","",$description);
+		$description = htmlspecialchars_decode($description);
+		// $description = strip_tags($description);
+		// $description = str_replace("\n","<br/>",$description);
+		// $description = str_replace("\r","<br/>",$description);
+		$description = str_replace("　　","",$description);
+
+		return $description;
+	}
 }
 ?>

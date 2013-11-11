@@ -649,8 +649,8 @@ class ZException extends Exception
         		{
         			$line = $this->getLine();
         		}
-        		// output::error($message,$file,$line,$code);;
-        		// exit;
+        		output::error($message,$file,$line,$code);;
+        		exit;
         		if ($is_admin === false && !isset($_GET['error_debug']))
         		{
         			output::url($config['web']['error_url']);

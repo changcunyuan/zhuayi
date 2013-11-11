@@ -4,7 +4,7 @@
  * Zhuayi 网站名称
  * --------------------------------
  */ 
-$config['web']['webname'] = 'Zhuayi';
+$config['web']['webname'] = '0611玄幻小说网';
 $config['web']['appname'] = 'zhuayi';
 
 /**
@@ -12,7 +12,7 @@ $config['web']['appname'] = 'zhuayi';
  * Zhuayi 网站地址
  * --------------------------------
  */
-$config['web']['weburl'] = 'http://'.$_SERVER['HTTP_HOST'];
+$config['web']['weburl'] = 'http://0611.cc';
 $config['web']['error_url'] = 'http://'.$_SERVER['HTTP_HOST'];
 
 /**
@@ -20,9 +20,6 @@ $config['web']['error_url'] = 'http://'.$_SERVER['HTTP_HOST'];
  * Zhuayi CDN地址 
  * --------------------------------
  */
-$config['cdn']['url'] = 'http://img1sw.baidu.com';
-$config['cdn']['css_url'] = $config['cdn']['url'].'/www/jiguang';
-$config['cdn']['version'] = '1';
 
 /**
  * --------------------------------
@@ -52,7 +49,7 @@ $config['url_config']['routing']['^\/admin(.*)'] = '/error/$1';
 $config['url_config']['routing']['^\/zpadmin(.*)'] = '/admin$1';
 
 
-$config['url_config']['routing']['^\/intro\/(.*?)\/([0-9]+)'] = '/book/intro/$1/$2/';
+$config['url_config']['routing']['^\/detail\/(.*?)\/([0-9]+?)$'] = '/book/detail/$1/$2/';
 
 
 ?>

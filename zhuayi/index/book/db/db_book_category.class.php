@@ -1,6 +1,6 @@
 <?php
 /*
- * db_book.php     Zhuayi 小说
+ * db_book_category.php     Zhuayi 小说分类
  *
  * @copyright    (C) 2005 - 2010  zhuayi
  * @licenes      http://www.zhuayi.net
@@ -10,24 +10,23 @@
  */
 
  
-class db_book extends zhuayi
+class db_book_category extends zhuayi
 {
-	static $table_name = "book";
-	static $db_name_conf = 'book';
+	private static $table_name = "book_category";
+	private static $db_name_conf = 'book';
 	
 	public static $_instance;
-
-	static function get_book_info_by_book_id($book_id)
+	
+	static function get_book_category_by_id($id)
 	{
-		$book_id = intval($book_id);
+		$id = intval($id);
 
-		if (empty($book_id))
+		if (empty($id))
 		{
 			throw new Exception("参数错误!", -1);
 		}
+		$where['id'] = $id;
 
-		$where = array();
-		$where['id'] = $book_id;
 		return self::$_instance->db->select_db(self::$db_name_conf)->fetch(self::$table_name,$where);
 	}
 }

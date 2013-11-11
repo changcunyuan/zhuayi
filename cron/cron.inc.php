@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_ALL^E_DEPRECATED);
+error_reporting(E_ALL^E_DEPRECATED^E_NOTICE^E_WARNING);
 $argv_array = arg_parser();
 
 /* 如果是文件夹 */
@@ -122,4 +122,22 @@ function arg_parser()
 	}
 	return $_ARG;
 }
+
+function console_log($action,$strings,$sleep = 0,$setup = 0)
+{
+	if ($setup == 0)
+	{
+		echo "[".date("Y-m-d H:i:s")."] {$_SERVER['PHP_SELF']} -> ";
+	}
+	else
+	{
+		echo ">";
+	}
+	echo "[{$action}] : {$strings}\n";
+	if ($sleep > 0)
+	{
+		sleep($sleep);
+	}
+}
+
 ?>

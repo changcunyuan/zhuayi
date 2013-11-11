@@ -41,8 +41,12 @@ class cmd extends zhuayi
 	function run()
 	{
 		global $argv_array;
-		
-		$nowindex = (empty($argv_array['-page'])?0:$argv_array['-page'])+self::$nowindex;
+
+		$nowindex = file_get_contents($argv_array['-page_file']);
+		if (empty($nowindex))
+		{
+			$nowindex = 0;
+		}
 
 		db_book::$_instance = &$this;
 		db_book_source::$_instance = &$this;
@@ -50,21 +54,20 @@ class cmd extends zhuayi
 		mod_book_collect_qidian_book::$_instance = &$this->http;
 		
 		/* 取未完结小说 */
-		$book_info = db_book::get_book_info_by_update_status(1,"{$nowindex},1");
+		$book_info = db_book::get_book_info_by_update_status(1,$nowindex.",1");
 		$book_info = $book_info[0];
 		if (empty($book_info))
 		{
-			throw new Exception("完了", -1);
+			return console_log("Select"," No data.",3);
 		}
 
-		echo "小说名: {$book_info['book_name']}";
+		console_log("Start","book_id = {$book_info['id']},book_name = {$book_info['book_name']}",0);
 
 		/* 查询来源 */
 		$source_info = db_book_source::get_book_source_by_book_id($book_info['id']);
 
 		/* 采集小说信息,是否有更新 */
 		$qidian_book_info = mod_book_collect_qidian_book::get_qidian_book_info_by_source_info($source_info);
-
 		if ($qidian_book_info == 404)
 		{
 			/* 更新表 */
@@ -75,48 +78,51 @@ class cmd extends zhuayi
 															$book_info['wordcount'],
 															$book_info['id']
 														);
-			echo "@@@@@@http_code is 404 delete @@@@@@\n";
+			console_log("check update","http status 404",0,1);
 			return false;
 		}
 
 		if (empty($qidian_book_info['book_name']))
 		{
-			echo "@@@@@@{$book_info['book_name']}  error sleep 30s @@@@@@\n";
-			sleep(30);
+			console_log("check update","collect fail",10,1);
 			return false;
 		}
 
 		if (strtotime($book_info['update_time']) == strtotime($qidian_book_info['update_time']))
 		{
-			echo "     章节状态: 无更新\n";
+			console_log("check update","no update",0,1);
 		}
 		else
 		{
-			echo "\n------------------------------------------------------------------------\n";
 			/* 章节采集 */
 			$chapters_list = mod_book_collect_qidian_book::collect_book_chapters_list_by_source_info($source_info);
-	
-			foreach ($chapters_list as $val)
+			$chapter_url = array();
+			$is_ok_array = array();
+			foreach ($chapters_list as $key=>$val)
 			{
 				try
 				{
-					$write_status = "empty";
-					$is_ok = 0;
-
 					$chapters_id = db_book_chapters::insert_book_chapters($val['book_id'],$val['title']);
 
 					if (!empty($val['url']))
 					{
 						$content = mod_book_collect_qidian_book::_get_qidian_free_content_by_url($val['url']);
+						$content = mod_book::replace_chapters_content($content);
 
-						if (mod_book::write_book_content_by_book_id_chapters_id($val['book_id'],$chapters_id,$content))
+						/* 上传BCS */
+						$is_ok_array[$key] = mod_book::write_book_content_by_book_id_chapters_id($val['book_id'],$chapters_id,$content);
+						$is_ok_array[$key]['title'] = $val['title'];
+
+						if ($is_ok_array[$key] != false )
 						{
-							$write_status = "success";
-							$is_ok = 1;
-							db_book_chapters::update_book_chapters_is_ok_by_chapters_id($is_ok,$chapters_id);
+							db_book_chapters::update_book_chapters_is_ok_by_chapters_id(1,$chapters_id);
+							console_log("Add chapters","{$val['title']} success {$is_ok_array[$key][1]}",0,1);
 						}
 					}
-					echo "ADD章节: {$val['title']} Write: {$write_status}\n";
+					else
+					{
+						console_log("Add chapters","no available url",0,1);
+					}
 					
 				}
 				catch (Exception $e)
@@ -125,6 +131,29 @@ class cmd extends zhuayi
 				}
 			}
 
+			/* 合并txt */
+			$merge_text = mod_book::merge_text($is_ok_array,$book_info['id'],$book_info['book_name']);
+			if ($merge_text === false)
+			{
+				console_log("merge text","fail",0,1);
+			}
+			else
+			{
+				console_log("merge text","success {$merge_text}",0,1);
+			}
+
+
+			/* 生成epub 
+			$epub = mod_book::create_epub($is_ok_array,$book_info['id'],$book_info['book_name'],$book_info['description'],$book_info['litpic']);
+			if ($epub === false)
+			{
+				console_log("create epub","fail",0,1);
+			}
+			else
+			{
+				console_log("create epub","success {$epub}",0,1);
+			}
+			*/
 			/* 更新表 */
 			db_book::update_book_info_update_status_by_id(
 															$val['title'],
@@ -135,9 +164,10 @@ class cmd extends zhuayi
 														);
 		}
 
-		self::$nowindex++;
+		$nowindex++;
+		file_put_contents($argv_array['-page_file'],$nowindex);
 		$sleep = rand(1,10);
-		echo "@@@@@@sleep:{$sleep}@@@@@@\n";
+		console_log("END","sleep {$sleep}s",rand(1,10),1);
 		sleep($sleep);
 		return false;
 

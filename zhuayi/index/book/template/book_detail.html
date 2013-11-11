@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Language" content="zh-CN"/>
+<meta name="keywords" content="{%$show.book_info.book_name%},{%$show.category.category_name%},{%$show.parent_category.category_name%}" />
+<meta name="description" content="{%$show.book_info.description%}" />
+<title>{%$show.book_info.book_name%} {%$show.category.category_name%} {%$show.parent_category.category_name%} - {%$config.web.webname%}</title>
+
+<style type="text/css">
+body{font-size:12px/20px arial, helvetica, verdana, tahoma, sans-serif;margin:0px;padding:0px;color:#333333;}
+.head{height:60px;background:#f2f2f2;width:100%;}
+.box{width:1190px;}
+.center{margin:0 auto;}
+.overflow{overflow:hidden;}
+.fleft{float:left}
+.fright{float:right;}
+a,a:link,a:visited{text-decoration: none;}
+.left-10{margin-left:10px;}
+.right-10{margin-right:10px;}
+.icon{display: inline-block;line-height: 0;vertical-align: middle;}
+.interval{margin:0px 5px 0px 5px;}
+h1,h2,h3,h4,p{margin:0px;padding:0px;font-size:14px;}
+.yahei{font-family: "Microsoft YaHei","微软雅黑",helvetica,arial,verdana,tahoma,sans-serif;}
+.color{color:#3399e0;}
+.color555{color:#555;}
+.button{background:#3399e0;padding:5px 10px 5px 10px;color:#fff;font-family: "Microsoft YaHei","微软雅黑",helvetica,arial,verdana,tahoma,sans-serif;display:inline-block;font-weight: normal}
+
+.head a{font-size:14px;color:#555;line-height: 60px;}
+.head .interval{line-height:60px;}
+.logo{display:inline-block;width:140px;height:50px;border:1px #ccc solid;margin:5px 0px 0px 0px;}
+.ico_charts,.ico_user,.ico_history,.ico_upload{width:20px;height:20px;background:url(/statics/book/header.png) -48px -2px no-repeat;}
+.ico_user{background-position:0px -2px; }
+.ico_history{background-position:-2px -23px}
+.ico_upload{background-position:-95px -2px;}
+#top_search{background: #fff;border: 2px solid #a0a0a0;border-right: 0 none;color: #555;font-family: arial,helvetica,verdana,tahoma,sans-serif;font-size: 14px;line-height: 20px;vertical-align: middle;outline: 0 none;padding: 8px;margin: 0;height: 20px;width: 432px;}
+.top_form{margin-top:10px;}
+#search_btn{width:40px;height:40px;background:#14a8e4;background:url(/statics/book/header.png) 0px -48px;text-indent:-9999px;}
+
+.nav{color:#333;margin-top:10px;border-bottom: 3px solid #e6e6e6;padding-bottom:10px;}
+.nav a{color:#3399e0;}
+._nav{color:#909090;font-size:13px;}
+.nav .title{margin-top:5px;}
+.nav .title h1,.title h3{font-size:24px;}
+.nav .title h1{color:#3399e0;}
+.nav .title h3{font-size:20px;margin:5px 0px 0px 10px;}
+
+.detail{width:860px;}
+._detail{margin-top:10px;height:242px;}
+._detail h2{font-size:24px;color:#333;}
+._detail .book_logo{margin-right:15px;border:1px #ccc solid}
+p._detail_info{font-size:14px;margin:13px 0px 13px 0px;}
+p._detail_info span{display:inline-block;width:200px;}
+p._detail_info a{margin-right:10px;}
+.desc{padding:10px;background:#f2f2f2;color:#7f7f7f;font-size:14px;line-height:180%;margin-top:10px;}
+</style>
+
+</head>
+<body>
+<div class="head">
+	<div class="box center overflow">
+		<a href="#" class="logo fleft"></a>
+		<a href="#" class="left-10 right-10 fleft yahei">首页</a>
+		<a href="#" class="left-10 right-10 fleft yahei">
+			<i class="icon ico_charts"></i>小说Top榜
+		</a>
+		<form class="fleft top_form">
+			<input type="input" class="fleft" id="top_search" value="凡人修仙传"/>
+			<a href="javascript:void(0)" class="fleft" id="search_btn">搜索</a>
+		</form>
+
+		<div class="fright">
+			<a href="#" class="left-10 fleft yahei">
+				<i class="icon ico_user"></i>登录
+			</a>
+			<span class="fleft interval">|</span>
+			<a href="#" class="right-10 fleft yahei">
+				<i class="icon"></i>注册
+			</a>
+			<a href="#" class="left-10 right-10 fleft yahei">
+				<i class="icon ico_history"></i>推送记录
+			</a>
+			<a href="#" class="left-10 right-10 fleft yahei">
+				<i class="icon ico_upload"></i>TXT转EPUB
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="box center overflow">
+	<div class="nav overflow">
+		<div class="_nav">
+			<a href="#">奇幻</a>
+			<span> > </span>
+			<a href="#">西方玄幻</a>
+		</div>
+
+		<div class="title overflow yahei">
+			<h1 class="fleft">{%$show.book_info.book_name%}: </h1>
+			<h3 class="fleft"> {%$show.book_info.last_chapter%}</h1>
+		</div>
+	</div>
+</div>
+
+<div class="box center overflow">
+	<div class="fleft detail">
+		<div class="_detail overflow">
+			<img src="http://wfqqreader.3g.qq.com/cover/744/235744/t7_235744.jpg" width="180" height="240" class="book_logo fleft"/>
+			<div class="fleft">
+				<h2 class="yahei">{%$show.book_info.book_name%}</h2>
+				<p class="overflow _detail_info">
+					<span class="fleft">作者:张翠山</span>
+					<span class="fleft">类型:古典修仙</span>
+				</p>
+				<p class="overflow _detail_info">
+					<span class="fleft">来源:起点</span>
+					<span class="fleft">状态:连载</span>
+				</p>
+				<p class=" _detail_info">总字数:140万</p>
+				<p class=" _detail_info">最近更新:<b class="color">那一夜的激情</b></p>
+				<p class=" _detail_info">更新时间:2013-11-02</p>
+				<p class=" _detail_info color555">本站珍重提醒: 本站资源均来自采集与网友上传 ,请下载后24小时内删除<p>
+				<p class="ovefflow _detail_info">
+					<a href="#" class="button">下载TXT</a>
+					<a href="#" class="button">下载Epub</a>
+					<a href="#" class="button">推送Kindle</a>
+				</p>
+			</div>
+		</div>
+		<div class="desc yahei">
+			{%replace_description description=$show.book_info.description%}
+		</div>
+	</div>
+
+</div>
+
+</body>
