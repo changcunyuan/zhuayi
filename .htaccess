@@ -1,0 +1,20 @@
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+
+RewriteRule ^(.*?)$ /index.php/$1 [QSA,PT,L]
+
+DirectoryIndex DirectoryIndex index.shtml index.html index.php
+
+AddType text/html .shtml
+
+AddOutputFilter INCLUDES .shtml
+
+AddType text/html .html
+
+
+</IfModule>

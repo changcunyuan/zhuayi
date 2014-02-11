@@ -1,237 +1,91 @@
-# 大菠萝
+### cmd下执行PHP时,如何使用SERVER变量和argv参数
 
+```
+php  cron_test.php  -c /data/vhosts/baidu_soft.conf  
+```
 
-![Mou icon](http://mouapp.com/Mou_128.png)
-
-## Overview
-
-**Mou**, the missing Markdown editor for *web developers*.
-
-### Syntax
-
-#### Strong and Emphasize 
-
-**strong** or __strong__ ( Cmd + B )
-
-*emphasize* or _emphasize_ ( Cmd + I )
-
-**Sometimes I want a lot of text to be bold.
-Like, seriously, a _LOT_ of text**
-
-#### Blockquotes
-
-> Right angle brackets &gt; are used for block quotes.
-
-#### Links and Email
-
-An email <example@example.com> link.
-
-Simple inline link <http://chenluois.com>, another inline link [Smaller](http://smallerapp.com), one more inline link with title [Resize](http://resizesafari.com "a Safari extension").
-
-A [reference style][id] link. Input id, then anywhere in the doc, define the link with corresponding id:
-
-[id]: http://mouapp.com "Markdown editor on Mac OS X"
-
-Titles ( or called tool tips ) in the links are optional.
-
-#### Images
-
-An inline image ![Smaller icon](http://smallerapp.com/favicon.ico "Title here"), title is optional.
-
-A ![Resize icon][2] reference style image.
-
-[2]: http://resizesafari.com/favicon.ico "Title"
-
-#### Inline code and Block code
-
-Inline code are surround by `backtick` key. To create a block code:
-
-	Indent each line by at least 1 tab, or 4 spaces.
-    var Mou = exactlyTheAppIwant; 
-
-####  Ordered Lists
-
-Ordered lists are created using "1." + Space:
-
-1. Ordered list item
-2. Ordered list item
-3. Ordered list item
-
-#### Unordered Lists
-
-Unordered list are created using "*" + Space:
-
-* Unordered list item
-* Unordered list item
-* Unordered list item 
-
-Or using "-" + Space:
-
-- Unordered list item
-- Unordered list item
-- Unordered list item
-
-#### Hard Linebreak
-
-End a line with two or more spaces will create a hard linebreak, called `<br />` in HTML. ( Control + Return )  
-Above line ended with 2 spaces.
-
-#### Horizontal Rules
-
-Three or more asterisks or dashes:
+**
+zhuayi框架会对 `argv` 参数  进行了格式化数组处理,处理结果放在`argv_array`数组中,直接`global`引用即可!
+**
 
 ***
 
----
-
-- - - -
-
-#### Headers
-
-Setext-style:
-
-This is H1
-==========
-
-This is H2
-----------
-
-atx-style:
-
-# This is H1
-## This is H2
-### This is H3
-#### This is H4
-##### This is H5
-###### This is H6
-
-
-### Extra Syntax
-
-#### Footnotes
-
-Footnotes work mostly like reference-style links. A footnote is made of two things: a marker in the text that will become a superscript number; a footnote definition that will be placed in a list of footnotes at the end of the document. A footnote looks like this:
-
-That's some text with a footnote.[^1]
-
-[^1]: And that's the footnote.
-
-
-#### Strikethrough
-
-Wrap with 2 tilde characters:
-
-~~Strikethrough~~
-
-
-#### Fenced Code Blocks
-
-Start with a line containing 3 or more backticks, and ends with the first line with the same number of backticks:
+### 由于依赖的SERVER变量存放在vhosts中(如下),所以在cmd下执行php是获取不到`SERVER`变量的
 
 ```
-Fenced code blocks are like Stardard Markdown’s regular code
-blocks, except that they’re not indented and instead rely on
-a start and end fence lines to delimit the code block.
+<VirtualHost *>
+    <Directory "/data/site/code.csdn.net/zhuayi/">
+        Options -Indexes FollowSymLinks
+        Allow from all
+        AllowOverride All
+    </Directory>
+    ServerAdmin admin@www.zhuayi.net
+    DocumentRoot "/data/site/code.csdn.net/zhuayi"
+    ServerName zhuayi:80
+    ErrorLog "/private/var/log/apache2/zhuayi-error_log"
+    CustomLog "/data/logs/apache/zhuayi/access_log" common
+    
+    SetEnv BAIDU_CMS_MEMCACHE 127.0.0.1:11211
+    SetEnv BAIDU_MEMCACHED_KEY zhuayi
+    SetEnv BAIDU_MEMCACHED_OUTTIME 3600
+    SetEnv DEBUG true
+    ##SESSION##
+    SetEnv COOKIE_PATH tcp://127.0.0.1:11211
+    SetEnv COOKIE_HANDLER memcache
+    SetEnv COOKIE_TIMEOUT 1200
+</VirtualHost>
+
 ```
+[https://code.csdn.net/zhuayi/zhuayi/tree/master/apache.server](https://code.csdn.net/zhuayi/zhuayi/tree/master/apache.server)
 
-#### Tables
+*需要引用apache或者nginx的SERVER变量时可以使用  `-c` 参数指定到apache的vhosts或者nginx的conf文件.*
 
-A simple table looks like this:
+# cmd php example
+```
+<?php
+/*
+ * cron_test.php     命令行下执行PHP
 
-First Header | Second Header | Third Header
------------- | ------------- | ------------
-Content Cell | Content Cell  | Content Cell
-Content Cell | Content Cell  | Content Cell
+ *
+ * @copyright    (C) 2005 - 2010  zhuayi
+ * @licenes      http://www.zhuayi.net
+ * @lastmodify   2010-10-28
+ * @author       zhuayi
+ * @QQ			 2179942
+ * php cron_test.php -c /data/vhosts/baidu_soft.conf -soft_id  ~/Downloads/soft_id  -out ~/Downloads/hao123.xml
+ */
+include_once "../cron/cron.inc.php";
+class cron_test extends zhuayi
+{
+	/* 脚本最大执行时间 */
+	public $timeout = 1200;
+	public $run_start_time;
+	
+	/* 构造函数 */
+	function __construct()
+	{
+		parent::__construct();
+		$this->load_class('db',false);
+		parent::$admin = true;
+	}
 
-If you wish, you can add a leading and tailing pipe to each line of the table:
+	function run()
+	{
+		global $argv_array;
+		print_r($argv_array);
+		print_r($_SERVER);
+	}
+}
 
-| First Header | Second Header | Third Header |
-| ------------ | ------------- | ------------ |
-| Content Cell | Content Cell  | Content Cell |
-| Content Cell | Content Cell  | Content Cell |
-
-Specify alignement for each column by adding colons to separator lines:
-
-First Header | Second Header | Third Header
-:----------- | :-----------: | -----------:
-Left         | Center        | Right
-Left         | Center        | Right
-
-
-### Shortcuts
-
-#### View
-
-* Toggle live preview: Shift + Cmd + I
-* Toggle Words Counter: Shift + Cmd + W
-* Toggle Transparent: Shift + Cmd + T
-* Toggle Floating: Shift + Cmd + F
-* Left/Right = 1/1: Cmd + 0
-* Left/Right = 3/1: Cmd + +
-* Left/Right = 1/3: Cmd + -
-* Toggle Writing orientation: Cmd + L
-* Toggle fullscreen: Control + Cmd + F
-
-#### Actions
-
-* Copy HTML: Option + Cmd + C
-* Strong: Select text, Cmd + B
-* Emphasize: Select text, Cmd + I
-* Inline Code: Select text, Cmd + K
-* Strikethrough: Select text, Cmd + U
-* Link: Select text, Control + Shift + L
-* Image: Select text, Control + Shift + I
-* Select Word: Control + Option + W
-* Select Line: Shift + Cmd + L
-* Select All: Cmd + A
-* Deselect All: Cmd + D
-* Convert to Uppercase: Select text, Control + U
-* Convert to Lowercase: Select text, Control + Shift + U
-* Convert to Titlecase: Select text, Control + Option + U
-* Convert to List: Select lines, Control + L
-* Convert to Blockquote: Select lines, Control + Q
-* Convert to H1: Cmd + 1
-* Convert to H2: Cmd + 2
-* Convert to H3: Cmd + 3
-* Convert to H4: Cmd + 4
-* Convert to H5: Cmd + 5
-* Convert to H6: Cmd + 6
-* Convert Spaces to Tabs: Control + [
-* Convert Tabs to Spaces: Control + ]
-* Insert Current Date: Control + Shift + 1
-* Insert Current Time: Control + Shift + 2
-* Insert entity <: Control + Shift + ,
-* Insert entity >: Control + Shift + .
-* Insert entity &: Control + Shift + 7
-* Insert entity Space: Control + Shift + Space
-* Insert Scriptogr.am Header: Control + Shift + G
-* Shift Line Left: Select lines, Cmd + [
-* Shift Line Right: Select lines, Cmd + ]
-* New Line: Cmd + Return
-* Comment: Cmd + /
-* Hard Linebreak: Control + Return
-
-#### Edit
-
-* Auto complete current word: Esc
-* Find: Cmd + F
-* Close find bar: Esc
-
-#### Post
-
-* Post on Scriptogr.am: Control + Shift + S
-* Post on Tumblr: Control + Shift + T
-
-#### Export
-
-* Export HTML: Option + Cmd + E
-* Export PDF:  Option + Cmd + P
-
-
-### And more?
-
-Don't forget to check Preferences, lots of useful options are there.
-
-Follow [@chenluois](http://twitter.com/chenluois) on Twitter for the latest news.
-
-For feedback, use the menu `Help` - `Send Feedback`
+$cron = new cron_test();
+try
+{
+	$reset = false;
+	do
+	{
+		$reset = $cron->run($argv);
+	}
+	while ($reset===false);
+} 
+catch (ZException $e){}
+```
