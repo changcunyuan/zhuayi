@@ -4,9 +4,8 @@
 php  cron_test.php  -c /data/vhosts/baidu_soft.conf  
 ```
 
-**
-zhuayi框架会对 `argv` 参数  进行了格式化数组处理,处理结果放在`argv_array`数组中,直接`global`引用即可!
-**
+>zhuayi框架会对 `argv` 参数  进行了格式化数组处理,处理结果放在`argv_array`数组中,直接`global`引用即可!
+
 
 ***
 
