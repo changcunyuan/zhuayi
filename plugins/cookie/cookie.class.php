@@ -79,7 +79,6 @@ class cookie
 	
 	function ret_cookie($key)
 	{
-			
 		$string = stripslashes(htmlspecialchars_decode($_SESSION['zhuayi_'.$key]));
 
 		$json = json_decode($string,true);

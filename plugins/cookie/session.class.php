@@ -9,60 +9,62 @@
  * @QQ			 2179942
  * 
  */
-class session
+class session implements SessionHandlerInterface
 {
 	private static $_mc_instance;
 
-	//连接MC
-	public static function _get_mc($host)
+	private static $_instance;
+
+	//创建__clone方法防止对象被复制克隆
+	public function __clone()
 	{
-		if(!(self::$_mc_instance instanceof self))
-		{
-			if (strpos($host,'//') !== false)
-			{
-				$cookiepath = explode('//',$host);
-				$cookiepath = explode(':', $cookiepath[1]);
-				$host = $cookiepath[0];
-				$port = $cookiepath[1];
-			}
-			self::$_mc_instance = new Memcache;
-			self::$_mc_instance->connect($host, $port);
-		}
-		return self::$_mc_instance;
+		trigger_error('Clone is not allow!',E_USER_ERROR);
 	}
 
-	static function sess_open($sess_path, $sess_name)
+	//单例方法,用于访问实例的公共的静态方法
+	public static function getInstance()
+	{
+		if(!(self::$_instance instanceof self))
+		{
+			self::$_instance = new self();
+			self::$_mc_instance = new Memcache;
+
+			$cookiepath = explode(',',$_SERVER['COOKIE_PATH']);
+			$cookiepath = explode(':', $cookiepath[0]);
+			$host = $cookiepath[0];
+			$port = $cookiepath[1];
+
+			self::$_mc_instance->connect($host, $port);
+		}
+		return self::$_instance;
+	}
+
+	function open($sess_path, $sess_name)
 	{
 		return true;
     }
 
-    static function sess_close()
+    function close()
     {
 		return true;
     }
 
-    static function sess_get($sess_id)
+    function read($sess_id)
     {
-    	global $config;
-    	self::_get_mc($_SERVER['COOKIE_PATH']);
-        self::unserializesession(self::$_mc_instance->get($sess_id));
-        return true;
+    	return self::$_mc_instance->get($sess_id);
     }
 
-    static function sess_set($sid, $data)
+    function write($sid, $data)
     {
-    	global $config;
-    	self::_get_mc($_SERVER['COOKIE_PATH']);
-        self::$_mc_instance->set($sid,$data,MEMCACHE_COMPRESSED,$_SERVER['COOKIE_TIMEOUT']); 
-        return true;
+        return self::$_mc_instance->set($sid,$data,0,$_SERVER['COOKIE_TIMEOUT']);
     }
 
-    static function sess_destroy($sess_id)
+    function destroy($sess_id)
     {
         return true;
     }
 
-    static function sess_gc($maxlifetime)
+    function gc($maxlifetime)
     {
     	return true;
     }
@@ -93,7 +95,6 @@ class session
 
 		$valueText = substr($data, $lastOffset );
 		$returnArray[$currentKey] = unserialize($valueText);
-
 		return $returnArray;
     }
  }

@@ -1,5 +1,4 @@
 <?php
-
 //加载URL路由
 require PLUGINS_ROOT.'/core/url.class.php';
 
@@ -7,30 +6,34 @@ require PLUGINS_ROOT.'/core/url.class.php';
 require PLUGINS_ROOT.'/core/zhuayi.class.php';
 
 //加载缓存文件
-require_once PLUGINS_ROOT.'/core/cache.class.php';
+require PLUGINS_ROOT.'/core/cache.class.php';
 
 // 加载文件操作类
 // require_once PLUGINS_ROOT.'/core/file.class.php';
 
 // 加载应用公共静态方法
-require_once ZHUAYI_ROOT.'/zhuayi/mod_app.php';
+require ZHUAYI_ROOT.'/zhuayi/mod_app.php';
 
 //默认实例化类
 spl_autoload_register(array('zhuayi', '_load_class'));
-
 try
 {
-     //开启cache缓存
-    if (function_exists("memcache_get"))
+    $cache = new mem_cache();
+    $cache->use_cache = $_SERVER['BAIDU_MEMCACHE_ON'] == "false"?false:true;
+ 
+    if ($_SERVER['BAIDU_MEMCACHE_ON'] == true)
     {
-        $cache = new mem_cache();
-        /* 加载缓存key配置文件 */
-        require_once ZHUAYI_ROOT.'/config/app_cache_variable.config.php';
+        if (function_exists("memcache_get"))
+        {
+            /* 加载缓存key配置文件 */
+            require ZHUAYI_ROOT.'/config/app_cache_variable.config.php';
+        }
+        else
+        {
+            throw new Exception("该环境不支持memcache!", -1);
+        }
     }
-    else
-    {
-        throw new Exception("该环境不支持memcache!", -1);
-    }
+    
 		
 }
 catch (Exception $e)
@@ -97,4 +100,3 @@ function ob_gzip($content)
     }
     return $content;
 }
-?>

@@ -23,6 +23,8 @@ class mem_cache
 
 	private static $_instance;
 
+	public $use_cache = true;
+
 	/**
 	 * 构 造 函 数
 	 *
@@ -49,7 +51,6 @@ class mem_cache
 		if(!(self::$_instance instanceof self))
 		{
 			self::$_instance = new Memcache;
-
 			$memcache_config = explode(',',$_SERVER['BAIDU_CMS_MEMCACHE']);
 			foreach ($memcache_config as $key=>$val)
 			{
@@ -81,6 +82,11 @@ class mem_cache
 	 */
 	function set($key,$value,$expire='',$flag='',$group='')
 	{
+		if ($this->use_cache == false)
+		{
+			return false;
+		}
+
 		if (is_array($value))
 		{
 			$value = json_encode($value);
@@ -118,6 +124,10 @@ class mem_cache
 	 */
 	function increment($key,$value,$group='')
 	{
+		if ($this->use_cache == false)
+		{
+			return false;
+		}
 		if (!empty($group))
 		{
 			$key = $this->group($group).'_'.$key;
@@ -128,6 +138,7 @@ class mem_cache
 		{
 			echo "<!-- cache::set({$key}, {$value}, {$flag}, {$expire}) -->\n";
 		}
+
 
 		return self::$_instance->increment(md5($key),$value);
 	}
@@ -142,6 +153,10 @@ class mem_cache
 	 */
 	function decremen($key,$value,$group='')
 	{
+		if ($this->use_cache == false)
+		{
+			return false;
+		}
 		if (!empty($group))
 		{
 			$key = $this->group($group).'_'.$key;
@@ -161,6 +176,10 @@ class mem_cache
 	 */
 	function get($key,$type = false,$group='')
 	{
+		if ($this->use_cache == false)
+		{
+			return false;
+		}
 		if (!empty($group))
 		{
 			$key = $this->group($group).'_'.$key;
@@ -225,6 +244,10 @@ class mem_cache
 	 */
 	function delete($key,$group='')
 	{
+		if ($this->use_cache == false)
+		{
+			return false;
+		}
 		if (!empty($group))
 		{
 			$key = $this->group($group).'_'.$key;
@@ -247,6 +270,10 @@ class mem_cache
 	 */
 	function flush($group)
 	{
+		if ($this->use_cache == false)
+		{
+			return false;
+		}
 		$reset = $this->group($group);
 		$reset++;
         $reset = self::$_instance->set('group_'.$group, $reset);
@@ -255,6 +282,10 @@ class mem_cache
 	/* 插入一个数组进入目标缓存 */
 	function append_array($cache_key,$value = array())
 	{
+		if ($this->use_cache == false)
+		{
+			return false;
+		}
 		$reset = $this->get($cache_key);
 
 		/* 检查是否已存在配置 */

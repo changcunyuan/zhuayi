@@ -26,7 +26,7 @@ $config['web']['error_url'] = 'http://'.$_SERVER['HTTP_HOST'];
  * Zhuayi 是否debug模式 
  * --------------------------------
  */
-$config['debug'] = $_SERVER['DEBUG'];
+$config['debug'] = ($_SERVER['DEBUG'] == "true");
 
 /**
  * --------------------------------

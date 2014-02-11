@@ -28,7 +28,6 @@ if (!isset($_SERVER['HTTP_HOST']))
 }
 
 require ZHUAYI_ROOT.'/config/config.php';
-
 /**
  * --------------------------------
  * Zhuayi cookie
@@ -38,25 +37,23 @@ require ZHUAYI_ROOT.'/config/config.php';
 /* 设置cookie 域 */
 $cookiedomain = explode(':',$_SERVER['HTTP_HOST']);
 ini_set('session.cookie_domain', $cookiedomain[0]);
+ini_set('session.name', "ZHUAYISID");
+
 if (isset($_SERVER['COOKIE_HANDLER']) && $_SERVER['COOKIE_HANDLER'] == 'memcache')
 {
 	ini_set('session.save_handler', $_SERVER['COOKIE_HANDLER']);
 	ini_set('session.save_path', $_SERVER['COOKIE_PATH']);
-
 	require PLUGINS_ROOT.'/cookie/session.class.php';
-	$session = new session();
+	$session = session::getInstance();
 	session_set_save_handler(
-								array($session,'sess_open'),
-								array($session,'sess_close'),
-								array($session,'sess_get'),
-								array($session,'sess_set'),
-								array($session,'sess_destroy'),
-								array($session,'sess_gc')
-							);
+							    array($session, 'open'),
+							    array($session, 'close'),
+							    array($session, 'read'),
+							    array($session, 'write'),
+							    array($session, 'destroy'),
+							    array($session, 'gc')
+							    );
 }
 
 session_start();
-
 require ZHUAYI_ROOT.'/plugins/core/zhuayi.php';
-
-?>

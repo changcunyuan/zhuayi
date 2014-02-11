@@ -43,7 +43,6 @@ class zhuayi
 		$this->file = & $file;
 
 		$this->input = & $input;
-
 	}
 
 	function app()
@@ -333,7 +332,7 @@ class zhuayi
 		}
 		if (file_exists($filename))
 		{
-			return require_once $filename;
+			return require $filename;
 		}
 		else
 		{

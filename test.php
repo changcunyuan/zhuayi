@@ -8,6 +8,8 @@
 * @author       zhuayi
 * @QQ			2179942
 */
+ini_set( "display_errors",true);
+error_reporting(E_ALL);
 try
 {
 	/* error debug */

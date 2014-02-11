@@ -15,7 +15,6 @@ class book_action extends zhuayi
 	function __construct()
 	{
 		parent::__construct();
-		
 		$this->load_class('db');
 	}
 

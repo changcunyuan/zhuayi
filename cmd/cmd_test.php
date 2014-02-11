@@ -29,13 +29,24 @@ class cmd extends zhuayi
 		
 		$this->run_start_time = time();
 		parent::$admin = true;
-
+		$this->load_class('zlog');
 	}
 
 	function run()
 	{
+		// for ($i=1;$i<1000;$i++)
+		// {
+		// 	$this->zlog->debug('this is a demo');
+		// 	usleep(5000);
+		// }
+		$this->zlog->debug('this is a debug');
+		$this->zlog->trace('this is a trace');
+		$this->zlog->notice('this is a notice');
+		$this->zlog->warning('this is a warning');
+		$this->zlog->fatal('this is a fatal');
+		exit;
 		global $argv_array;
-
+		
 		$p_number = self::check_processes_number("./cmd/cmd_test_2.php -c /data/vhosts/zhuayi.conf -d ",80);
 		
 		for ($i=0;$i<=$p_number;$i++)
