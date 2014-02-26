@@ -1,4 +1,6 @@
 <?php
+
+
 /**
 * index.php     Zhuayi 入口文件
 *
