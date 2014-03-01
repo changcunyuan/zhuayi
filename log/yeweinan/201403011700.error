@@ -1,0 +1,786 @@
+<urlid=1736951744 url=/?db_debug date=2014-03-01 17:00:18 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=1736951744 url=/?db_debug date=2014-03-01 17:00:49 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=1736951744 url=/?db_debug date=2014-03-01 17:00:50 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=1736951744 url=/?db_debug date=2014-03-01 17:00:50 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=1736951744 url=/?db_debug date=2014-03-01 17:00:55 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=1736951744 url=/?db_debug date=2014-03-01 17:01:24 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=1736951744 url=/?db_debug date=2014-03-01 17:01:57 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=1736951744 url=/?db_debug date=2014-03-01 17:02:16 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=1736951744 url=/?db_debug date=2014-03-01 17:02:19 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=1736951744 url=/?db_debug date=2014-03-01 17:02:19 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=1736951744 url=/?db_debug date=2014-03-01 17:03:15 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=1736951744 url=/?db_debug date=2014-03-01 17:04:31 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=1736951744 url=/?db_debug date=2014-03-01 17:04:43 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=1736951744 url=/?db_debug date=2014-03-01 17:04:43 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=1736951744 url=/?db_debug date=2014-03-01 17:04:54 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=1736951744 url=/?db_debug date=2014-03-01 17:04:54 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=1736951744 url=/?db_debug date=2014-03-01 17:04:54 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=1736951744 url=/?db_debug date=2014-03-01 17:04:55 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=1736951744 url=/?db_debug date=2014-03-01 17:15:12 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '100-0-测试数据2' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=1736951744 url=/?db_debug date=2014-03-01 17:15:35 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '100-0-测试数据2' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=1736951744 url=/?db_debug date=2014-03-01 17:15:42 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '100-0-测试数据2' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=1736951744 url=/?db_debug date=2014-03-01 17:16:24 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '100-0-测试数据2' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=1736951744 url=/?db_debug date=2014-03-01 17:18:57 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 42000<br />Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 0,1' at line 1
+<urlid=1736951744 url=/?db_debug date=2014-03-01 17:20:23 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 42000<br />Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 0,1' at line 1
+<urlid=1736951744 url=/?db_debug date=2014-03-01 17:20:55 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 42000<br />Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 0,1' at line 1
+<urlid=2043925204 url=/ date=2014-03-01 17:23:28 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665808' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:28 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665808' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:28 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665808' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:28 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665808' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:28 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665808' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:28 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665808' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:28 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665808' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:28 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665808' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:28 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665809' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:29 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665809' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:29 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665809' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:29 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665809' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:29 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665809' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:29 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665809' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:29 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665809' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:29 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665809' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:30 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665810' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:30 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665810' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:30 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665810' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:30 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665810' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:30 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665810' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:30 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665810' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:30 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665810' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:30 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665810' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:30 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665811' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:30 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665811' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:31 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665811' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:31 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665811' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:31 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665811' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:31 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665811' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:31 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665811' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:31 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665811' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:31 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665811' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:31 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665811' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:31 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665811' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:31 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665811' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:31 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665811' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:31 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665811' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:31 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665811' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:31 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '100-0-测试数据2221393665811' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:31 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665811' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:31 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665811' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:31 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665811' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:31 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665811' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:31 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665811' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:31 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665811' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:31 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665811' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:31 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665811' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '100-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:23:32 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665812' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:45 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665885' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:45 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665885' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:45 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665885' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:45 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665885' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:45 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665885' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:45 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665885' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:45 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665885' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:45 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665885' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:45 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665885' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:45 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665885' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:45 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665885' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:45 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665885' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:45 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665885' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:45 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665885' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:45 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665885' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:45 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665885' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:45 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665885' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:46 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665886' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:46 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665886' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:46 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665886' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:46 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665886' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:46 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665886' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:46 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665886' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:46 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665886' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:46 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665886' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:46 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665886' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:46 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665886' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:46 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665886' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:46 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665886' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:47 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665887' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:47 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665887' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:47 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665887' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:47 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665887' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:47 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665887' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:47 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665887' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:47 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665887' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:47 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665887' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:47 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665887' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:48 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665888' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:48 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665888' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:48 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665888' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:48 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665888' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:48 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665888' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:48 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665888' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:48 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665888' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:48 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665888' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:48 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665888' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:48 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665888' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:48 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665888' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:48 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665888' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:48 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665888' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:48 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665888' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:48 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665888' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:48 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665888' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:48 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665888' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:48 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665888' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:49 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665889' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:49 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665889' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:49 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665889' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:49 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665889' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:49 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665889' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:49 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665889' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:49 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665889' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:49 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665889' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:49 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665889' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:49 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665889' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:49 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665889' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:49 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '100-0-测试数据2221393665889' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:49 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665889' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:49 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665889' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:49 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665889' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:49 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665889' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:49 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665889' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:49 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665889' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:49 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665889' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:49 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:49 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '100-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:49 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:49 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:50 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665890' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '100-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=2043925204 url=/ date=2014-03-01 17:24:51 cookie=>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据2221393665891' for key 'UNIQUE_CID_AUTHOR_ID_NAME'

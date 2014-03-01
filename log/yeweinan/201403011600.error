@@ -1,0 +1,10 @@
+<urlid=3228405768 url=/ date=2014-03-01 16:23:37 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 42S22<br />Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column '' in 'field list'
+<urlid=1736951744 url=/?db_debug date=2014-03-01 16:57:51 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=1736951744 url=/?db_debug date=2014-03-01 16:58:54 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=1736951744 url=/?db_debug date=2014-03-01 16:59:10 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
+<urlid=1736951744 url=/?db_debug date=2014-03-01 16:59:51 cookie=PHPSESSID=fslc0mqbntsh9bka6k433jt635>
+Uncaught PDOException, code: 23000<br />Message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0-测试数据' for key 'UNIQUE_CID_AUTHOR_ID_NAME'
