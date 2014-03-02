@@ -38,7 +38,6 @@ class zhuayi
     /* 取配置 */
     public function app()
     {
-
         if (php_sapi_name() === 'cli')
         {
             $dirname = 'cmd';
@@ -83,18 +82,18 @@ class zhuayi
     }
 
     /* 取配置 */
-    public static function get_conf($confname = '')
+    public static function get_conf($confname = 'global')
     {
-        if (empty($confname))
+        if (!isset(self::$conf_cache[$confname]))
         {
-            $confname = "global";
+            $filename = ZHUAYI_ROOT."/conf/".APP_NAME."/{$confname}.conf";
+            /* 性能分析 */
+            self::perf_include_count($filename);
+            
+            /* 加载文件 */
+            self::$conf_cache[$confname] = parse_ini_file($filename,true);
         }
-        $filename = ZHUAYI_ROOT."/conf/".APP_NAME."/{$confname}.conf";
-        /* 性能分析 */
-        self::perf_include_count($filename);
-        
-        /* 加载文件 */
-        return self::$conf_cache[$confname] = parse_ini_file($filename,true);
+        return self::$conf_cache[$confname];
     }
 
     /**
@@ -119,7 +118,7 @@ class zhuayi
     {
         
         // 为了兼容smarty,这里判断是否有smarty前缀,如果有,则调用smarty的加载方法
-        if (preg_match('/Smarty/i',$class))
+        if (preg_match('/Smarty_/i',$class))
         {
             return smartyAutoload($class);
         }
@@ -145,9 +144,9 @@ class zhuayi
     /* 性能分析 */
     static function perf_include_count($filename)
     {
-        if (isset($_GET['debug']))
+        if ($_SERVER['APP']['global']['debug'] && isset($_GET['include_debug']))
         {
-            self::$perf_include_count[] = $filename;
+            zhuayi::$perf_include_count[] = $filename;
         }
     }
 

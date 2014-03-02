@@ -76,7 +76,7 @@ class cache
         }
         
         $key = APP_NAME.'-'.$key;
-        if (isset($_GET['cache_debug']))
+        if ($_SERVER['APP']['global']['debug'] && isset($_GET['cache_debug']))
         {
             echo "<!--\n cache: set({$key}, ".print_r($value,true).", {$flag}, {$expire}) \n-->\n";
         }
@@ -115,7 +115,7 @@ class cache
         
         $reset = self::$_instance->get($key);
         
-        if (isset($_GET['cache_debug']))
+        if ($_SERVER['APP']['global']['debug'] && isset($_GET['cache_debug']))
         {
             echo "<!--\n cache_get: ".print_r($debug_key,true)." ";
             var_dump(print_r($reset,true));

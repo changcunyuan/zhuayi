@@ -2,7 +2,7 @@
 TAR="$MOD_NAME.tar.gz"
 SERVER="zhuayi@xiamo.cc"
 SERVER_PATH="/data/www/zhuayi"
-
+PASSPORT="worinima198698"
 while getopts "a::b::c::" arg #选项后面的冒号表示该选项需要参数
 do
         case $arg in
@@ -56,7 +56,7 @@ cd ..
 expect <<EOF
 spawn rsync -vzrtopg --progress --delete --exclude=conf ./output/ $SERVER:$SERVER_PATH
 expect "password:"
-send "worinima\r"
+send "$PASSPORT\r"
 expect eof
 EOF
 

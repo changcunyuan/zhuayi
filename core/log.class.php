@@ -16,16 +16,53 @@ class log
     public static $log_data = array();
     public static $log_exception = array();
 
+    public static $is_have_log = false;
+
     public static function exception(Exception $e)
     {
-        $strings = 'Uncaught '.get_class($e).', code: ' . $e->getCode() . "<br />Message: " . htmlentities($e->getMessage())."\n";
+        print_r($e);
+        exit;
+        $strings = 'Uncaught '.get_class($e).',file: '.$e->getFile().' code: ' . $e->getCode() . "<br />Message: " . htmlentities($e->getMessage())."\n";
         return self::_set_log_data($strings,'exception');
     }
 
     public static function notice($strings)
     {
-        $strings = "[NOTICE ".date("Y-m-d H:i:s")." ".self::get_debugback()."] ".$strings;
+        $strings = "[LOG ".date("Y-m-d H:i:s")." ".self::get_debugback()."] ".$strings;
         return self::_set_log_data($strings);
+    }
+
+    public static function error($errno, $errstr, $errfile, $errline)
+    {
+        if (!(error_reporting() & $errno))
+        {
+            return;
+        }
+
+        switch ($errno) {
+        case E_USER_ERROR:
+            $strings = "[PHP_ERROR $errno] $errstr<br />\n";
+            $strings .= "  Fatal error on line $errline in file $errfile";
+            $strings .= ", PHP " . PHP_VERSION . " (" . PHP_OS . ")<br />";
+            $strings .= "Aborting...<br />\n";
+            exit(1);
+            break;
+
+        case E_USER_WARNING:
+            $strings = "[PHP_WARNING $errno] $errstr";
+            break;
+
+        case E_USER_NOTICE:
+            $strings = "[PHP_NOTICE $errno] $errstr";
+            break;
+
+        default:
+            //$strings = "Unknown error type: [$errno] $errstr {$errfile} {$errline}\n";
+            return ;
+            break;
+        }
+        return self::_set_log_data($strings,'exception');
+
     }
 
     static function get_debugback()
@@ -44,12 +81,14 @@ class log
         {
             self::$log_data[] = $strings;
         }
+        self::$is_have_log = true;
         return true;
     }
 
     public static function _create_uniqid()
     {
         global $pagestartime;
+
         $star_time = explode(" ", $pagestartime);
         if (php_sapi_name() !== 'cli')
         {
@@ -68,6 +107,10 @@ class log
 
     public static function _write_log()
     {
+        if (self::$is_have_log === false)
+        {
+            return false;
+        }
         $log_name = date("YmdHi",time() - time()%self::$log_time);
         $log_path = ZHUAYI_ROOT."/log/".APP_NAME."/";
         $log_file = $log_path.$log_name;
@@ -86,8 +129,19 @@ class log
 
         if (!empty(self::$log_exception))
         {
-            error_log(self::_create_uniqid().implode("\n",self::$log_exception),3,$log_file.".error");
+            $exception = self::_create_uniqid().implode("\n",self::$log_exception);
+            if ($_SERVER['APP']['global']['debug'])
+            {
+                error_log($exception,3,$log_file.".error");
+            }
+            else
+            {
+               die($exception);
+            }
         }
-        return error_log(self::_create_uniqid().implode("\n",self::$log_data)."\n",3,$log_file.".log");
+        if (!empty(self::$log_data))
+        {
+            error_log(self::_create_uniqid().implode("\n",self::$log_data)."\n",3,$log_file.".log");
+        }
     }
 }

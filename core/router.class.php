@@ -25,8 +25,6 @@ class router extends zhuayi
 
     public $url;
 
-    public $conf;
-
     static $appname;
     /**
      * 构造函数
@@ -44,8 +42,6 @@ class router extends zhuayi
         {
             $this->url = parse_url($_SERVER['REQUEST_URI']);
         }
-        
-        $this->conf = zhuayi::get_conf();
     }
 
 
@@ -55,8 +51,8 @@ class router extends zhuayi
         $list = explode('/',$this->url['path']);
         unset($list[0]);
 
-        $this->modle = (empty($list[1])) ? $this->conf['app']['default_module'] : $list[1];
-        $this->action = (empty($list[2])) ? $this->conf['app']['default_action'] : $list[2];
+        $this->modle = (empty($list[1])) ? $_SERVER['APP']['global']['default_module'] : $list[1];
+        $this->action = (empty($list[2])) ? $_SERVER['APP']['global']['default_action'] : $list[2];
         unset($list[1]);unset($list[2]);
         $this->parameter = $list;
         return $this;
@@ -95,9 +91,9 @@ class router extends zhuayi
      */
     function routing()
     {
-        if (isset($this->conf['rewrite']))
+        if (isset($_SERVER['APP']['global']['rewrite']))
         {
-            foreach ($this->conf['rewrite'] as $key=>$val)
+            foreach ($_SERVER['APP']['global']['rewrite'] as $key=>$val)
             {
                 $this->url['path'] = preg_replace('/'.$val.'/i',$key,$this->url['path']);
             }
@@ -109,6 +105,6 @@ class router extends zhuayi
     {
         /* 写入LOG */
         log::_write_log();
-        $this->perf_info();
+        zhuayi::perf_info();
     }
 }

@@ -12,6 +12,8 @@ abstract class action extends zhuayi
 {
     protected $smarty;
 
+    public $assign;
+
     function display($show = array(),$tpl = '')
     {
         if (empty($tpl))
@@ -20,35 +22,24 @@ abstract class action extends zhuayi
         }
         $filename = APP_ROOT."/template/{$tpl[0]}/{$tpl[0]}_{$tpl[0]}.html";
 
-        $show = $this->_set_show($show);   
-        if (empty($this->tpl))
-        {
-            require $filename;
-        }
+        $show['config'] = $_SERVER['APP']['web'];
         if ($this->smarty)
         {
-            $this->smarty($show,$filename);
+            return $this->smarty($show,$filename);
         }
-        return true;
+        return require $filename;
     }
-
-
-    function _set_show($show)
-    {
-        return array_merge($show,$this->conf);
-    }
-
 
     function smarty($show,$filename)
     {
         $config = zhuayi::get_conf('smarty');
-        
-        $config['compile_dir'] = ZHUAYI_ROOT."/".$config['compile_dir']."{$this->conf['app']['appname']}";
+        $config['compile_dir'] = ZHUAYI_ROOT."/".$config['compile_dir'].APP_NAME;
         
         $smarty = new Smarty;
         $smarty->setCompileDir($config['compile_dir']);
         $smarty->left_delimiter = $config['left_delimiter'];
         $smarty->right_delimiter = $config['right_delimiter'];
+
         $smarty->assign('show',$show);
         $smarty->display($filename);
     }

@@ -63,10 +63,9 @@ abstract class mysql
     /* 连接mysql */
     public function connect($slave)
     {
-        $connect = $this->connect_string($slave);
-
         if (!isset($this->_connects[$this->db_name_conf][$slave]) || !is_object($this->_connects[$this->db_name_conf][$slave]))
         {
+            $connect = $this->connect_string($slave);
             $this->_connects[$this->db_name_conf][$slave] = new PDO($connect['dbhost'],$connect['user'],$connect['pass'],array(PDO::ATTR_PERSISTENT => true));
 
             /* 设置报错信息*/
@@ -116,7 +115,7 @@ abstract class mysql
             $sth->execute();
         }
 
-        if (isset($_GET['db_debug']))
+        if ($_SERVER['APP']['global']['debug'] && isset($_GET['db_debug']))
         {
             $db_ex_end_time = sprintf("%0.3f",zhuayi::getmicrotime()-$db_exe_start_time);
             self::perf_add_count($slave,$sql,$db_ex_end_time);

@@ -2,24 +2,24 @@
 
 class index_index extends action
 {
-    public $smarty = true;
+    public $smarty = false;
 
     public $obj = NULL;
 
     public function __construct()
     {
-        $this->db = new db_index();
     }
 
     function run($a = '',$b = '')
     {
         // var_dump($a);
         // var_dump($b);
-
-        //print_r($this->db->get_test('asd'));
+        log::notice('this is a demo');
+        print_r($this->db_index->get_test('asd'));
         // print_r($this);
         // $show = array('adsd'=>time());
-        // $this->display($show);
+        $show = array('a'=>1);
+        $this->display($show);
         // $asd = serialize($this);
         // $asd = unserialize($asd);
         // var_dump($asd);

@@ -26,8 +26,9 @@ date_default_timezone_set('Asia/Shanghai');
 spl_autoload_register(array('zhuayi', '_load_class'));
 
 set_exception_handler(array('log','exception'));
+set_error_handler(array('log','error'));
 
 /* 将INI配置赋值到SERVER变量中 */
-
+$_SERVER['APP'] = zhuayi::get_conf();
 $router = new router();
 $router->routing()->parse_url()->parse_cgi()->app();
