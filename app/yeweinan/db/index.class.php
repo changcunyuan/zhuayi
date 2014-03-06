@@ -7,9 +7,7 @@ class db_index extends mysql
 
     function get_test()
     {
-        $array = $this->cache->get('test');
-        if ($array === false)
-        {
+        
             //$this->count(array('id'=>1,'book_name'=>"{%太空%}",'author_id'=>"{>300}"));
             $array = $this->fetch(array('id'=>1,'book_name'=>"{%太空%}",'author_id'=>"{>300}"),'id desc');
             
@@ -18,8 +16,6 @@ class db_index extends mysql
 
             //$this->delete(array('id'=>$id));
 
-            $this->cache->set('test',$array);
-        }
         return $array;
     }
 }

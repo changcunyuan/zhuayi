@@ -9,4 +9,4 @@
 * @QQ           2179942
 */
 define('APP_ROOT', dirname(__FILE__));
-require dirname(dirname(APP_ROOT))."/core/zhuayi.php";
+require APP_ROOT."/../../core/zhuayi.php";

@@ -26,7 +26,6 @@ class cache
     //单例方法,用于访问实例的公共的静态方法
     public static function getInstance()
     {
-
         if(!(self::$_instance instanceof self))
         {
             $conf = zhuayi::get_conf('cache');
@@ -42,12 +41,14 @@ class cache
             foreach ($memcache_config as $key=>$val)
             {
                 $val = explode(':',$val);
-                self::$_instance->addServer($val[0], $val[1]);
+                self::$_instance->addServer($val[0], $val[1],true);
             }
         }
 
         return self::$_instance;
     }
+
+    private function __clone() {}
 
     /**
      * set 设 置 缓 存
@@ -76,7 +77,7 @@ class cache
         }
         
         $key = APP_NAME.'-'.$key;
-        if ($_SERVER['APP']['global']['debug'] && isset($_GET['cache_debug']))
+        if ($_SERVER['APP']['debug'] && isset($_GET['cache_debug']))
         {
             echo "<!--\n cache: set({$key}, ".print_r($value,true).", {$flag}, {$expire}) \n-->\n";
         }
@@ -115,7 +116,7 @@ class cache
         
         $reset = self::$_instance->get($key);
         
-        if ($_SERVER['APP']['global']['debug'] && isset($_GET['cache_debug']))
+        if ($_SERVER['APP']['debug'] && isset($_GET['cache_debug']))
         {
             echo "<!--\n cache_get: ".print_r($debug_key,true)." ";
             var_dump(print_r($reset,true));

@@ -8,7 +8,7 @@
  * @author       zhuayi
  * @QQ           2179942
  */
-abstract class mysql
+abstract class mysql extends zhuayi
 {
     public $db_name_conf;
 
@@ -115,7 +115,7 @@ abstract class mysql
             $sth->execute();
         }
 
-        if ($_SERVER['APP']['global']['debug'] && isset($_GET['db_debug']))
+        if ($_SERVER['APP']['debug'] && isset($_GET['db_debug']))
         {
             $db_ex_end_time = sprintf("%0.3f",zhuayi::getmicrotime()-$db_exe_start_time);
             self::perf_add_count($slave,$sql,$db_ex_end_time);
@@ -145,15 +145,32 @@ abstract class mysql
      */
     function factor()
     {
-        if (!isset($this->_connects[$this->db_name_conf][$this->table_name]))
+        $cache_key = __CLASS__."_{$this->db_name_conf}_{$this->table_name}";
+        $ret = $this->cache->get($cache_key);
+        if ($ret === false)
         {
             $query = $this->_query(" show fields from `{$this->table_name}`",1);
-
             $fields = $query->fetchAll(2);
             foreach ($fields as $key=>$val)
             {
-                $this->_connects[$this->db_name_conf][$this->table_name]["{$val['Field']}"] = "{$val['Type']}";
+                $ret["{$val['Field']}"] = "{$val['Type']}";
             }
+            $this->cache->set($cache_key,$ret);
+        }
+        $this->_set_table_fields($ret);
+        return $ret;
+    }
+
+    private function _set_table_fields($fields)
+    {
+        $this->_connects[$this->db_name_conf][$this->table_name] = $fields;
+    }
+
+    private function get_table_fields()
+    {
+        if (!isset($this->_connects[$this->db_name_conf][$this->table_name]))
+        {
+            $this->factor();
         }
         return $this->_connects[$this->db_name_conf][$this->table_name];
     }
@@ -169,7 +186,7 @@ abstract class mysql
     function parse_array($array)
     {
         /* 得到表字段 */
-        $factor = $this->factor();
+        $factor = $this->get_table_fields();
         if (is_array($array))
         {
             /* 去除不在表字段中 */
@@ -283,7 +300,7 @@ abstract class mysql
 
     public function _select($where = '',$order = '',$limit = '',$slave = 1)
     {
-        $factor = array_keys($this->factor());
+        $factor = array_keys($this->get_table_fields());
         $factor = "`".implode("`,`",$factor)."`";
         $sql = " select {$factor} from `{$this->table_name}` where".implode(' and ',$this->parse_array($where)).$this->order($order).$this->limit($limit);
         return $this->_query($sql,$slave);
@@ -380,14 +397,5 @@ abstract class mysql
     function __destruct()
     {
         unset($this->_connects);
-    }
-
-    function __get($fun)
-    {
-        if ($fun == 'cache')
-        {
-            return $this->cache = cache::getInstance();
-        }
-        var_dump($fun);
     }
 }

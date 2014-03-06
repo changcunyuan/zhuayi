@@ -12,7 +12,39 @@ abstract class action extends zhuayi
 {
     protected $smarty;
 
+    protected $post;
+
     public $assign;
+
+    public $check_cgi  = false;
+
+    function parse_cgi()
+    {
+        /* 格式化get post 参数 */
+        ini_set("magic_quotes_runtime", 0);
+
+        //处理被 get_magic_quotes_gpc 自动转义的数据,转换为HTML实体
+        //$this->get = $this->query;
+        parse_str($this->query,$this->get);
+        $this->post = $_POST;
+        $in = array(& $this->get, & $this->post);
+        while (list ($k, $v) = each($in))
+        {
+            foreach ($v as $key => $val)
+            {
+                if (! is_array($val) || !is_object($val))
+                {
+                    $in[$k][$key] = htmlspecialchars($val);
+                    continue;
+                }
+                $in[] = & $in[$k][$key];
+            }
+        }
+        unset($in);
+        $this->get = (object)$this->get;
+        $this->post = (object)$this->post;
+        return $this;
+    }
 
     function display($show = array(),$tpl = '')
     {
@@ -42,5 +74,19 @@ abstract class action extends zhuayi
 
         $smarty->assign('show',$show);
         $smarty->display($filename);
+    }
+
+    function __get($name)
+    {
+        if ($name == 'get' || $name == 'post')
+        {
+            $this->parse_cgi();
+            return $this->$name;
+        }
+        else
+        {
+            return $this->$name = new $name();
+        }
+        
     }
 }

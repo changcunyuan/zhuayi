@@ -5,8 +5,6 @@ class index_test extends action
 
     public function __construct()
     {
-        $this->db = new db_index();
-        
 
     }
 
@@ -18,7 +16,7 @@ class index_test extends action
         // var_dump($a);
         // var_dump($b);
         
-        print_r($this->db->get_test('asd'));
+        //print_r($this->db_index->get_test('asd'));
         // print_r($this);
         // $show = array('adsd'=>time());
         // $this->display($show);

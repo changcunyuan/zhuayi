@@ -1,30 +1,29 @@
 <?php
-
 class index_index extends action
 {
     public $smarty = false;
 
-    public $obj = NULL;
-
-    public function __construct()
-    {
-    }
+    public $check_cgi = true;
 
     function run($a = '',$b = '')
     {
         // var_dump($a);
         // var_dump($b);
-        log::notice('this is a demo');
-        print_r($this->db_index->get_test('asd'));
-        // print_r($this);
-        // $show = array('adsd'=>time());
-        $show = array('a'=>1);
-        $this->display($show);
+        // log::notice('this is a demo');
+        //$thi
+        $this->db_index->get_test('asd');
+        print_r($this->get->asds);
+        print_r($this->post->asd);
+        exit;
+        //print_r($this->db_index->get_test('asd'));
+        // // print_r($this);
+        // // $show = array('adsd'=>time());
+        // $show = array('a'=>1);
+        // $this->display($show);
         // $asd = serialize($this);
         // $asd = unserialize($asd);
         // var_dump($asd);
-        die("
-                    刁蒲城，<font color=red>野渭南</font><br/><br/>
+        die("       刁蒲城，<font color=red>野渭南</font><br/><br/>
                     不讲理的大荔县<br/><br/>
                     蛮临潼,鬼合阳<br/><br/>
                     韩城是个球咬腿<br/><br/>

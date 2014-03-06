@@ -20,10 +20,13 @@ class log
 
     public static function exception(Exception $e)
     {
-        print_r($e);
-        exit;
+        header("HTTP/1.0 500 server error");
         $strings = 'Uncaught '.get_class($e).',file: '.$e->getFile().' code: ' . $e->getCode() . "<br />Message: " . htmlentities($e->getMessage())."\n";
-        return self::_set_log_data($strings,'exception');
+        self::_set_log_data($strings,'exception');
+        if ($_SERVER['APP']['debug'])
+        {
+            exit(print_r($e,true));
+        }
     }
 
     public static function notice($strings)
@@ -122,7 +125,7 @@ class log
             $reset = @mkdir($log_path,0777,true);
             if (!$reset)
             {
-                throw new Exception("No such file or directory : mkdir {$log_path}", -1);
+                die("mkdir: log_path: No such file or directory");
             }
             chmod($log_path, 0777);
         }
@@ -130,7 +133,7 @@ class log
         if (!empty(self::$log_exception))
         {
             $exception = self::_create_uniqid().implode("\n",self::$log_exception);
-            if ($_SERVER['APP']['global']['debug'])
+            if ($_SERVER['APP']['debug'])
             {
                 error_log($exception,3,$log_file.".error");
             }
