@@ -5,6 +5,12 @@ class db_index extends mysql
     public $db_name_conf = 'yeweinan';
     public $table_name = 'book';
 
+    function __construct()
+    {
+        
+    }
+    
+    
     function get_test()
     {
         

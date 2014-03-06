@@ -21,12 +21,18 @@ if [ ! $MOD_NAME ]; then
     exit;
 fi    
 
+if [[ ! -d app/$MOD_NAME/ ]];then
+    echo "search app/$MOD_NAME: No such file or directory";
+    exit;
+fi
+
 if [[ -d output ]];then
     rm -rf output
 fi
 
 mkdir output
 mkdir -p output/app/
+
 
 #cp 文件
 cp -r -p core output

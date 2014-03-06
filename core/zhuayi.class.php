@@ -26,18 +26,20 @@ abstract class zhuayi
 
     public static $conf_cache = array();
     
-    /**
-     * 构造函数
-     *
-     */
-    function __construct()
-    {
-        
-    }
+    abstract function __construct();
+   
 
     function __get($name)
     {
-        return $this->$name = new $name();
+        if ($name == 'get' || $name == 'post')
+        {
+            $this->parse_cgi();
+            return $this->$name;
+        }
+        else
+        {
+            return $this->$name = new $name();
+        }
     }
 
     /* 取配置 */

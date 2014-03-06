@@ -5,16 +5,20 @@ class index_index extends action
 
     public $check_cgi = true;
 
+    function __construct()
+    {
+        
+    }
+    
     function run($a = '',$b = '')
     {
         // var_dump($a);
         // var_dump($b);
         // log::notice('this is a demo');
         //$thi
-        $this->db_index->get_test('asd');
-        print_r($this->get->asds);
-        print_r($this->post->asd);
-        exit;
+        var_dump($this->db_index->get_test('asd'));
+        var_dump($this->get->asds);
+        var_dump($this->post->asd);
         //print_r($this->db_index->get_test('asd'));
         // // print_r($this);
         // // $show = array('adsd'=>time());
@@ -23,7 +27,8 @@ class index_index extends action
         // $asd = serialize($this);
         // $asd = unserialize($asd);
         // var_dump($asd);
-        die("       刁蒲城，<font color=red>野渭南</font><br/><br/>
+        echo "<br/>       
+                    刁蒲城，<font color=red>野渭南</font><br/><br/>
                     不讲理的大荔县<br/><br/>
                     蛮临潼,鬼合阳<br/><br/>
                     韩城是个球咬腿<br/><br/>
@@ -36,6 +41,6 @@ class index_index extends action
                     米脂的婆姨，绥德的汉<br/><br/>
                     清涧的石板，瓦窑堡的炭<br/><br/>
                     三原的媳妇不能看<br/><br/>
-            ");
+            ";
     }
 }

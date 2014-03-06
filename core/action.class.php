@@ -75,18 +75,4 @@ abstract class action extends zhuayi
         $smarty->assign('show',$show);
         $smarty->display($filename);
     }
-
-    function __get($name)
-    {
-        if ($name == 'get' || $name == 'post')
-        {
-            $this->parse_cgi();
-            return $this->$name;
-        }
-        else
-        {
-            return $this->$name = new $name();
-        }
-        
-    }
 }

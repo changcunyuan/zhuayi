@@ -1,7 +1,6 @@
 <?php
 class index_test extends action
 {
-    public $tpl = '';
 
     public function __construct()
     {
