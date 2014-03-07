@@ -28,6 +28,19 @@ abstract class zhuayi
     
     abstract function __construct();
    
+    public function init()
+    {
+        $cmd = new router();
+        $cmd->routing()->parse_url()->app();
+    }
+
+    public function cil()
+    {
+        $cmd = new router();
+        $cmd->parse_url()->app();
+    }
+
+
 
     function __get($name)
     {
@@ -45,19 +58,20 @@ abstract class zhuayi
     /* 取配置 */
     public function app()
     {
-        $actions = 'actions';
         if (php_sapi_name() === 'cli')
         {
-            $actions = 'cmd';
+            $actions = 'script';
         }
-
-        $filename = APP_ROOT."/{$actions}/{$this->modle}/{$this->action}.php";
-
-        /* 加载模块文件 */
-        if (!self::_includes($filename))
+        else
         {
-            throw new Exception("加载{$filename}失败!!");
-        } 
+            $filename = APP_ROOT."/actions/{$this->modle}/{$this->action}.php";
+            /* 加载模块文件 */
+            if (!self::_includes($filename))
+            {
+                throw new Exception("require({$filename}): failed to open stream: No such file or directory");
+            } 
+        }
+        
         $class = "{$this->modle}_{$this->action}";
 
         $app = new $class;

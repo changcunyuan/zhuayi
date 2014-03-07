@@ -35,13 +35,13 @@ class router extends zhuayi
         if (php_sapi_name() === 'cli')
         {
             require dirname(__FILE__)."/cli.class.php";
-            $this->url['path'] = cli::init();
+            $this->url = cli::init();
         }
         else
         {
             $this->url = parse_url($_SERVER['REQUEST_URI']);
-            $this->query = $this->url['query'];
         }
+        $this->query = $this->url['query'];
     }
 
     /* 格式化URL */
@@ -74,11 +74,11 @@ class router extends zhuayi
         }
         return $this;
     }
-
+    
     function __destruct()
     {
         /* 写入LOG */
-        log::_write_log();
+        log::write_log();
         zhuayi::perf_info();
     }
 }

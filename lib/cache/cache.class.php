@@ -20,7 +20,7 @@ class cache
 
     function __construct()
     {
-       self::$_instance = self::getInstance();
+        self::$_instance = self::getInstance();
     }
 
     //单例方法,用于访问实例的公共的静态方法

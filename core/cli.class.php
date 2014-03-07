@@ -3,24 +3,33 @@ class cli
 {
     public static $argv;
 
+    function __construct()
+    {
+
+    }
+
     static function init()
     {
         self::$argv = $_SERVER['argv'];
 
         self::$argv = self::arg_parser();
 
-        if (in_array('--help',self::$argv) || in_array('-h',self::$argv) || in_array('-?',self::$argv) || in_array('-help',self::$argv) || empty(self::$argv['-a']))
+        if (in_array('--help',self::$argv) || in_array('-h',self::$argv) || in_array('-?',self::$argv) || in_array('-help',self::$argv) )
         {
             self::get_help();
         }
-        foreach (self::$argv as $key=>$val)
-        {
-            if ($key != '-a' || $key != '-m')
-            {
-                $_GET[str_replace("-",'',$key)] = $val;
-            }
-        }
-
+        // foreach (self::$argv as $key=>$val)
+        // {
+        //     if ($key != '-a' || $key != '-m')
+        //     {
+        //         $_GET[str_replace("-",'',$key)] = $val;
+        //     }
+        // }
+        $url['path'] = "/index/test";
+        $url['query'] = http_build_query(self::$argv);
+        return $url;
+        print_r($url['query']);
+        exit;
         return '/'.self::$argv['-m'].'/'.self::$argv['-a'];
     }
 
@@ -33,7 +42,7 @@ class cli
         $cron_help .= "_______________________________________________________________________________________\n";
 
         echo $cron_help;
-        exit;
+        //exit;
     }
 
     /* 格式化 arg */

@@ -18,11 +18,15 @@ class log
 
     public static $is_have_log = false;
 
+    function __construct()
+    {
+
+    }
     public static function exception(Exception $e)
     {
         header("HTTP/1.0 500 server error");
         $strings = 'Uncaught '.get_class($e).',file: '.$e->getFile().' code: ' . $e->getCode() . "<br />Message: " . htmlentities($e->getMessage())."\n";
-        self::_set_log_data($strings,'exception');
+        error_log($strings,3,self::_get_log_path().".error-log");
         if ($_SERVER['APP']['debug'])
         {
             exit(print_r($e,true));
@@ -74,16 +78,9 @@ class log
         return "{$debug_info[2]['class']}->{$debug_info[2]['function']} line:{$debug_info[1]['line']}";
     }
 
-    public static function _set_log_data($strings,$type = '')
+    public static function _set_log_data($strings)
     {
-        if ($type == 'exception')
-        {
-            self::$log_exception[] = $strings;
-        }
-        else
-        {
-            self::$log_data[] = $strings;
-        }
+        self::$log_data[] = $strings;
         self::$is_have_log = true;
         return true;
     }
@@ -108,43 +105,30 @@ class log
         return "<".implode(' ', $log_start).">\n";
     }
 
-    public static function _write_log()
+    /* level 1-致命错误,导致页面中断, 0-非致命错误 */
+    public static function write_log()
     {
-        if (self::$is_have_log === false)
+        if (self::$is_have_log)
         {
-            return false;
+            var_dump(time());
+            return error_log(implode("\n", self::$log_data),3,self::_get_log_path().".log");
         }
-        $log_name = date("YmdHi",time() - time()%self::$log_time);
-        $log_path = ZHUAYI_ROOT."/log/".APP_NAME."/";
-        $log_file = $log_path.$log_name;
+        
+    }
 
-        /* 创建文件夹 */
-        if (!is_dir($log_path))
+    public static function _get_log_path()
+    {
+        $log_path = ZHUAYI_ROOT."/log/".APP_NAME."/".date("Ymd");
+        if (!is_dir(dirname($log_path)))
         {
             $oldumask = umask(0);
-            $reset = @mkdir($log_path,0777,true);
+            $reset = @mkdir(dirname($log_path),0777,true);
             if (!$reset)
             {
                 die("mkdir: log_path: No such file or directory");
             }
             chmod($log_path, 0777);
         }
-
-        if (!empty(self::$log_exception))
-        {
-            $exception = self::_create_uniqid().implode("\n",self::$log_exception);
-            if ($_SERVER['APP']['debug'])
-            {
-                error_log($exception,3,$log_file.".error");
-            }
-            else
-            {
-               die($exception);
-            }
-        }
-        if (!empty(self::$log_data))
-        {
-            error_log(self::_create_uniqid().implode("\n",self::$log_data)."\n",3,$log_file.".log");
-        }
+        return $log_path;
     }
 }
