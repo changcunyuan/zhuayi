@@ -12,7 +12,9 @@ class index_index extends action
     
     function run($a = '',$b = '')
     {
-        echo "   
+        //print_r($this->db_index->get_test());
+
+        die( "   
                     刁蒲城，<font color=red>野渭南</font><br/><br/>
                     不讲理的大荔县<br/><br/>
                     蛮临潼,鬼合阳<br/><br/>
@@ -26,6 +28,6 @@ class index_index extends action
                     米脂的婆姨，绥德的汉<br/><br/>
                     清涧的石板，瓦窑堡的炭<br/><br/>
                     三原的媳妇不能看<br/><br/>
-            ";
+            ");
     }
 }

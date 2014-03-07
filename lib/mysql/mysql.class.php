@@ -22,6 +22,11 @@ abstract class mysql extends zhuayi
 
     private $_connects = array();
 
+    function __construct()
+    {
+        
+    }
+
     //单例方法,用于访问实例的公共的静态方法
     public static function getInstance($config)
     {

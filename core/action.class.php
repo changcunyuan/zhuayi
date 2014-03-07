@@ -10,14 +10,6 @@
  */
 abstract class action extends zhuayi
 {
-    protected $smarty;
-
-    protected $post;
-
-    public $assign;
-
-    public $check_cgi  = false;
-
     function parse_cgi()
     {
         /* 格式化get post 参数 */
@@ -41,8 +33,8 @@ abstract class action extends zhuayi
             }
         }
         unset($in);
-        $this->get = (object)$this->get;
-        $this->post = (object)$this->post;
+        $this->get = $this->get;
+        $this->post = $this->post;
         return $this;
     }
 

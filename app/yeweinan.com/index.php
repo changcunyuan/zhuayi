@@ -10,3 +10,4 @@
 */
 define('APP_ROOT', dirname(__FILE__));
 require APP_ROOT."/../../core/zhuayi.php";
+zhuayi::init();
