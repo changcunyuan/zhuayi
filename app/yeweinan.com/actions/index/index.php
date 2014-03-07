@@ -12,22 +12,7 @@ class index_index extends action
     
     function run($a = '',$b = '')
     {
-        // var_dump($a);
-        // var_dump($b);
-        // log::notice('this is a demo');
-        //$thi
-        var_dump($this->db_index->get_test('asd'));
-        var_dump($this->get->asds);
-        var_dump($this->post->asd);
-        //print_r($this->db_index->get_test('asd'));
-        // // print_r($this);
-        // // $show = array('adsd'=>time());
-        // $show = array('a'=>1);
-        // $this->display($show);
-        // $asd = serialize($this);
-        // $asd = unserialize($asd);
-        // var_dump($asd);
-        echo "<br/>       
+        echo "   
                     刁蒲城，<font color=red>野渭南</font><br/><br/>
                     不讲理的大荔县<br/><br/>
                     蛮临潼,鬼合阳<br/><br/>
