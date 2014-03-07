@@ -1,0 +1,6 @@
+data/
+build.sh
+conf/
+log/
+.DS_Store
+doc/
