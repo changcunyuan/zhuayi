@@ -68,7 +68,7 @@ abstract class zhuayi
             /* 加载模块文件 */
             if (!self::_includes($filename))
             {
-                throw new Exception("加载{$filename}失败!!");
+                throw new Exception("require({$filename}): failed to open stream: No such file or directory");
             } 
         }
         

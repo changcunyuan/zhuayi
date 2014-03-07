@@ -74,11 +74,11 @@ class router extends zhuayi
         }
         return $this;
     }
-
+    
     function __destruct()
     {
         /* 写入LOG */
-        log::_write_log();
+        log::write_log();
         zhuayi::perf_info();
     }
 }

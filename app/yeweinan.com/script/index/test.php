@@ -12,7 +12,8 @@ class index_test extends action
 
     function run($a = '',$b = '')
     {
-        //print_r($this->db_index->get_test());
+        //log::notice('aaa');
+        print_r($this->db_index->get_test());
         // var_dump($a);
         // var_dump($b);
         
@@ -31,6 +32,5 @@ class index_test extends action
         return false;
     }
 }
-
 
 zhuayi::cil();

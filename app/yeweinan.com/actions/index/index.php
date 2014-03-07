@@ -13,8 +13,7 @@ class index_index extends action
     function run($a = '',$b = '')
     {
         //print_r($this->db_index->get_test());
-
-        die( "   
+        echo ( "   
                     刁蒲城，<font color=red>野渭南</font><br/><br/>
                     不讲理的大荔县<br/><br/>
                     蛮临潼,鬼合阳<br/><br/>
