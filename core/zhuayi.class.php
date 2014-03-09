@@ -31,6 +31,7 @@ abstract class zhuayi
 
     abstract function __construct();
    
+<<<<<<< HEAD
     public static function init()
     {
         $cmd = new router();
@@ -44,6 +45,21 @@ abstract class zhuayi
     }
 
  
+=======
+    public function init()
+    {
+        $cmd = new router();
+        $cmd->routing()->parse_url()->app();
+    }
+
+    public function cil()
+    {
+        $cmd = new router();
+        $cmd->parse_url()->app();
+    }
+
+
+>>>>>>> ef4ada92ef98751b255ae7674890956e8acab3cc
 
     function __get($name)
     {

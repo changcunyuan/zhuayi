@@ -28,6 +28,12 @@ class cli
         $url['path'] = "/index/test";
         $url['query'] = http_build_query(self::$argv);
         return $url;
+<<<<<<< HEAD
+=======
+        print_r($url['query']);
+        exit;
+        return '/'.self::$argv['-m'].'/'.self::$argv['-a'];
+>>>>>>> ef4ada92ef98751b255ae7674890956e8acab3cc
     }
 
     static function get_help()

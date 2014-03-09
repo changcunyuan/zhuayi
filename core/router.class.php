@@ -80,8 +80,12 @@ class router extends zhuayi
         }
         return $this;
     }
+<<<<<<< HEAD
 
 
+=======
+    
+>>>>>>> ef4ada92ef98751b255ae7674890956e8acab3cc
     function __destruct()
     {
         /* 写入LOG */
