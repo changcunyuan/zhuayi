@@ -22,6 +22,11 @@ class router extends zhuayi
     public $url;
 
     static $appname;
+
+    public $default_modle = 'index';
+
+    public $default_action = 'index';
+
     
     /**
      * 构造函数
@@ -31,6 +36,7 @@ class router extends zhuayi
     {
         /* 将INI配置赋值到SERVER变量中 */
         $_SERVER['APP'] = zhuayi::get_conf();
+        
         /* 兼容cli */
         if (php_sapi_name() === 'cli')
         {
@@ -50,8 +56,8 @@ class router extends zhuayi
         $list = explode('/',$this->url['path']);
         unset($list[0]);
 
-        $this->modle = (empty($list[1])) ? 'index' : $list[1];
-        $this->action = (empty($list[2])) ? 'index' : $list[2];
+        $this->modle = (empty($list[1])) ? $this->default_modle : $list[1];
+        $this->action = (empty($list[2])) ? $this->default_action : $list[2];
         unset($list[1]);unset($list[2]);
         $this->parameter = $list;
         return $this;
@@ -74,7 +80,8 @@ class router extends zhuayi
         }
         return $this;
     }
-    
+
+
     function __destruct()
     {
         /* 写入LOG */

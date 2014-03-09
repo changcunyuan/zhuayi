@@ -7,7 +7,6 @@
  * @author       zhuayi
  * @QQ           2179942
  */
-
 $pagestartime = microtime();
 define('ZHUAYI_ROOT', dirname(dirname(__FILE__)));
 define('APP_NAME',substr(strrchr(APP_ROOT,'/'),1,100));

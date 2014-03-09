@@ -20,27 +20,30 @@ abstract class zhuayi
 
     protected $url;
 
+    protected $query;
+
     public static $perf_include_count;
 
     public static $appname;
 
     public static $conf_cache = array();
     
+
     abstract function __construct();
    
-    public function init()
+    public static function init()
     {
         $cmd = new router();
-        $cmd->routing()->parse_url()->app();
+        return $cmd->bootstrap()->routing()->parse_url()->app();
     }
 
-    public function cil()
+    public static function cil()
     {
         $cmd = new router();
-        $cmd->parse_url()->app();
+        $cmd->bootstrap()->parse_url()->app();
     }
 
-
+ 
 
     function __get($name)
     {
@@ -49,7 +52,7 @@ abstract class zhuayi
             $this->parse_cgi();
             return $this->$name;
         }
-        else
+        else if (!empty($name))
         {
             return $this->$name = new $name();
         }
@@ -73,7 +76,6 @@ abstract class zhuayi
         }
         
         $class = "{$this->modle}_{$this->action}";
-
         $app = new $class;
 
         /* 合并对象 */
@@ -157,11 +159,31 @@ abstract class zhuayi
             throw new Exception("Class '{$class}' not found", -1);
         }
     }
+    /* 加载bootstrap类 */
+    public function bootstrap()
+    {
+        $filename = APP_ROOT."/bootstrap.php";
+        if (self::_includes($filename) === false)
+        {
+            throw new Exception("Class bootstrap not found", -1);
+        }
+    
+        $class_vals = get_class_methods('bootstrap');
+
+        foreach($class_vals as $value)
+        { 
+            if (substr($value,0,2) == '__' && $value !== '__construct')
+            {
+                call_user_func_array(array('bootstrap',$value),array($this));
+            }
+        }
+        return $this;
+    }
 
     /* 性能分析 */
     static function perf_include_count($filename)
     {
-        if ($_SERVER['APP']['debug'] && isset($_GET['debug']))
+        if (isset($_SERVER['APP']['debug']) && $_SERVER['APP']['debug'] && isset($_GET['debug']))
         {
             self::$perf_include_count[] = $filename;
         }

@@ -3,11 +3,8 @@ class index_index extends action
 {
     public $smarty = false;
 
-    public $check_cgi = true;
-
     function __construct()
     {
-        
     }
     
     function run($a = '',$b = '')
