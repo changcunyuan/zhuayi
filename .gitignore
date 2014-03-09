@@ -1,5 +1,5 @@
 data/
-build.sh
+*.sh
 conf/
 log/
 .DS_Store

@@ -1,8 +1,8 @@
 #!/usr/bin/expect
 TAR="$MOD_NAME.tar.gz"
-SERVER="***********"
-SERVER_PATH="***********"
-PASSPORT="**********"
+SERVER="zhuayi@xiamo.cc"
+SERVER_PATH="/data/www/0611.cc"
+PASSPORT="worinima198698"
 while getopts "a::b::c::" arg #选项后面的冒号表示该选项需要参数
 do
         case $arg in
