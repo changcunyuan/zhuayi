@@ -18,22 +18,9 @@ class cli
         {
             self::get_help();
         }
-        // foreach (self::$argv as $key=>$val)
-        // {
-        //     if ($key != '-a' || $key != '-m')
-        //     {
-        //         $_GET[str_replace("-",'',$key)] = $val;
-        //     }
-        // }
         $url['path'] = "/index/test";
         $url['query'] = http_build_query(self::$argv);
         return $url;
-<<<<<<< HEAD
-=======
-        print_r($url['query']);
-        exit;
-        return '/'.self::$argv['-m'].'/'.self::$argv['-a'];
->>>>>>> ef4ada92ef98751b255ae7674890956e8acab3cc
     }
 
     static function get_help()
@@ -45,7 +32,7 @@ class cli
         $cron_help .= "_______________________________________________________________________________________\n";
 
         echo $cron_help;
-        //exit;
+        exit;
     }
 
     /* 格式化 arg */
