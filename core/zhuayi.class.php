@@ -24,8 +24,6 @@ abstract class zhuayi
 
     public static $perf_include_count;
 
-    public static $appname;
-
     public static $conf_cache = array();
     
 
@@ -57,7 +55,7 @@ abstract class zhuayi
         }
     }
 
-    /* 取配置 */
+    /* 载入应用 */
     public function app()
     {
         if (php_sapi_name() === 'cli')
