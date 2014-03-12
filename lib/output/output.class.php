@@ -16,24 +16,11 @@ class output extends zhuayi
        
     }
 
-
-    function __get($name = '')
-    {
-        if ($name == 'get')
-        {
-            return $this->get();
-        }
-        else if ($name == 'post')
-        {
-            return $this->get = $this->post();
-        }
-    }
-
     public function _get_tpl_path()
     {
         $tpl = debug_backtrace();
         $tpl = explode('_',$tpl[2]['class']);
-        return $filename = APP_ROOT."/template/{$tpl[0]}/{$tpl[0]}_{$tpl[0]}.html";
+        return APP_ROOT."/template/{$tpl[0]}/{$tpl[0]}_{$tpl[0]}.html";
     }
 
     /* 返回输出 */

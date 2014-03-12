@@ -42,14 +42,9 @@ abstract class zhuayi
 
     function __get($name)
     {
-        if ($name == 'get' || $name == 'post')
+        if (!empty($name))
         {
-            $this->parse_cgi();
-            return $this->$name;
-        }
-        else if (!empty($name))
-        {
-            return new $name();
+            return $this->$name = new $name();
         }
     }
 

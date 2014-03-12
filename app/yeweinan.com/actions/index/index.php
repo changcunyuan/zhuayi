@@ -5,12 +5,20 @@ class index_index extends action
 
     function __construct()
     {
+
     }
     
     function run($a = '',$b = '')
     {
-        print_r($this->input->get);
-        print_r($this->input->post);
+        //var_dump($this->input->get['asds']);
+        //print_r($this->input->get);
+        
+        //$this->input->cookie = array('asd'=>'123');
+        //print_r($this->input->set_cookie('asd',123));
+        print_r($this->input->cookie['asd']);
+        //$this->input->post = array('ddd'=>time());
+        //print_r($this->input->post);
+        //print_r($this->input->set_cookie(''))
         //print_r($this->db_index->get_test());
         
         echo ( "   
