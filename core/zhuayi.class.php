@@ -20,8 +20,6 @@ abstract class zhuayi
 
     protected $url;
 
-    protected $query;
-
     public static $perf_include_count;
 
     public static $conf_cache = array();
@@ -51,7 +49,7 @@ abstract class zhuayi
         }
         else if (!empty($name))
         {
-            return $this->$name = new $name();
+            return new $name();
         }
     }
 
@@ -104,6 +102,7 @@ abstract class zhuayi
         if (!isset(self::$conf_cache[$confname]))
         {
             $filename = ZHUAYI_ROOT."/conf/".APP_NAME."/{$confname}.conf";
+
             /* 性能分析 */
             self::perf_include_count($filename);
             
@@ -149,7 +148,6 @@ abstract class zhuayi
         {
             $filename = ZHUAYI_ROOT."/lib/{$_class[0]}/".implode('_',$_class).".class.php";
         }
-       
         /* 加载文件 */
         if (!self::_includes($filename))
         {
@@ -169,7 +167,7 @@ abstract class zhuayi
 
         foreach($class_vals as $value)
         { 
-            if (substr($value,0,2) == '__' && $value !== '__construct')
+            if (substr($value,0,2) == '__')
             {
                 call_user_func_array(array('bootstrap',$value),array($this));
             }

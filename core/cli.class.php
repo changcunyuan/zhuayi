@@ -19,7 +19,7 @@ class cli
             self::get_help();
         }
         $url['path'] = "/index/test";
-        $url['query'] = http_build_query(self::$argv);
+        $_SERVER['REQUEST_URI'] = "/?".http_build_query(self::$argv);
         return $url;
     }
 
@@ -49,6 +49,12 @@ class cli
                 $_ARG[$argv[$i]] = $argv[$i+1];
                 continue;
             }
+            if (substr($argv[$i],0,2) == '--' )
+            {
+                $argv[$i] = str_replace('--','',$argv[$i]);
+                $_GET[$argv[$i]] = 'true';
+            }
+
             if (substr($argv[$i],0,1) == '-' )
             {
                 $_ARG[$argv[$i]] = 'true';

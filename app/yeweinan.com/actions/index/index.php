@@ -9,7 +9,10 @@ class index_index extends action
     
     function run($a = '',$b = '')
     {
+        print_r($this->input->get);
+        print_r($this->input->post);
         //print_r($this->db_index->get_test());
+        
         echo ( "   
                     刁蒲城，<font color=red>野渭南</font><br/><br/>
                     不讲理的大荔县<br/><br/>
@@ -25,5 +28,7 @@ class index_index extends action
                     清涧的石板，瓦窑堡的炭<br/><br/>
                     三原的媳妇不能看<br/><br/>
             ");
+
+        $this->output->display($show);
     }
 }

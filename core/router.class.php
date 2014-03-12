@@ -47,7 +47,6 @@ class router extends zhuayi
         {
             $this->url = parse_url($_SERVER['REQUEST_URI']);
         }
-        $this->query = $this->url['query'];
     }
 
     /* 格式化URL */
@@ -86,5 +85,6 @@ class router extends zhuayi
         /* 写入LOG */
         log::write_log();
         zhuayi::perf_info();
+        unset($this);
     }
 }

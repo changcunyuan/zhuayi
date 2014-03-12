@@ -10,34 +10,6 @@
  */
 abstract class action extends zhuayi
 {
-    function parse_cgi()
-    {
-        /* 格式化get post 参数 */
-        ini_set("magic_quotes_runtime", 0);
-
-        //处理被 get_magic_quotes_gpc 自动转义的数据,转换为HTML实体
-        //$this->get = $this->query;
-        parse_str($this->query,$this->get);
-        $this->post = $_POST;
-        $in = array(& $this->get, & $this->post);
-        while (list ($k, $v) = each($in))
-        {
-            foreach ($v as $key => $val)
-            {
-                if (! is_array($val) || !is_object($val))
-                {
-                    $in[$k][$key] = htmlspecialchars($val);
-                    continue;
-                }
-                $in[] = & $in[$k][$key];
-            }
-        }
-        unset($in);
-        $this->get = $this->get;
-        $this->post = $this->post;
-        return $this;
-    }
-
     function display($show = array(),$tpl = '')
     {
         if (empty($tpl))
@@ -46,7 +18,6 @@ abstract class action extends zhuayi
         }
         $filename = APP_ROOT."/template/{$tpl[0]}/{$tpl[0]}_{$tpl[0]}.html";
 
-        $show['config'] = $_SERVER['APP']['web'];
         if ($this->smarty)
         {
             return $this->smarty($show,$filename);
@@ -54,7 +25,7 @@ abstract class action extends zhuayi
         return require $filename;
     }
 
-    function smarty($show,$filename)
+    function smarty($show,$filename = '')
     {
         $config = zhuayi::get_conf('smarty');
         $config['compile_dir'] = ZHUAYI_ROOT."/".$config['compile_dir'].APP_NAME;

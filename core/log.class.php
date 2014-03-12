@@ -110,7 +110,6 @@ class log
     {
         if (self::$is_have_log)
         {
-            var_dump(time());
             return error_log(implode("\n", self::$log_data),3,self::_get_log_path().".log");
         }
         
