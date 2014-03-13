@@ -8,7 +8,7 @@
  * @author       zhuayi
  * @QQ           2179942
  */
-class cache
+class cache extends zhuayi
 {
     public $expire = 300;
 

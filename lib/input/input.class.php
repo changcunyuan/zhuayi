@@ -20,18 +20,6 @@ class input extends zhuayi
     {
     }
 
-    public static function _session_start()
-    {
-        if (is_null(self::$session_start))
-        {
-            session_start();
-            $cookiedomain = explode(':',$_SERVER['HTTP_HOST']);
-            ini_set('session.cookie_domain', $cookiedomain[0]);
-            self::$session_start = true;
-        }
-    }
-
-
     function __get($name = '')
     {
         if ($name == 'get')
@@ -41,10 +29,6 @@ class input extends zhuayi
         else if ($name == 'post')
         {
             return $this->post = $this->post();
-        }
-        else if ($name == 'cookie')
-        {
-            return $this->cookie = $this->cookie();
         }
     }
 
@@ -90,18 +74,5 @@ class input extends zhuayi
     public function post()
     {
         return $this->filter_xss($_POST);
-    }
-
-    public function set_cookie($key,$value)
-    {
-        self::_session_start();
-        $_SESSION[$key] = $value;
-        session_write_close();
-    }
-
-    public function cookie()
-    {
-        self::_session_start();
-        return $_SESSION;
     }
 }

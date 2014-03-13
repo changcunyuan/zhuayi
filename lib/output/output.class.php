@@ -76,7 +76,7 @@ class output extends zhuayi
         header('Content-type: application/json');
         $array['status'] = $status;
         $array['msg'] = $msg;
-        echo "{$callback}(".json_encode($array).")";
+        die("{$callback}(".json_encode($array).")");
     }
 
     /* 跳转 */
