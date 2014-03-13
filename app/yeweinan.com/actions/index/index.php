@@ -10,11 +10,10 @@ class index_index extends action
     
     function run($a = '',$b = '')
     {
-        //$this->session->insert('user_info',array('user_name'=>'zhuayi','passport'=>array('198698')));
+        //$this->session->insert('user_info',array('user_name'=>'zhuayi111','passport'=>array('198698')));
         //$this->session->update('user_info',array('user_name'=>'zhuayi'));
         //$this->session->delete('user_info','passport');
-        print_r($this->session->get);
-        exit;
+       
         //var_dump($this->input->get['asds']);
         //print_r($this->input->get);
         

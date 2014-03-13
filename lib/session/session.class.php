@@ -47,11 +47,14 @@ class session extends zhuayi
                 ini_set('session.save_path', $session_conf['session_save_path']);
             }
         }
-
+        if (empty($session_conf['session_cookie_domain']))
+        {
+            $session_conf['session_cookie_domain'] = $_SERVER['HTTP_HOST'];
+        }
+  
         ini_set('session.save_handler', $session_conf['session_save_handler']);
-        ini_set('session.cookie_domain', $session_conf['session_cookie_domain']);
         ini_set('session.name', $session_conf['session_cookie_name']);
-        session_set_cookie_params($session_conf['session_expiration']);
+        session_set_cookie_params($session_conf['session_expiration'],'/',$session_conf['session_cookie_domain']);
         session_start();
     }
 
@@ -100,6 +103,11 @@ class session extends zhuayi
     function get()
     {
         return $_SESSION;
+    }
+
+    function __destruct()
+    {
+        session_write_close();
     }
    
 }
