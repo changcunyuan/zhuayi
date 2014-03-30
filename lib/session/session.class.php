@@ -87,15 +87,16 @@ class session extends zhuayi
     }
 
     /* 删除session */
-    public function delete($key,$key2)
+    public function delete($key)
     {
-        if (empty($key2))
+        if (empty($key))
         {
-            $_SESSION[$key] = '';
+            session_unset();
+            session_destroy();
         }
         else
         {
-            $_SESSION[$key][$key2] = '';
+            $_SESSION[$key] = '';
         }
     }
 

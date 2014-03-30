@@ -32,21 +32,6 @@ class input extends zhuayi
         }
     }
 
-    public static function set_request_url($data = '')
-    {
-        if (!empty($data))
-        {
-            $data = "&".$data;
-        }
-        if (!is_null(self::$query))
-        {
-            return self::$query .= $data;
-        }
-        $query = parse_url($_SERVER['REQUEST_URI']);
-        self::$query = preg_replace('/(.*?)\?$1/', "", $query['query']);
-        return self::$query .= $data;
-    }
-
     /* 递归过滤 */
     public function filter_xss($data)
     {
@@ -67,7 +52,9 @@ class input extends zhuayi
 
     /* 格式化get 参数 */
     public function get()
-    {   
+    {
+        $_SERVER['REQUEST_URI'] = preg_replace('/(.*?)\?/', "", $_SERVER['REQUEST_URI']);
+        parse_str($_SERVER['REQUEST_URI'],$_GET);
         return $this->filter_xss($_GET);
     }
 

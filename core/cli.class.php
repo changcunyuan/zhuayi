@@ -3,11 +3,6 @@ class cli
 {
     public static $argv;
 
-    function __construct()
-    {
-
-    }
-
     static function init()
     {
         self::$argv = $_SERVER['argv'];
@@ -18,8 +13,9 @@ class cli
         {
             self::get_help();
         }
-        $url['path'] = "/index/test";
-        $_SERVER['REQUEST_URI'] = "/?".http_build_query(self::$argv);
+        
+        $url['path'] = substr($_SERVER['PHP_SELF'],strrpos($_SERVER['PHP_SELF'],'script',-3)+6);
+        $_SERVER['REQUEST_URI'] = http_build_query(self::$argv);
         return $url;
     }
 

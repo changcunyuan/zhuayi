@@ -52,6 +52,7 @@ class router extends zhuayi
     /* 格式化URL */
     public function parse_url()
     {
+        $this->url['path'] = str_replace(".php",'',$this->url['path']);
         $list = explode('/',$this->url['path']);
         unset($list[0]);
 

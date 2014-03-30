@@ -17,6 +17,6 @@ class bootstrap
 
     public static function __set_user_session(zhuayi $zhuayi)
     {
-        $zhuayi->user = array('zhuayi'=>true);
+        $zhuayi->user = $zhuayi->session->get('zhuayi');
     }
 }
