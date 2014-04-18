@@ -17,7 +17,8 @@ class index_test extends action
         //$this->output->json('1','111');
 
         //return false;
-        var_dump(time());
+        print_r($this->db_index->get_test());
+        var_dump($_GET);
         var_dump($this->input->get['-m']);
         exit;
         print_r($this->input->get['-m']);

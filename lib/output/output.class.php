@@ -10,6 +10,8 @@
  */
 class output extends zhuayi
 {
+    /* 模板变量 */
+    public $show = array();
 
     function __construct()
     {
@@ -23,9 +25,17 @@ class output extends zhuayi
         return APP_ROOT."/template/{$tpl[0]}/{$tpl[0]}_{$tpl[0]}.html";
     }
 
+    /* 设置模板变量 */
+    public function append_show($show)
+    {
+        array_push($this->show,$show);
+        return $this->show;
+    }
+
     /* 返回输出 */
     public function fetch($show = array(),$filename = '')
     {
+        $show = $this->append_show($show);
         ob_start();
         $content = ob_get_contents();
         ob_end_clean();
@@ -39,6 +49,8 @@ class output extends zhuayi
         {
             $filename = $this->_get_tpl_path();
         }
+        $show = $this->append_show($show);
+
         return require $filename;
     }
 
@@ -49,7 +61,7 @@ class output extends zhuayi
         {
             $filename = $this->_get_tpl_path();
         }
-        $config = zhuayi::get_conf('smarty');
+        $config = $_SERVER['APP']['smarty'];
         $config['compile_dir'] = ZHUAYI_ROOT."/".$config['compile_dir'].APP_NAME;
         
         $smarty = new Smarty;
@@ -57,6 +69,7 @@ class output extends zhuayi
         $smarty->left_delimiter = $config['left_delimiter'];
         $smarty->right_delimiter = $config['right_delimiter'];
 
+        $show = $this->append_show($show);
         $smarty->assign('show',$show);
         $smarty->display($filename);
     }

@@ -64,10 +64,6 @@ class session extends zhuayi
         {
             return $this->get = $this->get();
         }
-        elseif ($name == 'cache')
-        {
-            return $this->cache = new cache();
-        }
     }
 
     /* 写入session */

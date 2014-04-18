@@ -53,8 +53,6 @@ class input extends zhuayi
     /* 格式化get 参数 */
     public function get()
     {
-        $_SERVER['REQUEST_URI'] = preg_replace('/(.*?)\?/', "", $_SERVER['REQUEST_URI']);
-        parse_str($_SERVER['REQUEST_URI'],$_GET);
         return $this->filter_xss($_GET);
     }
 

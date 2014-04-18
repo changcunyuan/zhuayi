@@ -48,7 +48,7 @@ class cli
             if (substr($argv[$i],0,2) == '--' )
             {
                 $argv[$i] = str_replace('--','',$argv[$i]);
-                $_GET[$argv[$i]] = 'true';
+                $_ARG[$argv[$i]] = 'true';
             }
 
             if (substr($argv[$i],0,1) == '-' )

@@ -28,7 +28,8 @@ class cache extends zhuayi
     {
         if(!(self::$_instance instanceof self))
         {
-            $conf = zhuayi::get_conf('cache');
+            //$conf = zhuayi::get_conf('cache');
+            $conf = $_SERVER['APP']['cache'];
 
             if ($conf['use_cache'] === 'on')
             {
@@ -118,7 +119,7 @@ class cache extends zhuayi
         
         if ($_SERVER['APP']['debug'] && isset($_GET['cache_debug']))
         {
-            echo "<!--\n cache_get: ".print_r($debug_key,true)." ";
+            echo "<!--\n cache: get(".print_r($debug_key,true).")";
             var_dump(print_r($reset,true));
             echo " \n-->\n";
         }

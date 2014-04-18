@@ -41,7 +41,7 @@ abstract class mysql extends zhuayi
     /* 获取连接 */
     public function connect_string($slave = 0)
     {
-        $db_conf = zhuayi::get_conf('db');
+        $db_conf = zhuayi::get_conf('mysql');
         if (!isset($db_conf[$this->db_name_conf]))
         {
             throw new Exception("get db_conf: ".$this->db_name_conf." : No such file or directory", -1);
@@ -101,7 +101,7 @@ abstract class mysql extends zhuayi
     {
 
         /* SQL 执行时间开始 */
-        $db_exe_start_time = zhuayi::getmicrotime();
+        $db_exe_start_time = action::getmicrotime();
 
         /* 检查连接是否存在 */
         $status = $this->connect($slave)->getAttribute(PDO::ATTR_SERVER_INFO);
@@ -122,7 +122,7 @@ abstract class mysql extends zhuayi
 
         if ($_SERVER['APP']['debug'] && isset($_GET['db_debug']))
         {
-            $db_ex_end_time = sprintf("%0.3f",zhuayi::getmicrotime()-$db_exe_start_time);
+            $db_ex_end_time = sprintf("%0.3f",action::getmicrotime()-$db_exe_start_time);
             self::perf_add_count($slave,$sql,$db_ex_end_time);
         }
         return $sth;

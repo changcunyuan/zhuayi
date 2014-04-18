@@ -92,7 +92,7 @@ abstract class zhuayi
     }
 
     /* 取配置 */
-    public static function get_conf($confname = 'global')
+    public static function get_conf($confname = 'app')
     {
         if (!isset(self::$conf_cache[$confname]))
         {
@@ -177,57 +177,5 @@ abstract class zhuayi
         {
             self::$perf_include_count[] = $filename;
         }
-    }
-
-    static function perf_info()
-    {
-        if (isset($_GET['db_debug']))
-        {
-            //echo "\n";
-            $db_list = mysql::$db_base_performance_sql_count;
-            $db_num = 1;
-            foreach ($db_list as $key=>$val)
-            {
-                echo "<!--\nsql_{$db_num}: db_name_conf_key: {$val['db_name']}\n";
-                echo "SQL:{$val['sql']}\nexecute_time:{$val['execute_time']}\n-->\n";
-                $db_num++;
-            }
-            unset($db_list);
-        }
-
-        /* 占用内存 */
-        if (isset($_GET['debug']))
-        {
-            global $pagestartime;
-
-            $db_ex_end_time = sprintf("%0.3f",self::getmicrotime() - self::getmicrotime($pagestartime));
-            $include_count = count(self::$perf_include_count);
-            $memory_get_usage = sprintf('%0.5f', memory_get_usage() / 1048576 );
-
-            /* 包含文件数 */
-            $include_list = self::$perf_include_count;
-            echo "\n";
-            foreach ($include_list as $val)
-            {
-                echo "<!-- include:{$val} -->\n";
-            }
-            unset($include_list);
-
-            echo "<!--";
-            echo "页面用时: {$db_ex_end_time} 秒 ";
-            echo "文件加载数: {$include_count} 个 ";
-            echo "内存占用: {$memory_get_usage} MB ";
-            echo "-->";
-        }
-    }
-
-    static function getmicrotime($microtime='')
-    {
-        if (empty($microtime))
-        {
-            $microtime = microtime();
-        }
-        list($usec, $sec) = explode(" ",$microtime);
-        return ((float)$usec + (float)$sec);
     }
 }

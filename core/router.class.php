@@ -36,7 +36,7 @@ class router extends zhuayi
     {
         /* 将INI配置赋值到SERVER变量中 */
         $_SERVER['APP'] = zhuayi::get_conf();
-        
+
         /* 兼容cli */
         if (php_sapi_name() === 'cli')
         {
@@ -52,6 +52,8 @@ class router extends zhuayi
     /* 格式化URL */
     public function parse_url()
     {
+        $request_url = preg_replace('/(.*?)\?/', "", $_SERVER['REQUEST_URI']);
+        parse_str($request_url,$_GET);
         $this->url['path'] = str_replace(".php",'',$this->url['path']);
         $list = explode('/',$this->url['path']);
         unset($list[0]);
@@ -69,8 +71,7 @@ class router extends zhuayi
      */
     function routing()
     {
-        $rewrite = zhuayi::get_conf('rewrite');
-
+        $rewrite = $_SERVER['APP']['rewire'];
         if ($rewrite !== false)
         {
             foreach ($rewrite as $key=>$val)
@@ -79,13 +80,5 @@ class router extends zhuayi
             }
         }
         return $this;
-    }
-
-    function __destruct()
-    {
-        /* 写入LOG */
-        log::write_log();
-        zhuayi::perf_info();
-        unset($this);
     }
 }

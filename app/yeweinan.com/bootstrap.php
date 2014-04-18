@@ -17,6 +17,7 @@ class bootstrap
 
     public static function __set_user_session(zhuayi $zhuayi)
     {
-        $zhuayi->user = $zhuayi->session->get('zhuayi');
+        $zhuayi->output->show = array('name'=>'野渭南');
+        //$zhuayi->user = $zhuayi->session->get('zhuayi');
     }
 }
