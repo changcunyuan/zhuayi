@@ -30,8 +30,6 @@
 ```
 example.com/news/article/345/参数1/参数2/....
 ```
-
->注意：index.php 文件是被默认包含在 URL 中的，但是可以通过更改 .htaccess 文件来改变这个设置
 	
 ###Zhuayi 功能强大
 
@@ -74,52 +72,207 @@ example.com/news/article/345/参数1/参数2/....
 
 *需要引用apache或者nginx的SERVER变量时可以使用  `-c` 参数指定到apache的vhosts或者nginx的conf文件.*
 
-# cmd php example
+# cli下PHP执行的一个例子
 ```
+#!/usr/bin/php
 <?php
-/*
- * cron_test.php     命令行下执行PHP
-
+/**
+ * dnspod_modify_record.php     Zhuayi DNS修改A解析记录
  *
- * @copyright    (C) 2005 - 2010  zhuayi
- * @licenes      http://www.zhuayi.net
- * @lastmodify   2010-10-28
+ * @copyright    (C) 2005 - 2010  Zhuayi
+ * @lastmodify   2010-10-27
  * @author       zhuayi
- * @QQ			 2179942
- * php cron_test.php -c /data/vhosts/baidu_soft.conf -soft_id  ~/Downloads/soft_id  -out ~/Downloads/hao123.xml
+ * @QQ           2179942
+ * @explam  php /dnspod/script/dnspod/dnspod_domain_list.php -domain dns.yeweinan.com -value 127.0.0.1 -u ** -p **
  */
-include_once "../cron/cron.inc.php";
-class cron_test extends zhuayi
-{
-	/* 脚本最大执行时间 */
-	public $timeout = 1200;
-	public $run_start_time;
-	
-	/* 构造函数 */
-	function __construct()
-	{
-		parent::__construct();
-		$this->load_class('db',false);
-		parent::$admin = true;
-	}
 
-	function run()
-	{
-		global $argv_array;
-		print_r($argv_array);
-		print_r($_SERVER);
-	}
+define('APP_ROOT', dirname(dirname(dirname(__FILE__))));
+require APP_ROOT."/../../core/zhuayi.php";
+
+class dnspod_modify_record extends action
+{
+
+    const  GET_DOMAIN_LIST  = 'https://dnsapi.cn/Domain.List';
+
+    const  GET_DOMAIN_ALIAS_LIST = 'https://dnsapi.cn/Record.List';
+
+    const  MODIFY_RECORD = 'https://dnsapi.cn/Record.Modify';
+
+    const  OUT_IP_URL = 'http://iframe.ip138.com/ic.asp';
+
+    public  $cache_file;
+
+    public $post_array = array(
+                                'format' => 'json',
+                              );
+
+    public $domain;
+
+    public $record;
+
+    public function __construct()
+    {
+        $this->post_array['login_email'] = $this->input->get['-u'];
+        $this->post_array['login_password'] = $this->input->get['-p'];
+
+        if (empty($this->post_array['login_email']) || empty($this->post_array['login_password']))
+        {
+            throw new Exception("username or password is not value", -1);
+        }
+
+        if (empty($this->input->get['-value']))
+        {
+            /* 获取外网IP */
+            $this->http->get(self::OUT_IP_URL);
+            preg_match('/\[(.*?)\]/i',$this->http->results,$this->input->get['-value']);
+
+            $this->input->get['-value'] = $this->input->get['-value'][1];
+
+            if (empty($this->input->get['-value']))
+            {
+                throw new Exception("is not find ip by ".self::OUT_IP_URL, -1);
+            }
+        }
+
+        $this->cache_file = ZHUAYI_ROOT."/data/".APP_NAME."/ip.cache";
+
+        /* 读取缓存,看是否有IP变化 */
+        $cache = file_get_contents($this->cache_file);
+
+        if ($cache == $this->input->get['-value'])
+        {
+            $this->log->notice("cache_ip {$cache} == {$this->input->get['-value']}");
+            exit;
+        }
+    }
+
+    
+    function run()
+    {
+        /* 取顶级域名 */
+        $this->input->get['-domain'] = $this->_reset_domain($this->input->get['-domain']);
+    
+        $domain_list = $this->get_domain_alias_by_domain($this->input->get['-domain']['top_domain'].".".$this->input->get['-domain']['postfix']);
+
+        /* 取需要解析的IP */
+        if (empty($this->input->get['-domain']['second_domain']))
+        {
+            $this->input->get['-domain']['second_domain'] = "@";
+        }
+       
+        $this->record = $domain_list[$this->input->get['-domain']['second_domain']];
+  
+        /* 修改记录 */
+        $this->_update_alias_by_domain_id();
+    }
+
+    function _update_alias_by_domain_id()
+    {
+        if (empty($this->domain['id']) || empty($this->record['id']))
+        {
+            throw new Exception("domain_id or record_id is not value !!", -1);
+        }
+
+        /* 修改解析 */
+        $this->post_array['domain_id'] = $this->domain['id'];
+        $this->post_array['record_id'] = $this->record['id'];
+        $this->post_array['record_type'] = 'A';
+        $this->post_array['record_line'] = '默认';
+        $this->post_array['sub_domain'] = $this->input->get['-domain']['second_domain'];
+        $this->post_array['value'] = $this->input->get['-value'];
+
+        unset($this->post_array['domain']);
+
+        $results = $this->_post(self::MODIFY_RECORD,$this->post_array);
+
+        $this->file->write(ZHUAYI_ROOT."/data/".APP_NAME."/ip.cache",$results['record']['value']);
+
+        $this->log->notice("{$this->record['name']}.{$this->domain['name']} == {$results['record']['value']} is {$results['status']['message']}");
+    }
+
+
+    /* 获取域名记录列表 */
+    function get_domain_alias_by_domain($domain)
+    {
+        $this->post_array['domain'] = $domain;
+
+        $results = $this->_post(self::GET_DOMAIN_ALIAS_LIST,$this->post_array);
+
+        $this->domain = $results['domain'];
+
+        $results = $results['records'];
+
+        foreach ($results as $val);
+        {
+            $array_tmp[$val['name']] = $val;
+        }
+        return $array_tmp;
+
+    }
+
+
+    function get_domain_list()
+    {
+        $domains = $this->_post(self::GET_DOMAIN_LIST,$this->post_array);
+        $domains = $domains['domains'];
+        foreach ($domains as $val)
+        {
+            $domains_tmp[$val['name']] = $val;
+        }
+
+        return $domains_tmp;
+    }
+
+    function _reset_domain($domain)
+    {
+        /* 取后缀 */
+        $dmtypeRegx = '/(.*?)(com\.cn|org\.cn|net\.cn|com\.jp|co\.jp|com\.kr|com\.tw|cn|com|org|info|us|fr|de|tv|net|cc|biz|hk|jp|kr|name|me|tw|la|pw)$/i';  
+        preg_match($dmtypeRegx, $domain, $matches);
+
+        if (empty($matches))
+        {
+            return false;
+        }
+        $postfix = $matches[2];
+        $domain = $matches[1];
+
+        /* 判断是几级域名 */
+        $domain = explode('.',$domain);
+        if (count($domain) == 3)
+        {
+            if ($domain[0] == 'www')
+            {
+                unset($domain[0]);
+            }
+        }
+        /* 判断万网该死的域名 */
+        if (count($domain) == 2 && $domain[0] == 'www')
+        {
+            $domain = array();
+        }
+        if (count($domain) > 2 )
+        {
+            $second_domain = reset($domain);
+        }
+
+        $top_domain = end(array_filter($domain));
+        return array('top_domain'=>$top_domain,'second_domain'=>$second_domain,'domain'=>$domain,'postfix'=>$postfix);
+    }
+
+    function _post($url,$post_array)
+    {
+        $this->http->post($url,$post_array);
+
+        $this->http->results = json_decode($this->http->results,true);
+
+        if ($this->http->results['status']['code'] != 1)
+        {
+            throw new Exception($this->http->results['status']['message'], $this->http->results['status']['code']);
+        }
+
+        return $this->http->results;
+    }
 }
 
-$cron = new cron_test();
-try
-{
-	$reset = false;
-	do
-	{
-		$reset = $cron->run($argv);
-	}
-	while ($reset===false);
-} 
-catch (ZException $e){}
+zhuayi::cil();
 ```
