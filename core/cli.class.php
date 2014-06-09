@@ -18,8 +18,6 @@ class cli
         $url['path'] = str_replace(".php",'',$url['path']);
         $url['path'] = explode('_',$url['path'],2);
         $url['path'] = "/".implode('/',$url['path']);
-        var_dump($url['path']);
-        exit;
         $_SERVER['REQUEST_URI'] = http_build_query(self::$argv);
         return $url;
     }
