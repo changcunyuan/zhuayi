@@ -42,36 +42,87 @@ example.com/news/article/345/参数1/参数2/....
 
 ***
 
-#### 由于依赖的SERVER变量存放在vhosts中(如下),所以在cmd下执行php是获取不到`SERVER`变量的
+#### 独立的配置文件,减少各应用间的耦合
+> 路径存放 `$PATH/conf/appname/app.conf`
 
 ```
-<VirtualHost *>
-    <Directory "/data/site/code.csdn.net/zhuayi/">
-        Options -Indexes FollowSymLinks
-        Allow from all
-        AllowOverride All
-    </Directory>
-    ServerAdmin admin@www.zhuayi.net
-    DocumentRoot "/data/site/code.csdn.net/zhuayi"
-    ServerName zhuayi:80
-    ErrorLog "/private/var/log/apache2/zhuayi-error_log"
-    CustomLog "/data/logs/apache/zhuayi/access_log" common
-    
-    SetEnv BAIDU_CMS_MEMCACHE 127.0.0.1:11211
-    SetEnv BAIDU_MEMCACHED_KEY zhuayi
-    SetEnv BAIDU_MEMCACHED_OUTTIME 3600
-    SetEnv DEBUG true
-    ##SESSION##
-    SetEnv COOKIE_PATH tcp://127.0.0.1:11211
-    SetEnv COOKIE_HANDLER memcache
-    SetEnv COOKIE_TIMEOUT 1200
-</VirtualHost>
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; 全局配置
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+debug = true;
+title = dota2;
+session_name = dota2;
+admin_session_name = zhuayi
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; SESSION配置
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[session]
+;Session Cookie 的名字。
+session_cookie_name = ZHUAYISESSID;
+
+;session 持续的秒数。默认是2个小时(7200秒)。如果将这个数值设为: 0，就可以得到 永久 session。
+session_expiration = 86400;
+
+;cookie设置域名,为空为当前域名
+session_cookie_domain = ;
+
+;以什么方式存储session,支持file,memcache
+session_save_handler = file;
+
+;session存储位置,session_save_handler为file时,该参数才有效
+session_save_path = ;
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; 缓存配置
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[cache]
+use_cache = on
+memcache_host = 127.0.0.1:11211,127.0.0.1:11211
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; rewire
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[rewire]
+;/index/index = 'index.html';
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Smarty模板的配置
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[smarty]
+; 同时支持绝对路径和相对路径，后面的目录配置也类似的
+template_dir = template/
+
+; 模板编译目录
+compile_dir = data/smarty/compile/
+
+; 是否检测模板更新
+; 0 - 不检测，有助于提升性能
+; 1 - 检测
+compile_check = 0
+
+; 配置目录
+config_dir = data/smarty/config/
+
+; 预加载的产品全局配置文件，必须相对于config_dir
+; 留空表示不需要预加载
+config_load =
+
+; 插件目录
+plugins_dir = 
+
+; 左右通配符
+left_delimiter = "{%"
+right_delimiter = "%}"
+
 
 ```
-[https://code.csdn.net/zhuayi/zhuayi/tree/master/apache.server](https://code.csdn.net/zhuayi/zhuayi/tree/master/apache.server)
-
-*需要引用apache或者nginx的SERVER变量时可以使用  `-c` 参数指定到apache的vhosts或者nginx的conf文件.*
-
 # cli下PHP执行的一个例子
 ```
 #!/usr/bin/php
