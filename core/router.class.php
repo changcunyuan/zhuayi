@@ -36,7 +36,7 @@ class router extends zhuayi
     {
         /* 将INI配置赋值到SERVER变量中 */
         $_SERVER['APP'] = zhuayi::get_conf();
-
+        
         /* 兼容cli */
         if (php_sapi_name() === 'cli')
         {

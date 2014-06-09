@@ -4,3 +4,5 @@ conf/
 log/
 .DS_Store
 doc/
+app/
+tar/

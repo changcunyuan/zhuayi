@@ -20,7 +20,7 @@ class session extends zhuayi
     function __construct()
     {
         /* 取session 配置 */
-        $session_conf = parent::get_conf('session');
+        $session_conf = $_SERVER['APP']['session'];
 
         /* 设置session cookie域 */
         if (empty($session_conf['session_cookie_domain']))
@@ -51,7 +51,7 @@ class session extends zhuayi
         {
             $session_conf['session_cookie_domain'] = $_SERVER['HTTP_HOST'];
         }
-  
+    
         ini_set('session.save_handler', $session_conf['session_save_handler']);
         ini_set('session.name', $session_conf['session_cookie_name']);
         session_set_cookie_params($session_conf['session_expiration'],'/',$session_conf['session_cookie_domain']);
@@ -79,7 +79,12 @@ class session extends zhuayi
         {
             return false;
         }
-        $_SESSION[$key] = array_merge($_SESSION[$key],$value);
+
+        foreach ($value as $key2=>$val)
+        {
+            $_SESSION[$key][$key2] = $val;
+        }
+        //$_SESSION[$key] = array_merge($_SESSION[$key],$value);
     }
 
     /* 删除session */

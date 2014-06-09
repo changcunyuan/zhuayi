@@ -30,13 +30,13 @@ abstract class zhuayi
     public static function init()
     {
         $cmd = new router();
-        return $cmd->bootstrap()->routing()->parse_url()->app();
+        return $cmd->routing()->parse_url()->bootstrap()->app();
     }
 
     public static function cil()
     {
         $cmd = new router();
-        $cmd->bootstrap()->parse_url()->app();
+        $cmd->parse_url()->app();
     }
 
 
@@ -57,7 +57,7 @@ abstract class zhuayi
         }
         else
         {
-            $filename = APP_ROOT."/actions/{$this->modle}/{$this->action}.php";
+            $filename = APP_ROOT."/actions/{$this->modle}/{$this->modle}_{$this->action}.php";
             /* 加载模块文件 */
             if (!self::_includes($filename))
             {
@@ -96,8 +96,7 @@ abstract class zhuayi
     {
         if (!isset(self::$conf_cache[$confname]))
         {
-            $filename = ZHUAYI_ROOT."/conf/".APP_NAME."/{$confname}.conf";
-
+            $filename = realpath(ZHUAYI_ROOT."/conf/".APP_NAME."/{$confname}.conf");
             /* 性能分析 */
             self::perf_include_count($filename);
             
@@ -114,6 +113,7 @@ abstract class zhuayi
      */
     static function _includes($filename)
     {
+        $filename = realpath($filename);
         self::perf_include_count($filename);
         if (file_exists($filename))
         {
@@ -137,7 +137,8 @@ abstract class zhuayi
         /* 判断是本地类还是全局类 */
         if (count($_class) > 1)
         {
-            $filename = APP_ROOT."/".implode('/',$_class).".class.php";
+            $path = "{$_class[0]}/{$_class[1]}";
+            $filename = APP_ROOT."/${path}/".implode('_',$_class).".class.php";
         }
         else
         {

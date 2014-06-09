@@ -71,8 +71,14 @@ abstract class mysql extends zhuayi
         if (!isset($this->_connects[$this->db_name_conf][$slave]) || !is_object($this->_connects[$this->db_name_conf][$slave]))
         {
             $connect = $this->connect_string($slave);
-            $this->_connects[$this->db_name_conf][$slave] = new PDO($connect['dbhost'],$connect['user'],$connect['pass'],array(PDO::ATTR_PERSISTENT => true));
+            try
+            {
+               $this->_connects[$this->db_name_conf][$slave] = new PDO($connect['dbhost'],$connect['user'],$connect['pass'],array(PDO::ATTR_PERSISTENT => true)); 
 
+            } catch (Exception $e) {
+                throw new Exception($e->getMessage(), -1);
+            }
+            
             /* 设置报错信息*/
             $this->_connects[$this->db_name_conf][$slave]->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION); 
 
@@ -99,7 +105,6 @@ abstract class mysql extends zhuayi
 
     public function _query($sql,$slave = 0)
     {
-
         /* SQL 执行时间开始 */
         $db_exe_start_time = action::getmicrotime();
 
@@ -113,7 +118,6 @@ abstract class mysql extends zhuayi
             /* 重连数据库 */
             $this->connect($slave);
         }
-
         $sth = $this->connect($slave)->prepare($sql,array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
         if ($sth)
         {
@@ -303,11 +307,18 @@ abstract class mysql extends zhuayi
     }
 
 
-    public function _select($where = '',$order = '',$limit = '',$slave = 1)
+    public function _select($where ,$order = '',$limit = '',$slave = 1)
     {
         $factor = array_keys($this->get_table_fields());
         $factor = "`".implode("`,`",$factor)."`";
-        $sql = " select {$factor} from `{$this->table_name}` where".implode(' and ',$this->parse_array($where)).$this->order($order).$this->limit($limit);
+        $sql = " select {$factor} from `{$this->table_name}` ";
+        $where = implode(' and ',$this->parse_array($where));
+        if (!empty($where))
+        {
+            $sql .= " where {$where}";
+        }
+        
+        $sql .= $this->order($order).$this->limit($limit);
         return $this->_query($sql,$slave);
     }
 
@@ -328,6 +339,21 @@ abstract class mysql extends zhuayi
     public function insert($array)
     {
         $sql = "insert into `{$this->table_name}` set ".implode(" , ", $this->parse_array($array));
+        $query = $this->_query($sql);
+        
+        if ($query)
+        {
+            return $this->insert_id();
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public function replace($array)
+    {
+        $sql = "replace into `{$this->table_name}` set ".implode(" , ", $this->parse_array($array));
         $query = $this->_query($sql);
         
         if ($query)
@@ -382,7 +408,13 @@ abstract class mysql extends zhuayi
 
     function count($where,$slave = 1)
     {
-        $sql = "select count(*) as count from `{$this->table_name}` where ".implode(" and ",$this->parse_array($where));
+        $where = implode(" and ",$this->parse_array($where));
+        $sql = "select count(*) as count from `{$this->table_name}`";
+
+        if (!empty($where))
+        {
+            $sql .= " where {$where}";
+        }
         $query = $this->_query($sql,$slave);
         $reset = $query->fetch(2);
         return $reset['count'];

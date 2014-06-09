@@ -36,7 +36,17 @@ class cache extends zhuayi
                 self::$use_cache = false;
                 return true;
             }
-            self::$_instance = new Memcache;
+
+            try
+            {
+                self::$_instance = new Memcache;    
+            }
+            catch (Exception $e)
+            {
+                self::$use_cache = false;
+                return true;
+            }
+            
 
             $memcache_config = explode(',',$conf['memcache_host']);
             foreach ($memcache_config as $key=>$val)

@@ -10,6 +10,8 @@
  */
 class output extends zhuayi
 {
+    public $filename;
+
     /* 模板变量 */
     public $show = array();
 
@@ -22,13 +24,17 @@ class output extends zhuayi
     {
         $tpl = debug_backtrace();
         $tpl = explode('_',$tpl[2]['class']);
-        return APP_ROOT."/template/{$tpl[0]}/{$tpl[0]}_{$tpl[0]}.html";
+        $model = $tpl[0];
+        unset($model);
+        $this->filename = implode("_",$tpl).".html";
+        return APP_ROOT."/template/{$tpl[0]}/".$this->filename;
     }
 
     /* 设置模板变量 */
     public function append_show($show)
     {
-        array_push($this->show,$show);
+
+        $this->show = array_merge($this->show,$show);
         return $this->show;
     }
 
@@ -64,14 +70,38 @@ class output extends zhuayi
         $config = $_SERVER['APP']['smarty'];
         $config['compile_dir'] = ZHUAYI_ROOT."/".$config['compile_dir'].APP_NAME;
         
-        $smarty = new Smarty;
-        $smarty->setCompileDir($config['compile_dir']);
-        $smarty->left_delimiter = $config['left_delimiter'];
-        $smarty->right_delimiter = $config['right_delimiter'];
+        /* 判断smarty编译文件是否存在 */
+        //$file_hash = md5_file($filename);
+        //$cache_file = $config['compile_dir']."/".$file_hash.".file.{$this->filename}.cache";
 
-        $show = $this->append_show($show);
-        $smarty->assign('show',$show);
-        $smarty->display($filename);
+        //$reset = false;
+        //if (!isset($_GET['recache']))
+        //{
+        //    $reset = include $cache_file;
+        //}
+        
+        //if ($reset === false)
+        //{
+
+            $smarty = new Smarty;
+            $smarty->setCompileDir($config['compile_dir']);
+            $smarty->left_delimiter = $config['left_delimiter'];
+            $smarty->right_delimiter = $config['right_delimiter'];
+            $show = $this->append_show($show);
+            if (!empty($show))
+            {
+                $smarty->assign('show',$show);
+            }
+
+            
+          //  ob_start();
+            $smarty->display($filename);
+          //  $content = ob_get_contents();
+          //  ob_end_clean();
+          //  $content .= "<script>var cache_file='{$file_hash}'</script>";
+          //  $this->file->write($cache_file,$content);
+          //  echo $content;
+        //}
     }
 
     /* json 输出 */

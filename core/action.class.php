@@ -10,7 +10,11 @@
  */
 abstract class action extends zhuayi
 {
-    
+    function __construct()
+    {
+       
+    }
+
     static function perf_info()
     {
         if (isset($_GET['db_debug']))

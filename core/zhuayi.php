@@ -9,10 +9,26 @@
  */
 $pagestartime = microtime();
 define('ZHUAYI_ROOT', dirname(dirname(__FILE__)));
-define('APP_NAME',substr(strrchr(APP_ROOT,'/'),1,100));
+define('APP_NAME',substr(strrchr(APP_ROOT,DIRECTORY_SEPARATOR),1,100));
 
 /*  输出页面字符集 */
 header('Content-type: text/html; charset=utf-8');
+
+if (isset($_SERVER['HTTP_X_REWRITE_URL']))
+{
+    $_SERVER['REQUEST_URI'] = $_SERVER['HTTP_X_REWRITE_URL'];
+}
+//ISAPI_Rewrite 2.x w/ HTTPD.INI configuration
+else if (isset($_SERVER['HTTP_REQUEST_URI']))
+{
+    $_SERVER['REQUEST_URI'] = $_SERVER['HTTP_REQUEST_URI'];
+}
+
+if (isset($_GET['error_debug']))
+{
+    ini_set( "display_errors",true);
+    error_reporting(E_ALL);
+}
 
 /* -----设置时区----  */
 date_default_timezone_set('Asia/Shanghai');
@@ -21,6 +37,7 @@ date_default_timezone_set('Asia/Shanghai');
 require ZHUAYI_ROOT.'/core/zhuayi.class.php';
 require ZHUAYI_ROOT.'/core/router.class.php';
 require ZHUAYI_ROOT.'/core/action.class.php';
+require ZHUAYI_ROOT.'/core/modle.class.php';
 require ZHUAYI_ROOT.'/core/log.class.php';
 
 //默认实例化类

@@ -7,7 +7,7 @@
  * @author       zhuayi
  * @QQ           2179942
  */
-class log
+class log extends zhuayi
 {
     public static $log_file;
 
@@ -18,24 +18,34 @@ class log
 
     public static $is_have_log = false;
 
+    public static $json = false;
+
     function __construct()
     {
 
     }
+
     public static function exception(Exception $e)
     {
-        header("HTTP/1.0 500 server error");
         $strings = 'Uncaught '.get_class($e).',file: '.$e->getFile().' code: ' . $e->getCode() . "<br />Message: " . htmlentities($e->getMessage())."\n";
-        error_log($strings,3,self::_get_log_path().".error-log");
+        error_log($strings,3,self::_get_log_path()."error-log");
         if ($_SERVER['APP']['debug'])
         {
-            exit(print_r($e,true));
+            if (self::$json)
+            {
+                output::json($e->getCode(),$e->getMessage());
+            }
+            else
+            {
+                header("HTTP/1.0 500 server error");
+                exit(print_r($e->getMessage(),true));
+            }
         }
     }
 
     public static function notice($strings)
     {
-        $strings = "[LOG ".date("Y-m-d H:i:s")." ".self::get_debugback()."] ".$strings;
+        $strings = "[".date("Y-m-d H:i:s")." ".self::get_debugback()."] ".$strings;
         return self::_set_log_data($strings);
     }
 
@@ -68,7 +78,7 @@ class log
             return ;
             break;
         }
-        return self::_set_log_data($strings,'exception');
+        return self::_set_log_data($strings);
 
     }
 
@@ -110,14 +120,13 @@ class log
     {
         if (self::$is_have_log)
         {
-            return error_log(implode("\n", self::$log_data),3,self::_get_log_path().".log");
+            return error_log(implode("\n", self::$log_data)."\n",3,self::_get_log_path().APP_NAME.".log");
         }
-        
     }
 
     public static function _get_log_path()
     {
-        $log_path = ZHUAYI_ROOT."/log/".APP_NAME."/".date("Ymd");
+        $log_path = ZHUAYI_ROOT."/log/".APP_NAME."/";
         if (!is_dir(dirname($log_path)))
         {
             $oldumask = umask(0);

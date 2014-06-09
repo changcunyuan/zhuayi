@@ -13,8 +13,13 @@ class cli
         {
             self::get_help();
         }
-        
-        $url['path'] = substr($_SERVER['PHP_SELF'],strrpos($_SERVER['PHP_SELF'],'script',-3)+6);
+      
+        $url['path'] = substr(strrchr($_SERVER['PWD'].DIRECTORY_SEPARATOR.$_SERVER['SCRIPT_NAME'],DIRECTORY_SEPARATOR),1,100);
+        $url['path'] = str_replace(".php",'',$url['path']);
+        $url['path'] = explode('_',$url['path'],2);
+        $url['path'] = "/".implode('/',$url['path']);
+        var_dump($url['path']);
+        exit;
         $_SERVER['REQUEST_URI'] = http_build_query(self::$argv);
         return $url;
     }
