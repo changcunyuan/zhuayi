@@ -133,7 +133,7 @@ class log extends zhuayi
             $reset = @mkdir(dirname($log_path),0777,true);
             if (!$reset)
             {
-                die("mkdir: log_path: No such file or directory");
+                die("mkdir: {$log_path}: No such file or directory");
             }
             chmod($log_path, 0777);
         }

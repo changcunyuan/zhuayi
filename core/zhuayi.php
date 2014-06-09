@@ -37,7 +37,6 @@ date_default_timezone_set('Asia/Shanghai');
 require ZHUAYI_ROOT.'/core/zhuayi.class.php';
 require ZHUAYI_ROOT.'/core/router.class.php';
 require ZHUAYI_ROOT.'/core/action.class.php';
-require ZHUAYI_ROOT.'/core/modle.class.php';
 require ZHUAYI_ROOT.'/core/log.class.php';
 
 //默认实例化类
