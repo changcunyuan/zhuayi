@@ -297,4 +297,14 @@
         }
         return $aOutData;
     }
+
+    /**
+     * 取字符串之间
+     */
+    static function get_section_strings($strings,$start,$end)
+    {
+        $_strings = explode($start,$strings);
+        $_strings = explode($end,$_strings[1]);
+        return $_strings[0];
+    }
  }
