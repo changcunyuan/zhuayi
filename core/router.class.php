@@ -45,6 +45,7 @@ class router extends zhuayi
         }
         else
         {
+            $_SERVER['REQUEST_URI'] = str_replace('.json', '', $_SERVER['REQUEST_URI']);
             $this->url = parse_url($_SERVER['REQUEST_URI']);
         }
     }
@@ -55,12 +56,27 @@ class router extends zhuayi
         $request_url = preg_replace('/(.*?)\?/', "", $_SERVER['REQUEST_URI']);
         parse_str($request_url,$_GET);
         $this->url['path'] = str_replace(".php",'',$this->url['path']);
-        $list = explode('/',$this->url['path']);
-        unset($list[0]);
+        $list = array_filter(explode('/',$this->url['path']));
 
-        $this->modle = (empty($list[1])) ? $this->default_modle : $list[1];
-        $this->action = (empty($list[2])) ? $this->default_action : $list[2];
-        unset($list[1]);unset($list[2]);
+        if (count($list) == 0)
+        {
+            $list = array($this->default_modle,$this->default_action);
+        }
+        else if (count($list) == 1)
+        {
+            //array_push($list,$this->default_action); array_push没有直接[]效率高
+            $list[] = $this->default_action;
+        }
+        $path = $list;
+        array_shift($path);
+        $this->modle = reset($list);
+        $this->action = implode("_",$path);
+
+        //unset($list[0]);
+        // exit;
+        // $this->modle = (empty($list[1])) ? $this->default_modle : $list[1];
+        // $this->action = (empty($list[2])) ? $this->default_action : $list[2];
+        // unset($list[1]);unset($list[2]);
         $this->parameter = $list;
         return $this;
     }

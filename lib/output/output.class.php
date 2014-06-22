@@ -24,17 +24,21 @@ class output extends zhuayi
     {
         $tpl = debug_backtrace();
         $tpl = explode('_',$tpl[2]['class']);
-        $model = $tpl[0];
-        unset($model);
+
+        $path = $tpl;
+        $file = array_pop($path);
+
         $this->filename = implode("_",$tpl).".html";
-        return APP_ROOT."/template/{$tpl[0]}/".$this->filename;
+        return APP_ROOT."/template/".implode("/",$path)."/".$this->filename;
     }
 
     /* 设置模板变量 */
     public function append_show($show)
     {
-
-        $this->show = array_merge($this->show,$show);
+        if (!is_null($show))
+        {
+            $this->show = array_merge($this->show,$show);
+        }
         return $this->show;
     }
 
@@ -93,7 +97,6 @@ class output extends zhuayi
                 $smarty->assign('show',$show);
             }
 
-            
           //  ob_start();
             $smarty->display($filename);
           //  $content = ob_get_contents();

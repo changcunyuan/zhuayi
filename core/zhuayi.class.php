@@ -57,15 +57,18 @@ abstract class zhuayi
         }
         else
         {
-            $filename = APP_ROOT."/actions/{$this->modle}/{$this->modle}_{$this->action}.php";
+            $path = $this->parameter;
+            $file = array_pop($path);
+            $filename = APP_ROOT."/actions/".implode("/",$path)."/".implode("_",$this->parameter).".php";
+           
             /* 加载模块文件 */
             if (!self::_includes($filename))
             {
                 throw new Exception("require({$filename}): failed to open stream: No such file or directory");
             } 
         }
-        
-        $class = "{$this->modle}_{$this->action}";
+
+        $class = implode("_",$this->parameter);
         $app = new $class;
 
         /* 合并对象 */
@@ -137,8 +140,8 @@ abstract class zhuayi
         /* 判断是本地类还是全局类 */
         if (count($_class) > 1)
         {
-            $path = "{$_class[0]}/{$_class[1]}";
-            $filename = APP_ROOT."/${path}/".implode('_',$_class).".class.php";
+            //$path = "{$_class[0]}/{$_class[1]}";
+            $filename = APP_ROOT."/".implode('/',$_class)."/".implode('_',$_class).".class.php";
         }
         else
         {
