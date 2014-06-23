@@ -358,7 +358,7 @@ abstract class mysql extends zhuayi
         
         if ($query)
         {
-            return $this->insert_id();
+            return true;
         }
         else
         {
