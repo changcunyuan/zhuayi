@@ -45,7 +45,11 @@ class router extends zhuayi
         }
         else
         {
-            $_SERVER['REQUEST_URI'] = str_replace('.json', '', $_SERVER['REQUEST_URI']);
+            if (strpos($_SERVER['REQUEST_URI'],".json") !== false)
+            {
+                log::$json = true;
+                $_SERVER['REQUEST_URI'] = str_replace('.json', '', $_SERVER['REQUEST_URI']);
+            }
             $this->url = parse_url($_SERVER['REQUEST_URI']);
         }
     }
