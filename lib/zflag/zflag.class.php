@@ -102,4 +102,9 @@ class zflag extends zhuayi
 		$check_function = (string)sprintf("_check_feature_by_%s",$this->config[$parent_name][$child_name]['type']);
 		return zflag_check::getInstance()->$check_function($this->config[$parent_name][$child_name]['value']);
 	}
+
+	function __destruct()
+    {
+        unset($this->config);
+    }
 }
