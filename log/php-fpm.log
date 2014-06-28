@@ -16,3 +16,57 @@
 [25-Jun-2014 01:13:31] NOTICE: exiting, bye-bye!
 [25-Jun-2014 10:12:19] NOTICE: fpm is running, pid 496
 [25-Jun-2014 10:12:19] NOTICE: ready to handle connections
+[25-Jun-2014 18:33:57] NOTICE: Terminating ...
+[25-Jun-2014 18:33:57] NOTICE: exiting, bye-bye!
+[26-Jun-2014 11:41:09] NOTICE: fpm is running, pid 834
+[26-Jun-2014 11:41:09] NOTICE: ready to handle connections
+[27-Jun-2014 00:40:57] NOTICE: Terminating ...
+[27-Jun-2014 00:40:57] NOTICE: exiting, bye-bye!
+[27-Jun-2014 15:15:22] NOTICE: [pool www] 'user' directive is ignored when FPM is not running as root
+[27-Jun-2014 15:15:22] NOTICE: [pool www] 'group' directive is ignored when FPM is not running as root
+[27-Jun-2014 15:15:22] NOTICE: fpm is running, pid 2052
+[27-Jun-2014 15:15:22] NOTICE: ready to handle connections
+[27-Jun-2014 15:15:26] NOTICE: [pool www] 'user' directive is ignored when FPM is not running as root
+[27-Jun-2014 15:15:26] NOTICE: [pool www] 'group' directive is ignored when FPM is not running as root
+[27-Jun-2014 15:15:26] ERROR: unable to bind listening socket for address '127.0.0.1:9000': Address already in use (48)
+[27-Jun-2014 15:15:26] ERROR: FPM initialization failed
+[27-Jun-2014 15:15:31] ERROR: unable to bind listening socket for address '127.0.0.1:9000': Address already in use (48)
+[27-Jun-2014 15:15:31] ERROR: FPM initialization failed
+[27-Jun-2014 15:16:34] ERROR: unable to bind listening socket for address '127.0.0.1:9000': Address already in use (48)
+[27-Jun-2014 15:16:34] ERROR: FPM initialization failed
+[27-Jun-2014 15:16:46] ERROR: unable to bind listening socket for address '127.0.0.1:9000': Address already in use (48)
+[27-Jun-2014 15:16:46] ERROR: FPM initialization failed
+[27-Jun-2014 15:17:12] ERROR: unable to bind listening socket for address '127.0.0.1:9000': Address already in use (48)
+[27-Jun-2014 15:17:12] ERROR: FPM initialization failed
+[27-Jun-2014 15:19:23] NOTICE: Terminating ...
+[27-Jun-2014 15:19:23] NOTICE: exiting, bye-bye!
+[27-Jun-2014 15:19:55] NOTICE: fpm is running, pid 2337
+[27-Jun-2014 15:19:55] NOTICE: ready to handle connections
+[27-Jun-2014 15:19:57] NOTICE: Terminating ...
+[27-Jun-2014 15:19:57] NOTICE: exiting, bye-bye!
+[27-Jun-2014 15:20:49] NOTICE: [pool www] 'user' directive is ignored when FPM is not running as root
+[27-Jun-2014 15:20:49] NOTICE: [pool www] 'group' directive is ignored when FPM is not running as root
+[27-Jun-2014 15:20:49] NOTICE: fpm is running, pid 2414
+[27-Jun-2014 15:20:49] NOTICE: ready to handle connections
+[27-Jun-2014 15:20:55] ERROR: unable to bind listening socket for address '127.0.0.1:9000': Address already in use (48)
+[27-Jun-2014 15:20:55] ERROR: FPM initialization failed
+[27-Jun-2014 15:21:04] NOTICE: [pool www] 'user' directive is ignored when FPM is not running as root
+[27-Jun-2014 15:21:04] NOTICE: [pool www] 'group' directive is ignored when FPM is not running as root
+[27-Jun-2014 15:21:04] ERROR: unable to bind listening socket for address '127.0.0.1:9000': Address already in use (48)
+[27-Jun-2014 15:21:04] ERROR: FPM initialization failed
+[27-Jun-2014 18:01:39] NOTICE: Terminating ...
+[27-Jun-2014 18:01:39] NOTICE: exiting, bye-bye!
+[27-Jun-2014 20:38:29] NOTICE: [pool www] 'user' directive is ignored when FPM is not running as root
+[27-Jun-2014 20:38:29] NOTICE: [pool www] 'group' directive is ignored when FPM is not running as root
+[27-Jun-2014 20:38:29] NOTICE: fpm is running, pid 312
+[27-Jun-2014 20:38:29] NOTICE: ready to handle connections
+[27-Jun-2014 20:38:33] ERROR: unable to bind listening socket for address '127.0.0.1:9000': Address already in use (48)
+[27-Jun-2014 20:38:33] ERROR: FPM initialization failed
+[28-Jun-2014 00:16:30] NOTICE: Terminating ...
+[28-Jun-2014 00:16:30] NOTICE: exiting, bye-bye!
+[28-Jun-2014 14:40:57] NOTICE: [pool www] 'user' directive is ignored when FPM is not running as root
+[28-Jun-2014 14:40:57] NOTICE: [pool www] 'group' directive is ignored when FPM is not running as root
+[28-Jun-2014 14:40:57] NOTICE: fpm is running, pid 351
+[28-Jun-2014 14:40:57] NOTICE: ready to handle connections
+[28-Jun-2014 14:41:19] ERROR: unable to bind listening socket for address '127.0.0.1:9000': Address already in use (48)
+[28-Jun-2014 14:41:19] ERROR: FPM initialization failed
