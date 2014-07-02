@@ -182,7 +182,7 @@ class http
         $httpheader['Cache-Control'] = 'no-cache';
         $httpheader['ACCEPT'] = $this->accept;
         $httpheader['ACCEPT-CHARSET'] = 'GBK,utf-8;q=0.7,*;q=0.3';
-
+        //exit;
         if (!empty($this->host))
         {
             $httpheader['host'] = $this->host;
