@@ -31,7 +31,7 @@ class log extends zhuayi
         error_log($strings,3,self::_get_log_path()."error-log");
         if ($_SERVER['APP']['debug'])
         {
-            if (self::$json)
+            if (strpos($_SERVER['HTTP_ACCEPT'],'json') !== false)
             {
                 output::json($e->getCode(),$e->getMessage());
             }

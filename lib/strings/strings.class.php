@@ -366,4 +366,11 @@
             }
         }
     }
+
+    //获取内容里的图片地址
+    public function get_image_list_by_strings($content)
+    {
+        preg_match_all('/src=["|\'](.*?)["|\']/s', htmlspecialchars_decode($article_info['content']),$img_list);
+        return $img_list[1];
+    }
  }
