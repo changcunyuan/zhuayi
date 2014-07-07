@@ -184,7 +184,7 @@ class http
         {
             curl_setopt($this->curl, CURLOPT_ENCODING, $this->encode);
         }
-
+        
         /* 设置header头 */
         $httpheader['CONNECTION'] = '""';
         $httpheader['Accept-Language'] = 'zh-CN,zh;q=0.8';
