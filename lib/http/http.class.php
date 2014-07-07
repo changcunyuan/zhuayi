@@ -60,6 +60,9 @@ class http
 
     var $post_urlencode = false;
 
+    var $range = 0; //CURLOPT_RANGE 返回字节数, 为0则不设置该参数
+
+
         /**
         * 构造函数
         */
@@ -152,6 +155,12 @@ class http
             curl_setopt($this->curl,CURLOPT_USERPWD,$this->userpassword);
         }
         
+        /* 返回字节数 */
+        if (!empty($this->range))
+        {
+            curl_setopt($this->curl, CURLOPT_RANGE, '0-'.$this->range); 
+        }
+
 
         /* 伪 造 来 路 页 面 */
         if (!empty($this->referer))
