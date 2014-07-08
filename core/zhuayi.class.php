@@ -99,7 +99,8 @@ abstract class zhuayi
                 {
                     echo "* Loop {$loop}/{$_GET['-loop']} Process {$pid} was created, and Executed:\n";
                     call_user_func_array(array($app,'run'),$this->parameter);
-                    //exit;
+                    pcntl_waitpid($pid,$status,WNOHANG);
+                    exit;
                 }
                 else
                 {
