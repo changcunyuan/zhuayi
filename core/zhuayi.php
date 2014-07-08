@@ -9,7 +9,12 @@
  */
 $pagestartime = microtime();
 define('ZHUAYI_ROOT', dirname(dirname(__FILE__)));
-define('APP_NAME',substr(strrchr(APP_ROOT,DIRECTORY_SEPARATOR),1,100));
+if (!defined('APP_NAME'))
+{
+    define('APP_NAME',substr(strrchr(APP_ROOT,DIRECTORY_SEPARATOR),1,100));  
+}
+
+define('UID', md5(time() . mt_rand(1,1000000)));
 
 /*  输出页面字符集 */
 header('Content-type: text/html; charset=utf-8');

@@ -40,7 +40,6 @@ class router extends zhuayi
         /* 兼容cli */
         if (php_sapi_name() === 'cli')
         {
-            require dirname(__FILE__)."/cli.class.php";
             $this->url = cli::init();
         }
         else

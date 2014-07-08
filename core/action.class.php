@@ -17,20 +17,6 @@ abstract class action extends zhuayi
 
     static function perf_info()
     {
-        if (isset($_GET['db_debug']))
-        {
-            //echo "\n";
-            $db_list = mysql::$db_base_performance_sql_count;
-            $db_num = 1;
-            foreach ($db_list as $key=>$val)
-            {
-                $db_str .= "\nsql_{$db_num}: db_name_conf_key: {$val['db_name']}\nSQL:{$val['sql']}\nexecute_time:{$val['execute_time']}\n";
-                $db_num++;
-            }
-            unset($db_list);
-            self::print_log("[DB_DEBUG]\n".$db_str);
-        }
-
         /* 占用内存 */
         if (isset($_GET['debug']))
         {
@@ -62,6 +48,25 @@ abstract class action extends zhuayi
         }
     }
 
+    static function write_sql_log()
+    {
+        $db_list = mysql::$db_base_performance_sql_count;
+        $db_num = 1;
+
+        if (empty($db_list))
+        {
+            return false;
+        }
+        $db_str = "\nUID:".md5(time() . mt_rand(1,1000000))." (".FILENAME.")\n";
+        foreach ($db_list as $key=>$val)
+        {
+            $db_str .= "  =>{$val['sql']}\n";
+            $db_num++;
+        }
+        unset($db_list);
+        error_log($db_str,3,log::_get_log_path()."sql.log");
+    }
+
     static function getmicrotime($microtime='')
     {
         if (empty($microtime))
@@ -77,6 +82,8 @@ abstract class action extends zhuayi
         /* 写入LOG */
         log::write_log();
         self::perf_info();
+        /* 写入 mysql log */
+        self::write_sql_log();
         unset($this);
     }
 }

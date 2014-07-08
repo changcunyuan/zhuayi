@@ -51,23 +51,26 @@ abstract class zhuayi
     /* 载入应用 */
     public function app()
     {
+        $path = $this->parameter;
+        $file = array_pop($path);
         if (php_sapi_name() === 'cli')
         {
             $actions = 'script';
         }
         else
         {
-            $path = $this->parameter;
-            $file = array_pop($path);
-            $filename = APP_ROOT."/actions/".implode("/",$path)."/".implode("_",$this->parameter).".php";
-           
-            /* 加载模块文件 */
-            if (!self::_includes($filename))
-            {
-                throw new Exception("require({$filename}): failed to open stream: No such file or directory");
-            } 
+            $actions = 'actions';
         }
+        $filename = APP_ROOT."/{$actions}/".implode("/",$path)."/".implode("_",$this->parameter).".php";
 
+        define('FILENAME',$filename);
+        
+        /* 加载模块文件 */
+        if (!self::_includes($filename))
+        {
+            throw new Exception("require({$filename}): failed to open stream: No such file or directory");
+        }
+  
         $class = implode("_",$this->parameter);
         $app = new $class;
 
@@ -80,12 +83,35 @@ abstract class zhuayi
         /* cli 模式下允许循环执行,知道返回结果不为false 为止 */
         if (php_sapi_name() === 'cli')
         {
-            $reset = false;
+            if (!function_exists('pcntl_fork'))
+            {
+                die("pcntl_fork not existing");
+            }
+            
+            $_GET['-loop'] = intval($_GET['-loop']);
+            $_GET['-loop'] = empty($_GET['-loop']) ? 0 : $_GET['-loop'];
+            $loop = 0;
             do
             {
-                $reset = $app->run();
+                $pid = pcntl_fork();
+
+                if ($pid == 0)
+                {
+                    echo "* Loop {$loop}/{$_GET['-loop']} Process {$pid} was created, and Executed:\n";
+                    call_user_func_array(array($app,'run'),$this->parameter);
+                    //exit;
+                }
+                else
+                {
+                    $pid = pcntl_wait($status, WUNTRACED);
+                    if (pcntl_wifexited($status))
+                    {
+                        //echo "\n* Sub process: {$pid} exited with {$status}\n";
+                    }
+                }
+                $loop++;
             }
-            while ($reset===false);
+            while ($loop < $_GET['-loop']);
         }
         else
         {

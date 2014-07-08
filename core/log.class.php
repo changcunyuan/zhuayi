@@ -27,7 +27,7 @@ class log extends zhuayi
 
     public static function exception(Exception $e)
     {
-        $strings = 'Uncaught '.get_class($e).',file: '.$e->getFile().' code: ' . $e->getCode() . "<br />Message: " . htmlentities($e->getMessage())."\n";
+        $strings = '['.date("Y-m-d H:i:s").'] Uncaught '.get_class($e).',file: '.$e->getFile().' Line: ' . $e->getLine() . " Message: " . $e->getMessage()."\n";
         error_log($strings,3,self::_get_log_path()."error-log");
         if ($_SERVER['APP']['debug'])
         {
@@ -95,26 +95,6 @@ class log extends zhuayi
         return true;
     }
 
-    public static function _create_uniqid()
-    {
-        global $pagestartime;
-
-        $star_time = explode(" ", $pagestartime);
-        if (php_sapi_name() !== 'cli')
-        {
-            $log_start[] = "urlid=".crc32($_SERVER['HTTP_COOKIE'].$_SERVER['REQUEST_URI']);
-            $log_start[] = "url=".$_SERVER['REQUEST_URI'];
-            $log_start[] = "cookie=".$_SERVER['HTTP_COOKIE'];
-        }
-        $log_start[] = "date=".date("Y-m-d H:i:s",$star_time[1]);
-
-        if (!empty($_SERVER['HTTP_REFERER']))
-        {
-            $log_start[] = "referer=".$_SERVER['HTTP_REFERER'];
-        }
-        return "<".implode(' ', $log_start).">\n";
-    }
-
     /* level 1-致命错误,导致页面中断, 0-非致命错误 */
     public static function write_log()
     {
@@ -127,10 +107,11 @@ class log extends zhuayi
     public static function _get_log_path()
     {
         $log_path = ZHUAYI_ROOT."/log/".APP_NAME."/";
-        if (!is_dir(dirname($log_path)))
+
+        if (!is_dir($log_path))
         {
             $oldumask = umask(0);
-            $reset = @mkdir(dirname($log_path),0777,true);
+            $reset = @mkdir($log_path,0777,true);
             if (!$reset)
             {
                 die("mkdir: {$log_path}: No such file or directory");
