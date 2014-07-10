@@ -73,7 +73,12 @@ abstract class mysql extends zhuayi
             $connect = $this->connect_string($slave);
             try
             {
-               $this->_connects[$this->db_name_conf][$slave] = new PDO($connect['dbhost'],$connect['user'],$connect['pass'],array(PDO::ATTR_PERSISTENT => true)); 
+               $this->_connects[$this->db_name_conf][$slave] = new PDO(
+                                                                            $connect['dbhost'],
+                                                                            $connect['user'],
+                                                                            $connect['pass'],
+                                                                            array(PDO::ATTR_PERSISTENT => true)
+                                                                        ); 
 
             } catch (Exception $e) {
                 throw new Exception($e->getMessage(), -1);

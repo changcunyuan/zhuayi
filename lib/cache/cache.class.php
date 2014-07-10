@@ -26,11 +26,9 @@ class cache extends zhuayi
     //单例方法,用于访问实例的公共的静态方法
     public static function getInstance()
     {
-        if(!(self::$_instance instanceof self))
+        if(!is_object(self::$_instance))
         {
-            //$conf = zhuayi::get_conf('cache');
             $conf = $_SERVER['APP']['cache'];
-
             if ($conf['use_cache'] === 'on')
             {
                 self::$use_cache = false;

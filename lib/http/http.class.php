@@ -122,7 +122,10 @@ class http
         {
             if (strpos($url,'?') === false )
             {
-                $url .= '?'.$parame;
+                if (!empty($parame))
+                {
+                    $url .= '?'.$parame;
+                }
             }
             else
             {
