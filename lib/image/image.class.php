@@ -347,26 +347,7 @@ class image extends http
 	 */
 	function save($filename)
 	{
-		$h = trim(substr(strrchr(strtolower($filename),'.'),1,100));
-		if (empty($h))
-		{
-			$filename .= $this->h; 
-		}
-
-		$reset = $this->file->write($filename,$this->file_data);
-
-		if ($reset['status'] != -1)
-		{
-			$array['src'] = $reset;
-			$array['height'] = $this->height;
-			$array['width'] = $this->width;
-			$array['h'] = $this->h;
-			return output::arrays('1',$array);
-		}
-		else
-		{
-			return output::arrays('-1',$reset['msg']);
-		}
+		return file_put_contents($filename,$this->file_data);
 	}
 	
 	/* 合并图片 */
