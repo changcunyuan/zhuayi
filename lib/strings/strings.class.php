@@ -29,6 +29,7 @@
     function limit($string, $start, $len, $byte=3)
     {
         $string = htmlspecialchars_decode($string);
+        $string = str_replace('&nbsp;','',$string);
         $string = str_replace('<br />','\n',$string);
         $string = strip_tags($string);
         if (empty($string))
@@ -373,4 +374,6 @@
         preg_match_all('/src=["|\'](.*?)["|\']/s', htmlspecialchars_decode($content),$img_list);
         return $img_list[1];
     }
+
+    
  }

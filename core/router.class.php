@@ -38,7 +38,7 @@ class router extends zhuayi
         $_SERVER['APP'] = zhuayi::get_conf();
         
         /* 兼容cli */
-        if (php_sapi_name() === 'cli')
+        if (APP_MODE === 'cli')
         {
             $this->url = cli::init();
         }

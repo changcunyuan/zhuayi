@@ -53,7 +53,8 @@ abstract class zhuayi
     {
         $path = $this->parameter;
         $file = array_pop($path);
-        if (php_sapi_name() === 'cli')
+
+        if (APP_MODE === 'cli')
         {
             $actions = 'script';
         }
@@ -70,7 +71,7 @@ abstract class zhuayi
         {
             throw new Exception("require({$filename}): failed to open stream: No such file or directory");
         }
-  
+
         $class = implode("_",$this->parameter);
         $app = new $class;
 
@@ -81,7 +82,7 @@ abstract class zhuayi
         }
 
         /* cli 模式下允许循环执行,知道返回结果不为false 为止 */
-        if (php_sapi_name() === 'cli')
+        if (APP_MODE === 'cli')
         {
             if (!function_exists('pcntl_fork'))
             {

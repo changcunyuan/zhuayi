@@ -34,6 +34,7 @@ class cli
 
         define('APP_NAME',self::$argv['-app']);
         define('APP_ROOT', dirname(dirname(__FILE__))."/app/".APP_NAME);
+        define('APP_MODE', 'cli');
 
         if (empty(self::$argv['-file']))
         {
