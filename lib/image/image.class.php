@@ -228,8 +228,16 @@ class image extends http
 				/* 横的 */
 				$_width = intval($info[0]*$height/$info['1']);
 
-				$x = 0-($_width - $width) / 2;
-				$width = $_width;
+				$x = 0;
+				if ($width > $_width && $width < $this->width)
+                {
+                    $height = $height * $width / $_width;
+                }
+                else //裁剪
+                {
+                	$x = 0-($_width - $width) / 2;
+                	$width = $_width;
+                }
 
 			}
 			else
@@ -238,7 +246,14 @@ class image extends http
 				$_height = intval($info['1']* $width/$info['0']);
 				//$y = 0-($_height - $height) / 2;
 				$y = 0;
-				$height = $_height;
+				if ($height > $_height && $height < $this->height)
+                {
+                    $width = $width * $height / $_height;
+                }
+                else
+                {
+                    $height = $_height;
+                }
 			}
 		}
 
