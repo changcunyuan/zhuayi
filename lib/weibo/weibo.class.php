@@ -11,6 +11,7 @@
 
 class weibo extends http
 {
+    public $access_token = null;
 
     public $conf = array(
                             'response_type'    =>     'code',
@@ -84,16 +85,35 @@ class weibo extends http
 
     function get_user_info_by_token($access_token,$uid)
     {
-        $uid = intval($uid);
+        $uid = floor(floatval($uid));
         $access_token = mysql_escape_string($access_token);
 
         if (empty($uid) || empty($access_token))
         {
             throw new Exception("参数错误!", 1);
         }
-        $arr['access_token'] = $access_token;
+        $this->access_token = $arr['access_token'] = $access_token;
         $arr['uid'] = $uid;
         return $this->run('https://api.weibo.com/2/users/show.json',$arr,'get');
+    }
+
+    public function get_weibo_info_by_id($weiboid,$access_token = '')
+    {
+        $weiboid = floor(floatval($weiboid));
+
+        if (empty($weiboid))
+        {
+            throw new Exception("参数错误!", -1);
+        }
+
+        if (empty($access_token))
+        {
+            $access_token = $this->access_token;
+        }
+
+        $array['access_token'] = $access_token;
+        $array['id'] = $weiboid;
+        return $this->run('https://api.weibo.com/2/statuses/show.json',$arr,'get');
     }
 
 }
