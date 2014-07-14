@@ -34,29 +34,38 @@ class weibo extends http
 
     function run($ap_url,$array = array(),$method = 'get')
     {
-        if ($method == 'get')
+        $cache_key = "weibo-".md5(json_encode($array));
+        $reset = $this->cache->get($cache_key);
+        if ($reset === false)
         {
-            $reset = $this->get($ap_url,$array);
-        }
-        else
-        {
-            $this->post($ap_url,$array);
-        }
+            if ($method == 'get')
+            {
+                $reset = $this->get($ap_url,$array);
+            }
+            else
+            {
+                $this->post($ap_url,$array);
+            }
 
-        if ($this->status > 0)
-        {
-            throw new Exception($this->error, -1);
-        }
-        $reset = json_decode($this->results,true);
-        if (!is_array($reset))
-        {
-            throw new Exception("接口返回数据异常!", -1);
-        }
+            if ($this->status > 0)
+            {
+                throw new Exception($this->error, -1);
+            }
+            $reset = json_decode($this->results,true);
+            if (!is_array($reset))
+            {
+                throw new Exception("接口返回数据异常!", -1);
+            }
 
-        /* 判断是否调用失败 */
-        if (isset($reset['error']))
-        {
-            throw new Exception($reset['error'].":{$reset['error_code']}", -1);
+            /* 判断是否调用失败 */
+            if (isset($reset['error']))
+            {
+                throw new Exception($reset['error'].":{$reset['error_code']}", -1);
+            }
+            else
+            {
+                $this->cache->set($cache_key,$reset,$this->cache_outtime);
+            }
         }
 
         return $reset;
@@ -99,16 +108,15 @@ class weibo extends http
 
     public function get_weibo_info_by_id($weiboid,$access_token = '')
     {
-        $weiboid = floor(floatval($weiboid));
-
-        if (empty($weiboid))
-        {
-            throw new Exception("参数错误!", -1);
-        }
+        //$weiboid = floor(floatval($weiboid));
 
         if (empty($access_token))
         {
             $access_token = $this->access_token;
+        }
+        if (empty($weiboid)  || empty($access_token))
+        {
+            throw new Exception("参数错误!", -1);
         }
 
         $array['access_token'] = $access_token;
