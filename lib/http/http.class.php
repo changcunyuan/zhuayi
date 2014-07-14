@@ -68,12 +68,13 @@ class http
         */
     function __construct()
     {
-        $this->curl = curl_init();
+        
     }
 
     function exec($url,$method = 'GET',$parame = array()) 
     {
-        
+        $this->curl = curl_init();
+
         $this->parame = $parame;
 
         /* 如果URL传递为数组,则认定为需要绑定HOSTS */
@@ -248,8 +249,8 @@ class http
             //echo " info:{$this->results}\r\n";
             echo "-->\r\n";
         }
-        //curl_close($this->curl);
-        //unset($this->curl);
+        curl_close($this->curl);
+        unset($this->curl);
     }
     
     /**
