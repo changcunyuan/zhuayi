@@ -113,7 +113,7 @@ class weibo extends http
 
         $array['access_token'] = $access_token;
         $array['id'] = $weiboid;
-        return $this->run('https://api.weibo.com/2/statuses/show.json',$arr,'get');
+        return $this->run('https://api.weibo.com/2/statuses/show.json',$array,'get');
     }
 
 }
