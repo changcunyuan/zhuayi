@@ -54,7 +54,7 @@ abstract class zhuayi
         $path = $this->parameter;
         $file = array_pop($path);
 
-        if (APP_MODE === 'cli')
+        if (php_sapi_name() === 'cli')
         {
             $actions = 'script';
         }
@@ -82,7 +82,7 @@ abstract class zhuayi
         }
 
         /* cli 模式下允许循环执行,知道返回结果不为false 为止 */
-        if (APP_MODE === 'cli')
+        if (php_sapi_name() === 'cli')
         {
             if (!function_exists('pcntl_fork'))
             {

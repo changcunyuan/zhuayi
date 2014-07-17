@@ -16,6 +16,8 @@ class cli
 {
     public static $argv;
 
+    public static $url;
+
     static function init()
     {
         self::$argv = $_SERVER['argv'];
@@ -34,7 +36,7 @@ class cli
 
         define('APP_NAME',self::$argv['-app']);
         define('APP_ROOT', dirname(dirname(__FILE__))."/app/".APP_NAME);
-        define('APP_MODE', 'cli');
+        //define('APP_MODE', 'cli');
 
         if (empty(self::$argv['-file']))
         {
@@ -42,12 +44,10 @@ class cli
         }
         
         //$url['path'] = substr(strrchr($_SERVER['PWD'].DIRECTORY_SEPARATOR.$_SERVER['SCRIPT_NAME'],DIRECTORY_SEPARATOR),1,100);
-        $url['path'] = self::$argv['-file'];
-        $url['path'] = str_replace(".php",'',$url['path']);
+        self::$url['path'] = str_replace(".php",'',self::$argv['-file']);
         //$url['path'] = explode('_',$url['path'],2);
         //$url['path'] = "/".implode('/',$url['path']);
         $_SERVER['REQUEST_URI'] = http_build_query(self::$argv);
-        return $url;
     }
 
     static function get_help()

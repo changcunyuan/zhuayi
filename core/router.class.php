@@ -38,9 +38,9 @@ class router extends zhuayi
         $_SERVER['APP'] = zhuayi::get_conf();
         
         /* 兼容cli */
-        if (APP_MODE === 'cli')
+        if (php_sapi_name() === 'cli')
         {
-            $this->url = cli::init();
+            $this->url = cli::$url;
         }
         else
         {
@@ -49,7 +49,7 @@ class router extends zhuayi
                 log::$json = true;
                 $_SERVER['REQUEST_URI'] = str_replace('.json', '', $_SERVER['REQUEST_URI']);
             }
-            $this->url = parse_url($_SERVER['REQUEST_URI']);
+            $this->url = parse_url(preg_replace('/\?.*$/i', '', $_SERVER['REQUEST_URI']));
         }
     }
 

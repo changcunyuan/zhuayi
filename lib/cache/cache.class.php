@@ -16,7 +16,7 @@ class cache extends zhuayi
 
     private static $_instance;
 
-    public  static $use_cache;
+    public  static $use_cache = true;
 
     function __construct()
     {
@@ -96,6 +96,7 @@ class cache extends zhuayi
 
     function get($key)
     {
+
         if (self::$use_cache === false)
         {
             return false;
@@ -138,7 +139,6 @@ class cache extends zhuayi
         {
             $reset =  $json;
         }
-
         return $reset;
     }
 }
