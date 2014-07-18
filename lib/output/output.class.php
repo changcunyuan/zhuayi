@@ -39,6 +39,10 @@ class output extends zhuayi
         {
             $this->show = array_merge($this->show,$show);
         }
+        if (is_array($this->input->get))
+        {
+            $this->show['get'] = $this->input->get;
+        }
         return $this->show;
     }
 
