@@ -14,6 +14,11 @@ if (!defined('APP_NAME'))
     define('APP_NAME',substr(strrchr(APP_ROOT,DIRECTORY_SEPARATOR),1,100));  
 }
 
+if (!defined('APP_MODE'))
+{
+    define('APP_MODE','cgi');  
+}
+
 define('UID', md5(time() . mt_rand(1,1000000)));
 
 /*  输出页面字符集 */

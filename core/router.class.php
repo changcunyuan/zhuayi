@@ -38,26 +38,25 @@ class router extends zhuayi
         $_SERVER['APP'] = zhuayi::get_conf();
         
         /* 兼容cli */
-        if (php_sapi_name() === 'cli')
+        if (APP_MODE === 'cli')
         {
             $this->url = cli::$url;
         }
         else
         {
-            if (strpos($_SERVER['REQUEST_URI'],".json") !== false)
-            {
-                log::$json = true;
-                $_SERVER['REQUEST_URI'] = str_replace('.json', '', $_SERVER['REQUEST_URI']);
-            }
-            $this->url = parse_url(preg_replace('/\?.*$/i', '', $_SERVER['REQUEST_URI']));
+
+            $this->url = $_SERVER['REQUEST_URI'];
         }
     }
 
     /* 格式化URL */
     public function parse_url()
     {
-        $request_url = preg_replace('/(.*?)\?/', "", $_SERVER['REQUEST_URI']);
-        parse_str($request_url,$_GET);
+        $this->url = str_replace('.json', '', $this->url);
+        $this->url = parse_url($this->url);
+
+        parse_str($this->url['query'],$_GET);
+
         $this->url['path'] = str_replace(".php",'',$this->url['path']);
         $list = array_filter(explode('/',$this->url['path']));
 

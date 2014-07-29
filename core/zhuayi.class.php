@@ -54,7 +54,7 @@ abstract class zhuayi
         $path = $this->parameter;
         $file = array_pop($path);
 
-        if (php_sapi_name() === 'cli')
+        if (APP_MODE === 'cli')
         {
             $actions = 'script';
         }
@@ -82,7 +82,7 @@ abstract class zhuayi
         }
 
         /* cli 模式下允许循环执行,知道返回结果不为false 为止 */
-        if (php_sapi_name() === 'cli')
+        if (APP_MODE === 'cli')
         {
             if (!function_exists('pcntl_fork'))
             {
@@ -115,9 +115,13 @@ abstract class zhuayi
             }
             while ($loop < $_GET['-loop']);
         }
+        else if (APP_MODE == 'swoole')
+        {
+            return call_user_func_array(array($app,'run'),$this->parameter);
+        }
         else
         {
-            call_user_func_array(array($app,'run'),$this->parameter);
+            die(call_user_func_array(array($app,'run'),$this->parameter));
         }
 
     }
@@ -145,9 +149,16 @@ abstract class zhuayi
     static function _includes($filename)
     {
         $filename = realpath($filename);
-        self::perf_include_count($filename);
+        $file_list = array_flip(self::$perf_include_count);
+
+        if (isset($file_list[$filename]))
+        {
+            return true;
+        }
+
         if (file_exists($filename))
         {
+            self::perf_include_count($filename);
             return require $filename;
         }
         else
@@ -205,7 +216,7 @@ abstract class zhuayi
     /* 性能分析 */
     static function perf_include_count($filename)
     {
-        if (isset($_SERVER['APP']['debug']) && $_SERVER['APP']['debug'] && isset($_GET['debug']))
+        if (isset($_SERVER['APP']['debug']) && $_SERVER['APP']['debug'])
         {
             self::$perf_include_count[] = $filename;
         }
