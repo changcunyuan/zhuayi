@@ -52,8 +52,12 @@ class router extends zhuayi
     /* 格式化URL */
     public function parse_url()
     {
-        $this->url = str_replace('.json', '', $this->url);
-        $this->url = parse_url($this->url);
+        if (!is_array($this->url))
+        {
+            $this->url = str_replace('.json', '', $this->url);
+            $this->url = parse_url($this->url);
+        }
+        
 
         parse_str($this->url['query'],$_GET);
 
