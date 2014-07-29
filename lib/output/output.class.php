@@ -102,7 +102,7 @@ class output extends zhuayi
             }
 
           //  ob_start();
-            return $smarty->fetch($filename);
+            return $smarty->display($filename);
           //  $content = ob_get_contents();
           //  ob_end_clean();
           //  $content .= "<script>var cache_file='{$file_hash}'</script>";
@@ -117,8 +117,8 @@ class output extends zhuayi
         header('Content-type: application/json');
         $array['status'] = $status;
         $array['msg'] = $msg;
-        return json_encode($array);
-        //die(json_encode($array));
+        //return json_encode($array);
+        die(json_encode($array));
     }
 
     /* jsonp 输出 */
@@ -127,7 +127,7 @@ class output extends zhuayi
         header('Content-type: application/json');
         $array['status'] = $status;
         $array['msg'] = $msg;
-        return "{$callback}(".json_encode($array).")";
+        die("{$callback}(".json_encode($array).")");
     }
 
     /* 跳转 */
