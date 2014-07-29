@@ -121,7 +121,9 @@ abstract class zhuayi
         }
         else
         {
-            call_user_func_array(array($app,'run'),$this->parameter);
+            $reset = call_user_func_array(array($app,'run'),$this->parameter);
+
+            die($reset);
         }
 
     }
