@@ -58,7 +58,6 @@ class router extends zhuayi
             $this->url = parse_url($this->url);
         }
         
-
         parse_str($this->url['query'],$_GET);
 
         $this->url['path'] = str_replace(".php",'',$this->url['path']);

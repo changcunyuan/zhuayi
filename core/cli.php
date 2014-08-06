@@ -45,6 +45,7 @@ class cli
         
         //$url['path'] = substr(strrchr($_SERVER['PWD'].DIRECTORY_SEPARATOR.$_SERVER['SCRIPT_NAME'],DIRECTORY_SEPARATOR),1,100);
         self::$url['path'] = str_replace(".php",'',self::$argv['-file']);
+        self::$url['query'] = http_build_query(self::$argv);
         //$url['path'] = explode('_',$url['path'],2);
         //$url['path'] = "/".implode('/',$url['path']);
         $_SERVER['REQUEST_URI'] = http_build_query(self::$argv);
