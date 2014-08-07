@@ -92,6 +92,11 @@ class router extends zhuayi
      */
     function routing()
     {
+        if (!is_array($this->url))
+        {
+            $this->url = str_replace('.json', '', $this->url);
+            $this->url = parse_url($this->url);
+        }
         $rewrite = $_SERVER['APP']['rewire'];
         if ($rewrite !== false)
         {
