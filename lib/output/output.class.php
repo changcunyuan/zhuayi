@@ -27,7 +27,6 @@ class output extends zhuayi
 
         $path = $tpl;
         $file = array_pop($path);
-
         $this->filename = implode("_",$tpl).".html";
         return APP_ROOT."/template/".implode("/",$path)."/".$this->filename;
     }
@@ -117,7 +116,6 @@ class output extends zhuayi
         header('Content-type: application/json');
         $array['status'] = $status;
         $array['msg'] = $msg;
-        return json_encode($array);
         die(json_encode($array));
     }
 
