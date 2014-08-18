@@ -44,6 +44,10 @@ abstract class zhuayi
     {
         if (!empty($name))
         {
+            if ($name == 'redis')
+            {
+                $name = "z{$name}";
+            }
             return $this->$name = new $name();
         }
     }

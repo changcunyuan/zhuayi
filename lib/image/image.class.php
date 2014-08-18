@@ -103,7 +103,7 @@ class image extends http
 	function get_file_data($filename,$referer)
 	{
 		$opts = array(
-						'http'=>array('method'=>"GET",'timeout'=>20,'header'=>"Referer:{$referer}")  
+						'http'=>array('method'=>"GET",'timeout'=>20)  
 					);  
 		
 		/* 如果是外部图片增加,来路 */
@@ -112,10 +112,10 @@ class image extends http
 			//$refer_url = parse_url($filename);
 			$opts['http']['header'] = "Referer:http://".$referer;
 		}
-
+		
 		$context = stream_context_create($opts); 
 		$this->file_data = file_get_contents($filename,false, $context);
-
+		
 		if (empty($this->file_data) || $this->file_data === false)
 		{
 			throw new Exception("图片数据获取失败 <!-- {$filename} -->", -1);
