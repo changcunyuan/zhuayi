@@ -123,9 +123,15 @@ class output extends zhuayi
     public function jsonp($status = 0 ,$msg = '',$callback)
     {
         header('Content-type: application/json');
-        $array['status'] = $status;
-        $array['msg'] = $msg;
-        return "{$callback}(".json_encode($array).")";
+        $array['error'] = $status;
+        $array['data'] = ($status === 0)?$msg:null;
+
+        //callback参数只支持数字字母下划线及点号组成的字符串并且首字母不能是数字
+        if (!preg_match('/^[a-zA-Z_\.]+[a-zA-Z0-9_\.]*$/',$callback))
+        {
+            $callback = '';
+        }
+        die("{$callback}(".json_encode($array).")");
     }
 
     /* 跳转 */

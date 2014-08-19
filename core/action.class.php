@@ -64,7 +64,7 @@ abstract class action extends zhuayi
             $db_num++;
         }
         unset($db_list);
-        error_log($db_str,3,log::_get_log_path()."sql.log");
+        error_log($db_str,3,log::_get_log_path()."sql_".date("Y-m-d").".log");
     }
 
     static function getmicrotime($microtime='')

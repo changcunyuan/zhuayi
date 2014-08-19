@@ -220,14 +220,13 @@ abstract class mysql extends zhuayi
 
                 if (preg_match('/\{%(.*?)%\}/i',$val))
                 {
-                    $val = preg_replace('/\{%(.*?)%\}/i','$1',$val);
-                    $array_tmp[] = $_key." like '%".$val."%'";
-                }
-                elseif (preg_match('/\{(.*?)\}/i',$val))
-                {
-
+                //     $val = preg_replace('/\{%(.*?)%\}/i','$1',$val);
+                //     $array_tmp[] = $_key." like '%".$val."%'";
+                // }
+                // elseif (preg_match('/\{(.*?)\}/i',$val))
+                // {
                     /* 大于 {>} 小于{<}  {in}*/
-                    $val = preg_replace('/\{(.*?)\}/i','$1',$val);
+                    $val = preg_replace('/\{%(.*?)%\}/i','$1',$val);
                     $array_tmp[] = $_key.$val."";
                 }
                 else
